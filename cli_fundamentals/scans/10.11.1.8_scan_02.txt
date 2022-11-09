@@ -1,0 +1,53 @@
+kali@kali:~$ sudo nmap 10.11.1.8 -p- -sV -vv --open --reason      
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-01-22 14:12 EET
+NSE: Loaded 45 scripts for scanning.
+Initiating Ping Scan at 14:12
+Scanning 10.11.1.8 [4 ports]
+Completed Ping Scan at 14:12, 0.14s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:12
+Completed Parallel DNS resolution of 1 host. at 14:12, 0.01s elapsed
+Initiating SYN Stealth Scan at 14:12
+Scanning 10.11.1.8 [65535 ports]
+Discovered open port 21/tcp on 10.11.1.8
+Discovered open port 22/tcp on 10.11.1.8
+Discovered open port 139/tcp on 10.11.1.8
+Discovered open port 111/tcp on 10.11.1.8
+Discovered open port 445/tcp on 10.11.1.8
+SYN Stealth Scan Timing: About 10.46% done; ETC: 14:16 (0:04:25 remaining)
+SYN Stealth Scan Timing: About 20.79% done; ETC: 14:16 (0:03:52 remaining)
+SYN Stealth Scan Timing: About 34.58% done; ETC: 14:16 (0:02:52 remaining)
+SYN Stealth Scan Timing: About 47.64% done; ETC: 14:16 (0:02:13 remaining)
+Discovered open port 631/tcp on 10.11.1.8
+SYN Stealth Scan Timing: About 61.61% done; ETC: 14:16 (0:01:34 remaining)
+SYN Stealth Scan Timing: About 72.48% done; ETC: 14:16 (0:01:09 remaining)
+Completed SYN Stealth Scan at 14:15, 238.37s elapsed (65535 total ports)
+Initiating Service scan at 14:15
+Scanning 6 services on 10.11.1.8
+Completed Service scan at 14:16, 11.42s elapsed (6 services on 1 host)
+NSE: Script scanning 10.11.1.8.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 14:16
+Completed NSE at 14:16, 2.34s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 14:16
+Completed NSE at 14:16, 0.56s elapsed
+Nmap scan report for 10.11.1.8
+Host is up, received echo-reply ttl 63 (0.14s latency).
+Scanned at 2020-01-22 14:12:01 EET for 252s
+Not shown: 65524 filtered ports, 5 closed ports
+Reason: 65275 no-responses, 249 host-prohibiteds and 5 resets
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE     REASON         VERSION
+21/tcp  open  ftp         syn-ack ttl 63 vsftpd 2.0.1
+22/tcp  open  ssh         syn-ack ttl 63 OpenSSH 3.9p1 (protocol 1.99)
+111/tcp open  rpcbind     syn-ack ttl 63 2 (RPC #100000)
+139/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+445/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+631/tcp open  ipp         syn-ack ttl 63 CUPS 1.1
+Service Info: OS: Unix
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 253.21 seconds
+           Raw packets sent: 130961 (5.762MB) | Rcvd: 267 (19.044KB)
+

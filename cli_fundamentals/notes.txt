@@ -1,0 +1,160 @@
+------------------
+NOTES
+------------------
+
+Shells - command line interface we all know and love
+	sh - the og, super weak, /bin/sh
+	bash - bourne again shell, newerish goodish, /bin/bash
+	zsh - the new hotness, lots of wonderful features, you should download and install it
+
+Environmental Variables
+	Global variables used by the shell, specific to each instance
+		for variables to "persist" through instances, define them in the config file (~/.bashrc, ~/.zshrc)
+	examples
+		echo $PATH
+		echo $USER
+		echo $HOME
+	defining new variables
+		# bash scripting syntax
+		export x="test"
+		echo $x
+	export makes the variable accessible to any subprocess we spawn
+	$$ - the current pid of the current shell instance
+		echo $$
+		6969
+	env will list the variables
+
+Tab completion
+	goated feature, in bash, zsh, etc, will autocomplete the syntax of whatever you are typing
+	helpful for finding files, finding binaries, listing options
+	depth of completeion depends on the shell itself (can go brazy with zsh + ohmyzsh + plugins)
+
+Bash history
+	history file of commands are found in ~/.bash_history or ~/.zsh_history
+	many many uses
+		troubleshooting a similar problem as before - go back into the history file and retrace your steps
+		dont have to retype long commands
+			especially with autosuggestions in zsh :)
+		repeating previous command
+			echo hi
+				hi
+			!!
+				hi
+	customize the historyfile
+		in the .(shell)rc file, two vars: HISTSIZE and HISTFILESIZE
+			HISTSIZE = amount of commands stored in memory
+			HISTFILESIZE = amount of commands stored in the historyfile
+	reverse-i-search
+		CTRL-R from the command line to search through the historyfile
+
+Piping and redirection
+	each program has three data streams, STDIN, STDOUT, STDERR
+		STDIN - data fed into the program
+		STDOUT - output from the program, defaults to the terminal
+		STDERR - error messages, default to the terminal
+	operators such as |, <, > can redirect the output/ input of programs
+
+	redirection into a file
+		# will overwrite whatever is in the file already
+		echo "test" > foo.txt
+	redirection into an existing file
+		# will NOT overwrite whatever is in the file already
+		# note the difference of the >> :)
+		echo "test" >> foo.txt
+  redirection FROM a file
+		wc -l < file.txt
+	redirecting errors
+		# sends the error code (2) to /dev/null
+		find / -name anything 2>/dev/null
+	piping
+		something i do to ur mother got dam
+		sends the output from one command to another
+		cat error.txt | wc -m
+
+Text searching and manipulation
+	Grep
+		goated tool, searching through provided text to find a matching regular expression
+		cat foo.txt | grep bar
+		grep bar foo.txt
+		grep -R password
+	sed
+		stream editor
+		dice up a given data stream to perform somehting cool
+		echo "balls in my mouth" | sed 's/mouth/face/'
+			balls in my face
+	cut
+		extracts some aspect of a given string based on a delimeter
+			# -f = field, -d = delimeter
+			echo "I hack binaries,web apps,mobile apps, and just about anything else"| cut -f 2 -d ","
+				web apps
+	awk
+		programming language for text processing
+		common flag is -F for a field delimeter
+			echo "hello::there::friend" | awk -F "::" '{print $1, $3}'
+				hello friend
+
+	awk -F ":" '{ if ($6 == "/bin/false") {print $1}}' /etc/passwd
+	awk -F "," '{printf $13}' field_of_flags.csv
+	cat values_and_flags.txt | cut -f 1,2 -d ","| sort -r
+
+editing files from cli
+	use vim if ur cool
+
+comparing files
+	comm - kinda weak command to view whats common, uses columns or whatever, just use diff
+	diff - shows the difference in two files, in multiple formats
+	vimdiff - opens vim on multiple files, the difference between the files are highlighted
+
+	diff *| awk -F " " '{if ($1 == ">" || $1 == "<") {printf $2}}'
+
+Managing processes
+	kernel maintains info about each process, organizing them and assigning each a PID
+	backgrounding processes
+		have a command run but dont have it occupy the terminal screen as youre working
+		easiest way to to add an ampersand (&) to the end of the command
+	suspending a job
+		CTRL-Z a running job to suspend, type fg to bring it forwards again, bg to move it to the background
+	jobs and fg
+		suspend many jobs with CTRL-Z
+		run "jobs" to see current jobs on hand, fg %<jobs number> to bring it forward
+			%<string>, ex. %ping
+			%+ or %% - current job
+			%- - previous job
+	ps and kill
+		looking at the process status of all the processes running
+			ps aux - my favorite
+			ps -fC vim
+				-f = full format
+				-C = select by command line name
+		kill <pid>
+		kill -s SIGKILL <pig farming pid>
+
+File and command monitoring
+	tail
+		monitoring log files, as they are being written
+			tail -f /var/log/apache2/access.log
+	watch
+		watch a file, updates every x seconds, default is 2 seconds
+		watch -n 5 w
+			watch logged on users every 5 seconds
+	watch -n 5 -x ./watchman
+
+Downloading files
+	curl and wget
+	axel
+		downloads fast through multiple connections
+		axel -a -n 20 -o report_axel.pdf https://www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf
+	curl <ip>| grep OS{
+
+Custominzing the bash env
+	bash history customization
+		ignore duplicatres
+			export HISTCONTROL=ignoredups
+		ignore common commands
+			export HISTIGNORE="&:ls:[bf]g:exit:history"
+		update time formatting
+			export HISTTIMEFORMAT='%F %T '
+	aliases
+	unalias
+	presistent customizations
+		in the .rc file

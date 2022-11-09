@@ -1,0 +1,60 @@
+kali@kali:~$ sudo nmap 10.11.1.8 -p- -sV -vv --open --reason
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-01-22 14:02 EET
+NSE: Loaded 45 scripts for scanning.
+Initiating Ping Scan at 14:02
+Scanning 10.11.1.8 [4 ports]
+Completed Ping Scan at 14:02, 0.28s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:02
+Completed Parallel DNS resolution of 1 host. at 14:02, 0.02s elapsed
+Initiating SYN Stealth Scan at 14:02
+Scanning 10.11.1.8 [65535 ports]
+Discovered open port 445/tcp on 10.11.1.8
+Discovered open port 80/tcp on 10.11.1.8
+Discovered open port 21/tcp on 10.11.1.8
+Discovered open port 22/tcp on 10.11.1.8
+Discovered open port 3306/tcp on 10.11.1.8
+Discovered open port 111/tcp on 10.11.1.8
+Discovered open port 139/tcp on 10.11.1.8
+Discovered open port 443/tcp on 10.11.1.8
+SYN Stealth Scan Timing: About 7.06% done; ETC: 14:09 (0:06:48 remaining)
+SYN Stealth Scan Timing: About 20.12% done; ETC: 14:07 (0:04:02 remaining)
+SYN Stealth Scan Timing: About 29.94% done; ETC: 14:07 (0:03:33 remaining)
+SYN Stealth Scan Timing: About 44.61% done; ETC: 14:06 (0:02:30 remaining)
+SYN Stealth Scan Timing: About 57.62% done; ETC: 14:06 (0:01:51 remaining)
+SYN Stealth Scan Timing: About 74.54% done; ETC: 14:06 (0:01:02 remaining)
+SYN Stealth Scan Timing: About 87.21% done; ETC: 14:06 (0:00:31 remaining)
+Discovered open port 631/tcp on 10.11.1.8
+Completed SYN Stealth Scan at 14:06, 233.80s elapsed (65535 total ports)
+Initiating Service scan at 14:06
+Scanning 9 services on 10.11.1.8
+Completed Service scan at 14:08, 161.62s elapsed (9 services on 1 host)
+NSE: Script scanning 10.11.1.8.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 14:08
+Completed NSE at 14:08, 3.92s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 14:08
+Completed NSE at 14:08, 2.57s elapsed
+Nmap scan report for 10.11.1.8
+Host is up, received timestamp-reply ttl 63 (0.14s latency).
+Scanned at 2020-01-22 14:02:10 EET for 402s
+Not shown: 65524 filtered ports, 2 closed ports
+Reason: 65285 no-responses, 239 host-prohibiteds and 2 resets
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE     REASON         VERSION
+21/tcp   open  ftp         syn-ack ttl 63 vsftpd 2.0.1
+22/tcp   open  ssh         syn-ack ttl 63 OpenSSH 3.9p1 (protocol 1.99)
+80/tcp   open  http        syn-ack ttl 63 Apache httpd 2.0.52 ((CentOS))
+111/tcp  open  rpcbind     syn-ack ttl 63 2 (RPC #100000)
+139/tcp  open  netbios-ssn syn-ack ttl 63 Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+443/tcp  open  ssl/https?  syn-ack ttl 63
+445/tcp  open  netbios-ssn syn-ack ttl 63 Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+631/tcp  open  ipp         syn-ack ttl 63 CUPS 1.1
+3306/tcp open  mysql?      syn-ack ttl 63
+Service Info: OS: Unix
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 402.78 seconds
+           Raw packets sent: 130960 (5.762MB) | Rcvd: 251 (17.724KB)
+

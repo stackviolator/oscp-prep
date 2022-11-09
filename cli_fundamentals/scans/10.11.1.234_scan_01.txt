@@ -1,0 +1,41 @@
+kali@kali:~$ sudo nmap 10.11.1.234 -p- -sV -vv --open --reason 
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-01-22 14:34 EET
+NSE: Loaded 45 scripts for scanning.
+Initiating Ping Scan at 14:34
+Scanning 10.11.1.234 [4 ports]
+Completed Ping Scan at 14:34, 0.14s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:34
+Completed Parallel DNS resolution of 1 host. at 14:34, 0.03s elapsed
+Initiating SYN Stealth Scan at 14:34
+Scanning 10.11.1.234 [65535 ports]
+Discovered open port 80/tcp on 10.11.1.234
+Discovered open port 22/tcp on 10.11.1.234
+Discovered open port 10443/tcp on 10.11.1.234
+SYN Stealth Scan Timing: About 48.37% done; ETC: 14:35 (0:00:33 remaining)
+Completed SYN Stealth Scan at 14:35, 50.47s elapsed (65535 total ports)
+Initiating Service scan at 14:35
+Scanning 3 services on 10.11.1.234
+Completed Service scan at 14:35, 11.71s elapsed (3 services on 1 host)
+NSE: Script scanning 10.11.1.234.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 14:35
+Completed NSE at 14:35, 0.75s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 14:35
+Completed NSE at 14:35, 1.07s elapsed
+Nmap scan report for 10.11.1.234
+Host is up, received reset ttl 63 (0.14s latency).
+Scanned at 2020-01-22 14:34:12 EET for 64s
+Not shown: 65411 closed ports, 121 filtered ports
+Reason: 65411 resets and 121 no-responses
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE REASON         VERSION
+22/tcp    open  ssh     syn-ack ttl 63 OpenSSH 5.3p1 Debian 3ubuntu3 (Ubuntu Linux; protocol 2.0)
+80/tcp    open  http    syn-ack ttl 63 Apache httpd 2.2.14 ((Ubuntu))
+10443/tcp open  http    syn-ack ttl 63 CoreHTTP httpd 0.5.3.1
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 64.55 seconds
+           Raw packets sent: 73257 (3.223MB) | Rcvd: 71185 (2.847MB)
