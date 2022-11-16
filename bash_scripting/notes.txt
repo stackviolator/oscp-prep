@@ -1,0 +1,150 @@
+------------------
+NOTES
+------------------
+
+Variables
+	gotta know what vars are at this point
+		$ thing="good"
+		$ echo $thing
+			good
+	bash is case sensative - vars must be as well
+		thing="one"
+		Thing="two"
+		echo $Thing
+			two
+	 single vs double quotes
+	 	single quotes - every enclosed char is treatd literally
+			balls=5
+			test="$balls"
+			echo $test
+				$balls
+		double quotes - some characters are escaped, such as a $ or \
+			balls=5
+			test="$test"
+			echo $test
+				5
+	commands as a varable
+		can set the output of some command to a var
+			dir=$(pwd) # OR use backticks: dir=`pwd`
+			echo $dir
+				/root # or whatever the current dir is ;)
+		backticks are generally discouraged and is older
+		command substitution happens in a "subshell" (subprocess of the current shell) and does not alter variables
+
+Arugments
+	the cli arguments passed when executing the script
+	pretty straight forward, this table will cover the big things
+
+	$0 				- 		The name of the bash script
+	$1-$9 		- 		The first 9 arugments of the script
+	$# 				- 		Number of arugments (like argc)
+	$@ 				- 		All the arguments passed to the script
+	$? 				- 		The exit status of the most recently run process
+	$$ 				- 		The PID of the current script
+	$USER 		- 		The username of the user running the script
+	$HOSTNAME - 		The hostname of the machine
+	$RANDOM 	- 		Random number
+	$LINENO 	- 		Current line in the script
+
+User input
+	Capture user input into a var with the "read" keyword
+		echo "enter name"
+		read name
+		echo "name is $name"
+	Common read flags
+		-p = use a specific prompt
+			read -p "username: " username
+		-s = silence user input (dont display to the terminal)
+
+If/ else/ elif
+	basic conditional logic used in other programming languages
+	if - only execute some code if the condition is met
+		if [ <some condition> ] 		# dont need the square brackets! just "if condition"
+		then
+			# do something here
+		fi # fi will end the if statement
+	conditionals are a little wonky in bash, see the following table for tips
+
+	!condition 		- 		The condition is false
+	-n string 		- 		string length is greater than zero (similar to if str in python)
+	-z string 		- 		if the string is empty (similar to if !str in python)
+	str1 != str2 	- 		str1 does not equal str2
+	str1 = str2 	- 		str1 does equal str2
+	int -eq int2 	- 		int equals int2
+	int -ne int2 	- 		int is not equal to int2
+	int -gt int2 	- 		int is greater than int2
+	int -lt int2 	- 		int is less than int2
+	int -ge int2 	- 		int is greater than or equal to int2
+	int -le int2 	- 		int is less than or equal to than int2
+	-e file 			- 		file exists
+	-d file 			- 		file exists and is a directory
+	-r file 			- 		file exists and is readable
+	-s file 			- 		file exists and is not empty
+	-w file 			- 		file exists and has write perms
+	-x file 			- 		file exists and has execute perms
+
+	else - used to add in an alternative or catch all for conditions
+
+	elif - "else if" allows you to add more than two conditions
+		also will break conditional checks when an elif is hit
+			if have multiple if statements, a program will check each one sequentially, however, if you use elif, once one elif is hit, the program will not keep checking
+
+	if <something>
+	then
+		# do something here
+	elif <something else>
+		# do something else here
+	else
+		# do a third thing here
+
+Boolean logic operators
+	boolean = something with a true or false value
+	&& (AND), || (OR)
+	&& will only execute if the previous command returns a 0 exit code (0 means no error)
+		grep $user2 /etc/passwd && echo "$user2 found!" || echo "$user2 not found!"
+			if bob in in /etc/passwd it will execute the && command, else it will echo the || command
+	can also be used in if statements
+		if [condition1 && condition2]
+		then
+			#something
+		fi
+
+Loops
+	used for repetitive tasks
+	For loops
+		do something for a sequence
+		useful in bash oneliners
+			for ip in $(seq 1 10); do echo $ip; done
+			for i in {1..10}; do echo $i; done
+
+	While loops
+		perform some action while a condition is true
+		while [some condition]
+		do
+			# something
+		done
+
+Functions
+	functions within a script allow you to reuse code, instead of needing to write it over and over
+	two formats for functions
+		# type one
+		function function_name {
+			# something here
+		}
+		# type two - c like
+		function_name () {
+			# something here
+		}
+
+	Arugments
+		dont need to specify the arugments into the function declaration
+		use $1-$9 syntax within a function will reference the function arugments instead of the cli arguments
+
+	Return values
+		Return a variable when finishing a function with the return keyword
+
+	Scope and local variables
+		reuse the same variable name or resize the scope of a variable to only be used within a function with the local keyword
+
+Challenges
+	
