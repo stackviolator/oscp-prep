@@ -1,0 +1,52 @@
+------------------
+NOTES
+------------------
+
+Passive info gathering == recon == osint
+
+Cyclic process repeating at different places in the engagement
+	next step depends on what the last step's results were
+	helps in many aspects: phishing, password guessing
+
+Interpreations of "passive"
+	strict - never interact with the target at all
+	looser - interact as a normal user would, visit the website, sign up for something, but not testing the website for vulns
+	best to confirm with the client what they want
+
+Note taking
+	Take notes when youre gathering info
+	no right or wrong way kinda...
+	its only wrong if you cant find/digest the data you collected :)
+
+Website recon
+	things to look for
+		employee emails, twitter/ social media accounts
+			employee emails might follow a designated pattern and/or OG employees might have a different pattern
+
+Whois enumeration
+	whois - tcp service tool to make queries about the registration of a domain
+	megacorpone.com example:
+		registered under Alan Grofield, who is the "IT and security director"
+	whois can perform reverse lookups and normal lookups (domain name or ip addresses)
+
+Google "hacking"
+	i put it in quotes
+	using google operators to sequentially narrow down search results
+		starting with a broad search and moving from there
+	site operator
+		narrows the search results to just one domain name
+		site:megacorpone.com
+		can narrow down using other operators such as filetype or ext (extension)
+		- (minus) operator, exclude search results
+	intitle:"index of" "parent directory" to find pages that contain "index of" in the title and the words "parent directory" on the page.
+	google hacking database - place to find google queries that are mean
+		https://www.exploit-db.com/google-hacking-database
+	intitle:"Apache Flink Web Dashboard"
+
+Netcraft
+	web service that offers information gathering techniques
+	doesnt work without a mf payment plan ughhhhhh
+
+Recon-ng
+	BHIS tool that displays and stores results in a DB
+
