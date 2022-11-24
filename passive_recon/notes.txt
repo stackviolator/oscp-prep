@@ -49,4 +49,49 @@ Netcraft
 
 Recon-ng
 	BHIS tool that displays and stores results in a DB
+	add modules from the marketplace using "marketplace search"
+	some modules need api keys, markets with an * in the "K" column
 
+Open source code
+	various different places to find code
+	can be used to show the tech stack of the company, rare occasions secrets or sensative info has been committed
+	Github
+		search function is flexible, can do something like filename:users
+		couple tools are useful such as gitrob and gitleaks, as well as recon-ng modules
+	GitLab
+	SourceForge
+
+Shodan
+	Crawls devices connected to the internet
+	requires an account and a subscription now :(
+
+Security headers scanning
+	specialty sites that scan read the headers of http responses and such
+	get a basic idea of coding practices and standards at a company
+
+SSL Server test
+	SSL Server Test from Qualys SSL Lab
+	https://www.ssllabs.com/ssltest/
+	compares a websites SSL config to best practices
+
+Pastebin
+	website for storing and sharing text
+
+User information gathering
+	grunt work
+	used in phishing campaigns, targeted credential stuffing, building userlists, etc
+
+	Email harvesting
+		finding employee emails from a variety of public places
+		theHarvester - https://github.com/laramies/theHarvester
+
+	Password dumps
+		checking previous password dumps for people from a domain
+		dehashed, haveibeenpwned, etc
+
+Social media tools
+	dont really work anymore, apis change or need subscriptions, etc
+	https://www.social-searcher.com/
+
+Stack overflow
+Maltego
