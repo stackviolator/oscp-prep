@@ -1,0 +1,121 @@
+------------------
+NOTES
+------------------
+
+Directly interacting with the target to find out information about them
+
+DNS enumeration
+	DNS - translates domain names into IP addresses
+	Hierarchical structure, multiple hops and requests
+		1. domain is entered in the browser of the device
+		2. the request is handed the the OS and the OS dns client forwards the request to the external DNS server it is configured to use ( called the DNS recursor )
+		3. the recursor interacts with the root level DNS server, and the root level server responds with a TLD (top level domain, like a .com domain)
+
+	Interactacting with a DNS server
+		common dns records
+			NS - nameserver, authoritative server hosting the records for the domain
+			A - the record type, contains the IP address for a host
+			MX - mail exchange, contains the names of the servers that handles the mail transfer for a domain
+			PTR - Pointer records, used for reverse lookup
+			CNAME - canonical name, create names for other hosts
+			TXT - used to store arbitraty data
+		host command
+			host <domain name>
+			home -t mx <domain name>
+				-t = record type
+
+	Automating lookups
+		Forward lookup brute force
+			common hostnames in a file (list.txt) (ftp, vpn, mail, o365, etc)
+			for ip in $(cat list.txt); do host $ip.megacorpone.com; done
+
+		Reverse lookup brute force
+			for ip in $(seq  50 100); do host 38.100.193.$ip; done | grep -v "not found"
+
+	DNS zone transfers
+		zone transfer - basically a database replication between DNS servers
+			zone file is copied from the master DNS server to the slave DNS server
+			should only be able to be done by authorized slaves, however sometimes servers are misconfigured
+				people can just receive a zone file by asking - basically handing the layout of the netowrk
+			host -l <domain name>  <dns server addr>
+			host -l megacorpone.com ns2.megacorpone.com
+		Tools
+			dnsrecon - modern and advanced tool
+				i have code in the dnsrecon! - https://github.com/darkoperator/dnsrecon/commit/70f2de637b3d8c9379ade4fe9892986b14bd6f45
+				dnsrecon -d megacorpone.com -t axfr
+					-d = domain name
+					-t = type of enumeration (axfr == zone transfer)
+			dnsenum - another popular tool
+
+Port scanning
+	interacting with the ports of a host to figure out with services are running
+	intrusive nature - can trip IDSs or bring down weak hosts
+
+	TCP/ UDP scanning
+		using netcat as a portscanner
+			CONNECT scan - wait for a full 3-way handshake, if the handshake completes, the port is considered open
+			nc -nvv -w 1 -z 10.11.1.220 3388-3390
+				-w = connection timeout in seconds
+				-z = no I/O - dont send data
+				-n = no dns lookup
+				-v = verbose mode
+				3388-3390 = the ports to connect to
+		UDP Scan
+			nature of UDP, less reliable
+				if the port is closed, it should respond with an ICMP port unreachable, then it is closed
+			nc -nv -u -z -w 1 10.11.1.115 160-162
+				-u = use UDP
+
+	Port scanning with nmap
+		default will scan the top 1000 most common ports
+		scanning 1000 hosts with all defaults uses ~78kb of traffic
+		a full -p- port scan sends ~1000 MB of network traffic
+		Stealth scanning
+			syn or stealth scanning
+			default when no method is specified and the user has the raw sockets priv
+			does not send the final ACK in the TCP handshake
+			will not be passed to the application layer and wont appear in application layer logs
+		TCP connect scanning
+			-sT
+			does not need elevated privs, might be needed to use to scan some types of proxies
+		UDP Scanning
+			will use the common empty UDP packet to get an ICMP unreachable response in conjunction with other port specific protocols (ex. port 161 SNMP has its own way of handling an empty packet)
+			can use -sU and -sS together
+
+	Network scanning
+		-sn, uses a ping sweep, port 80 and 443 syns and ICMP timestamp requests
+
+	-oG = greppable output
+	save time and resources by using --top-ports=X to scan the top X ports
+	-A = aggresive/ all, will enable OS detection, script scaning, and traceroute
+	OS fingerprinting
+		-O flag
+		attempts to guess the OS based on various factors in the response such as TTL
+
+	Banner grabbing/ service enum
+		-sV inspects the service banners
+		not 100%, accurate, banners can be modified by the admin
+
+	Nmap scripting engine (NSE)
+		extendible feature to add scripts to nmap, -sC will run default scripts, can do stuff such as brute forcing, dns zone transfers
+		--script=<script name>
+		--script-help <script name>
+
+	Masscan
+		masscan, really fast, can scan the internet in 6 mins, although is unreliable
+		sudo masscan -p80 10.11.1.0/24 --rate=1000 -e tap0 --router-ip 10.11.0.1
+
+SMB enumeration
+	poor track record, very complex and open nature
+
+	Scanning for NetBIOS Service
+		NetBIOS listened on port 139 and a variety of other UDP ports
+			independent session layer protocol that allows computers to communicate on a local network
+		SMB listens on 445, although is a completely separate protocol
+			does not need to use NetBIOS, however it is needed for backwards compatibility -- therefore are often found together
+			nmap -v -p 139,445 -oG smb.txt 10.11.1.1-254
+				-v = verbose
+				-p 139,445 = NetBIOS and smb ports
+				-oG = greppable output
+			sudo nbtscan -r 10.11.1.0/24
+				specialized netbios scanner
