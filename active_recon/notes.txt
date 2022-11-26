@@ -119,3 +119,67 @@ SMB enumeration
 				-oG = greppable output
 			sudo nbtscan -r 10.11.1.0/24
 				specialized netbios scanner
+	nmap NSE smb scripting
+		lots of useful scripts in the NSE that can be used
+			ls -l /usr/share/nmap/scripts/smb*
+
+NFS Enumeration
+	NFS - distributed file system protocol
+	very annoying to set up securely, so often times it is common to find open shares
+	portmapper and RPCbind both run on port 111
+	RPC processes inform RPCbind when they start
+	scanning port 111
+		nmap -v -p 111 10.11.1.1-254
+		nmap -sV -p 111 --script=rpcinfo 10.11.1.1-254
+			find services registered with rpcbind
+	NFS NSE scripts
+		ls -1 /usr/share/nmap/scripts/nfs*
+			couple scripts located here
+		can run all of the scripts at once
+			nmap -p 111 --script nfs* 10.11.1.72
+		if there is an open share called "home"
+			mkdir home; sudo mount -o nolock 10.11.1.72:/home ~/home/; cd home/ && ls
+				mount the share locally on the kali box
+			sometimes files are locked behind a specific user account
+				linked to the UID, can create a new user and edit the entry in /etc/passwd to match the UID of the owner of the file
+
+SMTP enumeration
+	various important info and commands can be ran of vulnerable SMTP servers
+	nc -nv 10.11.1.217 25
+		will connect if open
+	VRFY root
+		VRFY asks he mail server to verify if the email exists
+		EXPN asks the server for the membership of a mailing list
+
+SNMP Enumeration
+	Complex and lots of misconfigurations by network admins
+	Based on UDP, susceptible to IP spoofing and relay attacks
+	version 1, 2, and 2c are all plaintext
+	SNMP MIB Tree
+		Management Information Base
+		contains info related to network management
+		organized as a tree, each node is an organization or network function
+		IBM knowledge center holds lots of useful info
+			https://www.ibm.com/support/knowledgecenter/ssw_aix_71/commprogramming/mib.html
+
+	Scanning for SNMP
+		sudo nmap -sU --open -p 161 10.11.1.1-254 -oG open-snmp.txt
+			-sU - udp scanning
+			--open - only display info about open ports
+
+	Windows SNMP enumeration
+		using the tools "snmpwalk" can walkthrough the snmp tree
+		typical read only community string is "public"
+		Enuermating the entire MID tree
+			snmpwalk -c public -v1 -t 10 10.11.1.14
+				-c - community string
+				-v - version number
+				-t - timeout
+		Enumerating windows users
+			snmpwalk -c public -v1 10.11.1.14 1.3.6.1.4.1.77.1.2.25
+		Enuermating windows processes
+			snmpwalk -c public -v1 10.11.1.73 1.3.6.1.2.1.25.4.2.1.2
+		Enuermating TCP Ports
+			snmpwalk -c public -v1 10.11.1.14 1.3.6.1.2.1.6.13.1.3
+		Enuermating installed software
+			snmpwalk -c public -v1 10.11.1.50 1.3.6.1.2.1.25.6.3.1.2
