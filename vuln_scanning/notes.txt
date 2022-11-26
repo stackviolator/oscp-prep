@@ -1,0 +1,26 @@
+------------------
+NOTES
+------------------
+manual testing and scanning is definitely better than automated, although automated has its place
+
+Overview and considderatins
+	How scanners work
+		General workflow
+			1. Detect if a system is up and running
+			2. Conduct a full or partial port scan
+			3. Identify the OS running
+			4. Identify running services using banner grabbing, service behavior, file discovery, etc
+			5. signature-matching to find vulnerabilities
+			Generally what we do manually, some help from automatic and verifiable use of signature matching
+			essentially pulling strings from the service banner, cutting the service ID out of it like "OpenSSH_7.9p1 Debian-10"
+				some scanners will also use an auto exploit feature
+			opportunity for false positives and false negatives
+				false positive - backporting, package maintaners roll back the software version to a previous patch
+			always confirm the vulnerabilities flagged by scanners
+
+	Manual vs automated scanners
+		best tactic is to combine manual and automated, best balance reveals itself over time
+		Manual testing requires lots of resources, time consuming
+		Red teaming needs to be precise and minimize network presence, therefore automated scanners are no bueno
+		automated scanners are needed on big engagements under a time constraint
+		automated scanners can have harmful defaults - automatically try to brute force passwords
