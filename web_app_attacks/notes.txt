@@ -1,0 +1,72 @@
+------------------
+NOTES
+------------------
+
+Web app assessment methodology
+	Gathering info about the webapp, what is it supposed to do? What is it running on?
+	Looking to exploit to increase permissions or pivot to another app
+		may need to have multiple hops and exploits to achieve ultimate goal
+	enumeration of new functionality is the key
+
+Web app enumeration
+	pivotal to find out everything you can about a specific app
+		some vulnerabilities are tech agnositic, however some payloads require specific parameters
+			e.g. uploading reverse shell in the backend language of the server
+	info to discover
+		programming languages and frameworks
+		web server software
+		database software
+		server OS
+	Inspecting URLs
+		basic however can lead to some important info
+			.php, .jsp, .do, .html
+		routes
+			web development standard, map a URI to a section of code
+	Inspecting page contents
+		things that can be found in the debugger console:
+			page's resources and content
+			JS frameworks
+			hidden input fields
+			comments
+			client-side controls within HTML
+			JS
+			etc.
+	Viewing reponse headers
+		two tools to do this
+			proxy (burp)
+			network tab in browser
+				need to refresh the page to see the traffic
+	Inspecting sitemaps
+		web pages often include sitemaps to help web crawlers crawl their pages
+		robots.txt - includes what pages not to visit (often are interesting to hackers)
+			allow and disallow - suggestions where "polite" crawlers do and dont go
+		sitemap.xml - usually contains a full map of the site
+	Locating admin consoles
+		web servers often come with remote admin web portals
+			default mysql - /manager/html
+			default tomcat - /phpmyadmin
+
+Web application assessment tools
+	DIRB - OLD AND BUSTEDDDDD USED FEROXBUSTER LETS GOOOOOOOO
+		used to bruteforce directories, (better) alternatives are gobuster and feroxbuster
+			dirb http://www.megacorpone.com -r -z 10
+				-r - non-recursive
+				-z - 10 millisecond delay between requests
+	burpsuite - proxy tool to inspect and alter requests
+		various other tools built in, although most need a pro version
+		community is good enough
+	nikto - super mid, dont even use it
+
+Exploiting web vulnerabilities
+	Exploiting admin consoles
+		once we find an admin console the goal is to log in
+			usually have a way to upload files (reverse/ web shells) or edit code or steal creds
+		brute forcing is bad, try to do it as little as possible
+			however, if needed, burp intruder is a good tool to automate web form logins
+		phpmyadmin XAMPP
+			log into the admin console -> can send SQL cmds
+				select * from webappdb.users;
+				insert into webappdb.users(password, username) VALUES ("backdoor","backdoor");
+
+Cross site scripting (XSS)
+	web apps need data sanitization
