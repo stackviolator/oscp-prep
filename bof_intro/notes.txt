@@ -1,0 +1,70 @@
+------------------
+NOTES
+------------------
+
+iconic memory corruption vuln
+
+Intro to x86 architecture
+	how software works at the CPU level
+
+	Program memory
+		Binary applications are ran, computer allocates space in memory
+		0x00000000 (lowest) - 0x7FFFFFFF (highest)
+		0x7FFFFFFF - 0xFFFFFFFF is the kernel memory space
+		Many memory spaces, although focussing on the stack
+
+		The stack
+			when threads run, they execute code from program images or from DLLs
+			threads need an area for short-term operations (local vars, functions, execution control info, etc)
+			each thread has its own stack
+			stacks are Last-In-First-Out (LIFO)
+				Pushing and popping operations
+					PUSH = add a new item to the top of the stack
+					POP = remove the first item from a list
+			analogy to a LIFO stack:
+				stack of trays in a cafeteria, when new trays are washed, they are added to the top of the pile, when someone needs a tray they grab the one on the top
+
+		Function Return Mechanics
+			need to know what address to return to upon completion of execution
+			return address is stored on the stack with function params and local vars
+			the collection of data for a single function call is a stack frame
+
+		CPU Registers
+			CPU keeps a seris of 9 32-bit registers (on a 32 bit platform)
+			registers are small high speed memory locations that facilitate efficient operations such as reading and manipulation
+			Registers have different nomenclature based on size
+
+			32-bit 	| 	Lower 16 Bits 	| 	High 8 Bits 	| 	Lower 8 Bits
+			--------+-------------------+-----------------+-----------------
+				EAX 	| 				AX 				| 			 AH 			| 				AL
+				EBX 	| 				BX  			| 			 BH  			| 				BL
+				ECX 	| 				CX 				| 		 	 CH 	  	| 				CL
+				EDX 	| 				DX 				| 			 DH 			| 				DL
+				ESI 	| 				SI 				| 			 N/A 			| 				N/A
+				EDI 	| 				DI 				|				 N/A 	  	| 				N/A
+				ESP 	| 				SP 				|        N/A      | 				N/A
+				EIP 	| 				IP 				|        N/A      |  				N/A
+
+			Each register was created for the 16 bit architecture then was expanded
+
+		General purpose registers
+			EAX (accumulator): Arithmetical and logical instructions
+			EBX (base): Base pointer for memory addresses
+			ECX (counter): Loop, shift, and rotation counter
+			EDX (data): I/O port addressing, multiplication, and division
+			ESI (source index): Pointer addressing of data and source in string copy operations
+			EDI (destination index): Pointer addressing of data and destination in string copy operations
+
+		ESP - the stack pointer
+			holds a memory address that will point to the "top" ( stack grows down so top is a bit confusing ) of the stack
+
+		EBP - the base pointer
+			holds a pointer (memory address) to where the current base of the stack frame
+			therefore EBP - ESP = the memory space of the current stack frame
+			can easily access elements in the stack frame by using $ebp and an offset
+
+		EIP - the instruction pointer
+			holds a memory address of the next instruction
+			main target of a buffer overflow
+
+Buffer Overflow walkthrough
