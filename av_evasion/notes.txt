@@ -76,3 +76,11 @@ Bypassing AV
 					modifying memory and introduce a hook into a function to point the execution flow to malicious code
 						hook = instructions that redirect the code execution
 					flow will return back to the modified function and resume execution
+
+
+Shellter
+	dynamic tool to shove a malicious payload into valid exe
+
+	using SpotifySetup.exe
+		shell will die when installer is finished, auto migrate to a different task to keep it alive
+			set AutoRunScript post/windows/manage/migrate
