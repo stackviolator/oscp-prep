@@ -84,3 +84,18 @@ Shellter
 	using SpotifySetup.exe
 		shell will die when installer is finished, auto migrate to a different task to keep it alive
 			set AutoRunScript post/windows/manage/migrate
+
+Challenge
+	bro literally why is there NO DOCUMENTATION on the internet on how to set the FTP conn to active and allow binary AasaaaaaaaaaaAAAAAAAAAAA
+		run "binary" and "passive"
+			kms
+	pt 1.
+		generate an exe with shellter, ez pz
+
+	pt 2.
+		install veil and use the python/meterpreter payload
+		select py2exe in the next step
+		output is a .bat
+
+extra readin :)
+https://www.microsoft.com/en-us/security/blog/2018/03/01/finfisher-exposed-a-researchers-tale-of-defeating-traps-tricks-and-complex-virtual-machines/
