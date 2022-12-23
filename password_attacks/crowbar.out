@@ -1,0 +1,22 @@
+2022-12-23 16:41:19 START
+2022-12-23 16:41:19 Crowbar v0.4.2
+2022-12-23 16:41:19 Trying 192.168.179.10:3389
+2022-12-23 16:41:59 START
+2022-12-23 16:41:59 Crowbar v0.4.2
+2022-12-23 16:41:59 Brute Force Type: rdp
+2022-12-23 16:41:59      Output File: /home/pop/projects/oscp-prep/password_attacks/crowbar.out
+2022-12-23 16:41:59         Log File: /home/pop/projects/oscp-prep/password_attacks/crowbar.log
+2022-12-23 16:41:59    Discover Mode: False
+2022-12-23 16:41:59     Verbose Mode: 1
+2022-12-23 16:41:59       Debug Mode: False
+2022-12-23 16:41:59 Trying 192.168.179.10:3389
+2022-12-23 16:42:15 START
+2022-12-23 16:42:15 Crowbar v0.4.2
+2022-12-23 16:42:15 Brute Force Type: rdp
+2022-12-23 16:42:15      Output File: /home/pop/projects/oscp-prep/password_attacks/crowbar.out
+2022-12-23 16:42:15         Log File: /home/pop/projects/oscp-prep/password_attacks/crowbar.log
+2022-12-23 16:42:15    Discover Mode: False
+2022-12-23 16:42:15     Verbose Mode: 1
+2022-12-23 16:42:15       Debug Mode: False
+2022-12-23 16:42:15 Trying 192.168.179.10:3389
+2022-12-23 16:42:21 [92mRDP-SUCCESS : [0m[94m192.168.179.10:3389 - admin:lab[0m

