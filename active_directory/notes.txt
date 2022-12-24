@@ -1,0 +1,130 @@
+------------------
+NOTES
+------------------
+
+Huge attack surface, service that allows sysadmins to update and manage OSs, users, and data access
+
+AD Theory
+	Several components, most importantly is the Domain Controller (DC)
+		core of AD, stores all info about how the instance is configured
+		enforces the rules that govern how objects in a domain interact with each other
+	Complexity is based on the control that  the network admins have vested in them
+	Domain
+		created for each instance of AD
+		usually is called something like corp.com or corp.local or something
+		in the domain, can have various objects such as computers and users
+	Organizational Units (OUs)
+		containers for storing and grouping objects
+			comparable to file system folders
+		computer objects
+			actual servers and machines that are domain joined
+		user objects
+			typically represent employees of a company
+		all objects have attributes such as name, username, password, etc
+
+AD Enuermation
+	typically methodology consists of compromising a box then using that box to pivot internally
+	use groups to assign perms
+		therefore there are higher value groups and targets
+		compromising member of Domain Admins >>>> some rando user
+	Compromise of the DC itself
+		can be used to modify all the domain joined computers
+		also has the hashes of all the domain user accounts
+
+	Traditional Approach
+		LOLBINS
+		net.exe
+			net user
+			net user /domain
+			net user <username> /domain
+			net group /domain
+
+	Modern Approach
+		Powershell
+		LDAP Provider path
+			LDAP://HostName[:PortNumber][/DistinguishedName]
+			find these components with:
+				[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+		Example
+			PdcRoleOwner            : DC01.corp.com
+			Name                    : corp.com
+
+			use getLDAPProviderPath.ps1
+				LDAP://DC01.corp.com/DC=corp,DC=com
+
+	Currently Logged on Users
+		Import-Module .\Powerview.ps1
+		Get-NetLoggedon -ComputerName client251
+		Get-NetSession -ComputerName dc01
+
+	Enumeration through SPNs
+		services laucned through the system itself are service accounts
+		can also be apart of high value groups
+		isolated applications can use a set of predefined accounts like LocalSystem, LocalService, and NetworkService
+		more complex apps like MSSQL, MySQL, IIS, etc. a domain user can be used
+		service instance identifier called SPNs can be used to link an account with a service
+		enumerating SPNs can get IPs and ports with application, limiting need for broad scanning
+
+		finding a hostname on an internal domain
+			serviceprincipalname    {HTTP/CorpWebServer.corp.com}
+				what is CorpWebServer?
+			nslookup CorpWebServer.corp.com
+				Name:    corpwebserver.corp.com
+				Address:  192.168.1.110
+		empire Get-SPN.py
+
+Active Directory Authentication
+	use enumerated users, groups, SPNs to compromise the Domain
+	either uses Kerberos or NTLM auth
+
+	NTLM Authentication
+		used when a client authenticates to a server using an IP (not a hostname)
+		or
+			if the user attempts to auth to a hostname that is not registered on the internal DNS
+			a third party app chooses to use NTLM auth
+
+		Steps of NTLM Auth
+			1. Client calc NTLM Hash
+			2. Client send username to app server
+			3. App server sends back a nonce
+				3a. Nonce also known as the challnege
+			4. Client send a response (encrypted nonce) back to app server
+			5. App server sends response, user, and nonce to the DC
+			6. DC encrpyts nonce with the NTLM hash of the user and compares it to the response
+			7. Approve authentication
+
+		NTLM hashes are fast, can be cracked semi-easily
+
+	Kerberos Authentication
+		Uses a ticket system
+		uses the DC in the role of a key distribution center (KDC)
+
+		Steps of Kerberos Auth
+			1. Client sends authentication server request
+				1a. Authentication Server Request == AS_REQ
+			2. DC sends auth server reply
+				1a. Authentication Server Reply == AS_REP
+				1b. AS_REP contains the session key and a ticket granting ticket (TGT)
+					1b1. TGT contains info about the user, is encrypted with a secret key to prevent tampering
+				1c. Session key is encrypted with the user's password hash
+			3. Client sends the ticket granting servive request
+			4. DC sends the ticket granting server reply
+			5. Client sends application request to the application server
+			6. app server sends the client the service authentication
+
+	Cached Credential Storage and Retrieval
+		currently the password hashes are stored in the memory space for LSASS
+		need mimikatz with elevated privs
+
+		mimikatz.exe
+		privilege::debug
+		sekurlsa::logonpasswords
+
+		TGT and service tickets are also stored locally in LSASS
+
+		sekurlsa::tickets
+			TGT vs TGS
+				Stealing a TGS would only allow us to particular resources associated with the tickets
+				Stealing a TGT would allow us to forge TGS's for arbitrary services
+
+
