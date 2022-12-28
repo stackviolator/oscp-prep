@@ -1,0 +1,8 @@
+------------------
+NOTES
+------------------
+
+FTP Anonymous login can upload a shell to the wwwroot and browse to
+very low level shell
+
+https://sohvaxus.github.io/content/winxp-sp1-privesc.html

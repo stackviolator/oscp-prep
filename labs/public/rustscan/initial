@@ -1,0 +1,3435 @@
+[1m[38;2;0;255;0m.[38;2;0;255;6m-[38;2;0;255;13m-[38;2;0;255;19m-[38;2;0;255;25m-[38;2;0;255;32m.[38;2;0;255;38m [38;2;0;255;45m.[38;2;0;255;51m-[38;2;0;255;57m.[38;2;0;255;64m [38;2;0;255;70m.[38;2;0;255;76m-[38;2;0;255;83m.[38;2;0;255;89m [38;2;0;255;96m.[38;2;0;255;102m-[38;2;0;255;108m-[38;2;0;255;115m-[38;2;0;255;121m-[38;2;0;255;127m.[38;2;0;255;134m.[38;2;0;255;140m-[38;2;0;255;147m-[38;2;0;255;153m-[38;2;0;255;159m.[38;2;0;255;166m [38;2;0;255;172m [38;2;0;255;178m.[38;2;0;255;185m-[38;2;0;255;191m-[38;2;0;255;198m-[38;2;0;255;204m-[38;2;0;255;210m.[38;2;0;255;217m [38;2;0;255;223m.[38;2;0;255;229m-[38;2;0;255;236m-[38;2;0;255;242m-[38;2;0;255;249m.[38;2;0;255;255m [38;2;0;249;255m [38;2;0;242;255m [38;2;0;236;255m.[38;2;0;230;255m-[38;2;0;223;255m-[38;2;0;217;255m.[38;2;0;210;255m [38;2;0;204;255m [38;2;0;198;255m.[38;2;0;191;255m-[38;2;0;185;255m.[38;2;0;179;255m [38;2;0;172;255m.[38;2;0;166;255m-[38;2;0;159;255m.[0m
+[38;2;0;255;0m|[38;2;0;255;6m [38;2;0;255;13m{[38;2;0;255;19m}[38;2;0;255;25m [38;2;0;255;32m [38;2;0;255;38m}[38;2;0;255;45m|[38;2;0;255;51m [38;2;0;255;57m{[38;2;0;255;64m [38;2;0;255;70m}[38;2;0;255;76m [38;2;0;255;83m|[38;2;0;255;89m{[38;2;0;255;96m [38;2;0;255;102m{[38;2;0;255;108m_[38;2;0;255;115m_[38;2;0;255;121m [38;2;0;255;127m{[38;2;0;255;134m_[38;2;0;255;140m [38;2;0;255;147m [38;2;0;255;153m [38;2;0;255;159m_[38;2;0;255;166m}[38;2;0;255;172m{[38;2;0;255;178m [38;2;0;255;185m{[38;2;0;255;191m_[38;2;0;255;198m_[38;2;0;255;204m [38;2;0;255;210m [38;2;0;255;217m/[38;2;0;255;223m [38;2;0;255;229m [38;2;0;255;236m_[38;2;0;255;242m_[38;2;0;255;249m_[38;2;0;255;255m}[38;2;0;249;255m [38;2;0;242;255m/[38;2;0;236;255m [38;2;0;230;255m{[38;2;0;223;255m}[38;2;0;217;255m [38;2;0;210;255m\[38;2;0;204;255m [38;2;0;198;255m|[38;2;0;191;255m [38;2;0;185;255m [38;2;0;179;255m`[38;2;0;172;255m|[38;2;0;166;255m [38;2;0;159;255m|[0m
+[38;2;0;255;0m|[38;2;0;255;6m [38;2;0;255;13m.[38;2;0;255;19m-[38;2;0;255;25m.[38;2;0;255;32m [38;2;0;255;38m\[38;2;0;255;45m|[38;2;0;255;51m [38;2;0;255;57m{[38;2;0;255;64m_[38;2;0;255;70m}[38;2;0;255;76m [38;2;0;255;83m|[38;2;0;255;89m.[38;2;0;255;96m-[38;2;0;255;102m.[38;2;0;255;108m_[38;2;0;255;115m}[38;2;0;255;121m [38;2;0;255;127m}[38;2;0;255;134m [38;2;0;255;140m|[38;2;0;255;147m [38;2;0;255;153m|[38;2;0;255;159m [38;2;0;255;166m [38;2;0;255;172m.[38;2;0;255;178m-[38;2;0;255;185m.[38;2;0;255;191m_[38;2;0;255;198m}[38;2;0;255;204m [38;2;0;255;210m}[38;2;0;255;217m\[38;2;0;255;223m [38;2;0;255;229m [38;2;0;255;236m [38;2;0;255;242m [38;2;0;255;249m [38;2;0;255;255m}[38;2;0;249;255m/[38;2;0;242;255m [38;2;0;236;255m [38;2;0;230;255m/[38;2;0;223;255m\[38;2;0;217;255m [38;2;0;210;255m [38;2;0;204;255m\[38;2;0;198;255m|[38;2;0;191;255m [38;2;0;185;255m|[38;2;0;179;255m\[38;2;0;172;255m [38;2;0;166;255m [38;2;0;159;255m|[0m
+[38;2;0;255;0m`[38;2;0;255;6m-[38;2;0;255;13m'[38;2;0;255;19m [38;2;0;255;25m`[38;2;0;255;32m-[38;2;0;255;38m'[38;2;0;255;45m`[38;2;0;255;51m-[38;2;0;255;57m-[38;2;0;255;64m-[38;2;0;255;70m-[38;2;0;255;76m-[38;2;0;255;83m'[38;2;0;255;89m`[38;2;0;255;96m-[38;2;0;255;102m-[38;2;0;255;108m-[38;2;0;255;115m-[38;2;0;255;121m'[38;2;0;255;127m [38;2;0;255;134m [38;2;0;255;140m`[38;2;0;255;147m-[38;2;0;255;153m'[38;2;0;255;159m [38;2;0;255;166m [38;2;0;255;172m`[38;2;0;255;178m-[38;2;0;255;185m-[38;2;0;255;191m-[38;2;0;255;198m-[38;2;0;255;204m'[38;2;0;255;210m [38;2;0;255;217m [38;2;0;255;223m`[38;2;0;255;229m-[38;2;0;255;236m-[38;2;0;255;242m-[38;2;0;255;249m'[38;2;0;255;255m [38;2;0;249;255m`[38;2;0;242;255m-[38;2;0;236;255m'[38;2;0;230;255m [38;2;0;223;255m [38;2;0;217;255m`[38;2;0;210;255m-[38;2;0;204;255m'[38;2;0;198;255m`[38;2;0;191;255m-[38;2;0;185;255m'[38;2;0;179;255m [38;2;0;172;255m`[38;2;0;166;255m-[38;2;0;159;255m'[0m
+[38;2;0;255;0mT[38;2;0;255;6mh[38;2;0;255;13me[38;2;0;255;19m [38;2;0;255;25mM[38;2;0;255;32mo[38;2;0;255;38md[38;2;0;255;45me[38;2;0;255;51mr[38;2;0;255;57mn[38;2;0;255;64m [38;2;0;255;70mD[38;2;0;255;76ma[38;2;0;255;83my[38;2;0;255;89m [38;2;0;255;96mP[38;2;0;255;102mo[38;2;0;255;108mr[38;2;0;255;115mt[38;2;0;255;121m [38;2;0;255;127mS[38;2;0;255;134mc[38;2;0;255;140ma[38;2;0;255;147mn[38;2;0;255;153mn[38;2;0;255;159me[38;2;0;255;166mr[38;2;0;255;172m.[0m[0m
+[1m[38;2;255;255;0m_[38;2;249;255;0m_[38;2;242;255;0m_[38;2;236;255;0m_[38;2;230;255;0m_[38;2;223;255;0m_[38;2;217;255;0m_[38;2;210;255;0m_[38;2;204;255;0m_[38;2;198;255;0m_[38;2;191;255;0m_[38;2;185;255;0m_[38;2;179;255;0m_[38;2;172;255;0m_[38;2;166;255;0m_[38;2;159;255;0m_[38;2;153;255;0m_[38;2;147;255;0m_[38;2;140;255;0m_[38;2;134;255;0m_[38;2;128;255;0m_[38;2;121;255;0m_[38;2;115;255;0m_[38;2;108;255;0m_[38;2;102;255;0m_[38;2;96;255;0m_[38;2;89;255;0m_[38;2;83;255;0m_[38;2;77;255;0m_[38;2;70;255;0m_[38;2;64;255;0m_[38;2;57;255;0m_[38;2;51;255;0m_[38;2;45;255;0m_[38;2;38;255;0m_[38;2;32;255;0m_[38;2;26;255;0m_[38;2;19;255;0m_[38;2;13;255;0m_[38;2;6;255;0m_[0m
+[38;2;255;255;0m:[38;2;249;255;0m [38;2;242;255;0mh[38;2;236;255;0mt[38;2;230;255;0mt[38;2;223;255;0mp[38;2;217;255;0ms[38;2;210;255;0m:[38;2;204;255;0m/[38;2;198;255;0m/[38;2;191;255;0md[38;2;185;255;0mi[38;2;179;255;0ms[38;2;172;255;0mc[38;2;166;255;0mo[38;2;159;255;0mr[38;2;153;255;0md[38;2;147;255;0m.[38;2;140;255;0mg[38;2;134;255;0mg[38;2;128;255;0m/[38;2;121;255;0mG[38;2;115;255;0mF[38;2;108;255;0mr[38;2;102;255;0mQ[38;2;96;255;0ms[38;2;89;255;0mG[38;2;83;255;0my[38;2;77;255;0m [38;2;70;255;0m [38;2;64;255;0m [38;2;57;255;0m [38;2;51;255;0m [38;2;45;255;0m [38;2;38;255;0m [38;2;32;255;0m [38;2;26;255;0m [38;2;19;255;0m [38;2;13;255;0m [38;2;6;255;0m:[0m
+[38;2;255;255;0m:[38;2;249;255;0m [38;2;242;255;0mh[38;2;236;255;0mt[38;2;230;255;0mt[38;2;223;255;0mp[38;2;217;255;0ms[38;2;210;255;0m:[38;2;204;255;0m/[38;2;198;255;0m/[38;2;191;255;0mg[38;2;185;255;0mi[38;2;179;255;0mt[38;2;172;255;0mh[38;2;166;255;0mu[38;2;159;255;0mb[38;2;153;255;0m.[38;2;147;255;0mc[38;2;140;255;0mo[38;2;134;255;0mm[38;2;128;255;0m/[38;2;121;255;0mR[38;2;115;255;0mu[38;2;108;255;0ms[38;2;102;255;0mt[38;2;96;255;0mS[38;2;89;255;0mc[38;2;83;255;0ma[38;2;77;255;0mn[38;2;70;255;0m/[38;2;64;255;0mR[38;2;57;255;0mu[38;2;51;255;0ms[38;2;45;255;0mt[38;2;38;255;0mS[38;2;32;255;0mc[38;2;26;255;0ma[38;2;19;255;0mn[38;2;13;255;0m [38;2;6;255;0m:[0m
+[38;2;255;255;0m [38;2;249;255;0m-[38;2;242;255;0m-[38;2;236;255;0m-[38;2;230;255;0m-[38;2;223;255;0m-[38;2;217;255;0m-[38;2;210;255;0m-[38;2;204;255;0m-[38;2;198;255;0m-[38;2;191;255;0m-[38;2;185;255;0m-[38;2;179;255;0m-[38;2;172;255;0m-[38;2;166;255;0m-[38;2;159;255;0m-[38;2;153;255;0m-[38;2;147;255;0m-[38;2;140;255;0m-[38;2;134;255;0m-[38;2;128;255;0m-[38;2;121;255;0m-[38;2;115;255;0m-[38;2;108;255;0m-[38;2;102;255;0m-[38;2;96;255;0m-[38;2;89;255;0m-[38;2;83;255;0m-[38;2;77;255;0m-[38;2;70;255;0m-[38;2;64;255;0m-[38;2;57;255;0m-[38;2;51;255;0m-[38;2;45;255;0m-[38;2;38;255;0m-[38;2;32;255;0m-[38;2;26;255;0m-[38;2;19;255;0m-[38;2;13;255;0m-[0m[0m
+Nmap? More like slowmap.🐢
+
+[1;34m[~][0m The config file is expected to be at "/home/pop/.rustscan.toml"
+[1;31m[!][0m File limit is lower than default batch size. Consider upping with --ulimit. May cause harm to sensitive servers
+[1;31m[!][0m Your file limit is very small, which negatively impacts RustScan's speed. Use the Docker image, or up the Ulimit with '--ulimit 5000'. 
+Open 10.11.1.21:21
+Open 10.11.1.8:21
+Open 10.11.1.13:21
+Open 10.11.1.101:21
+Open 10.11.1.14:21
+Open 10.11.1.115:21
+Open 10.11.1.116:21
+Open 10.11.1.128:21
+Open 10.11.1.227:21
+Open 10.11.1.223:21
+Open 10.11.1.8:22
+Open 10.11.1.220:21
+Open 10.11.1.35:22
+Open 10.11.1.44:22
+Open 10.11.1.39:22
+Open 10.11.1.101:22
+Open 10.11.1.72:22
+Open 10.11.1.71:22
+Open 10.11.1.115:22
+Open 10.11.1.116:22
+Open 10.11.1.251:21
+Open 10.11.1.141:22
+Open 10.11.1.136:22
+Open 10.11.1.209:22
+Open 10.11.1.231:22
+Open 10.11.1.237:22
+Open 10.11.1.234:22
+Open 10.11.1.251:22
+Open 10.11.1.250:22
+Open 10.11.1.72:25
+Open 10.11.1.115:25
+Open 10.11.1.227:25
+Open 10.11.1.229:25
+Open 10.11.1.231:25
+Open 10.11.1.217:22
+Open 10.11.1.217:25
+Open 10.11.1.20:53
+Open 10.11.1.120:53
+Open 10.11.1.220:53
+Open 10.11.1.8:80
+Open 10.11.1.10:80
+Open 10.11.1.21:80
+Open 10.11.1.31:80
+Open 10.11.1.50:80
+Open 10.11.1.14:80
+Open 10.11.1.35:80
+Open 10.11.1.39:80
+Open 10.11.1.72:80
+Open 10.11.1.101:80
+Open 10.11.1.115:80
+Open 10.11.1.116:80
+Open 10.11.1.133:80
+Open 10.11.1.123:80
+Open 10.11.1.227:80
+Open 10.11.1.223:80
+Open 10.11.1.234:80
+Open 10.11.1.229:80
+Open 10.11.1.237:80
+Open 10.11.1.250:80
+Open 10.11.1.251:80
+Open 10.11.1.20:88
+Open 10.11.1.120:88
+Open 10.11.1.220:88
+Open 10.11.1.217:80
+Open 10.11.1.116:110
+Open 10.11.1.72:110
+Open 10.11.1.229:110
+Open 10.11.1.8:111
+Open 10.11.1.72:111
+Open 10.11.1.115:111
+Open 10.11.1.141:111
+Open 10.11.1.231:111
+Open 10.11.1.237:111
+Open 10.11.1.209:111
+Open 10.11.1.136:113
+Open 10.11.1.217:110
+Open 10.11.1.217:111
+Open 10.11.1.72:119
+Open 10.11.1.5:135
+Open 10.11.1.20:135
+Open 10.11.1.21:135
+Open 10.11.1.13:135
+Open 10.11.1.24:135
+Open 10.11.1.22:135
+Open 10.11.1.31:135
+Open 10.11.1.50:135
+Open 10.11.1.128:135
+Open 10.11.1.121:135
+Open 10.11.1.120:135
+Open 10.11.1.123:135
+Open 10.11.1.122:135
+Open 10.11.1.111:135
+Open 10.11.1.220:135
+Open 10.11.1.223:135
+Open 10.11.1.227:135
+Open 10.11.1.222:135
+Open 10.11.1.5:139
+Open 10.11.1.8:139
+Open 10.11.1.21:139
+Open 10.11.1.20:139
+Open 10.11.1.13:139
+Open 10.11.1.22:139
+Open 10.11.1.24:139
+Open 10.11.1.31:139
+Open 10.11.1.111:139
+Open 10.11.1.101:139
+Open 10.11.1.121:139
+Open 10.11.1.115:139
+Open 10.11.1.136:139
+Open 10.11.1.128:139
+Open 10.11.1.120:139
+Open 10.11.1.123:139
+Open 10.11.1.122:139
+Open 10.11.1.220:139
+Open 10.11.1.231:139
+Open 10.11.1.227:139
+Open 10.11.1.222:139
+Open 10.11.1.223:139
+Open 10.11.1.116:143
+Open 10.11.1.115:143
+Open 10.11.1.229:143
+Open 10.11.1.217:143
+Open 10.11.1.115:199
+Open 10.11.1.20:389
+Open 10.11.1.120:389
+Open 10.11.1.220:389
+Open 10.11.1.8:443
+Open 10.11.1.14:443
+Open 10.11.1.217:443
+Open 10.11.1.123:443
+Open 10.11.1.115:443
+Open 10.11.1.227:443
+Open 10.11.1.223:443
+Open 10.11.1.237:443
+Open 10.11.1.8:445
+Open 10.11.1.5:445
+Open 10.11.1.13:445
+Open 10.11.1.21:445
+Open 10.11.1.20:445
+Open 10.11.1.22:445
+Open 10.11.1.24:445
+Open 10.11.1.31:445
+Open 10.11.1.101:445
+Open 10.11.1.111:445
+Open 10.11.1.121:445
+Open 10.11.1.120:445
+Open 10.11.1.122:445
+Open 10.11.1.128:445
+Open 10.11.1.136:445
+Open 10.11.1.123:445
+Open 10.11.1.223:445
+Open 10.11.1.227:445
+Open 10.11.1.220:445
+Open 10.11.1.222:445
+Open 10.11.1.231:445
+Open 10.11.1.20:464
+Open 10.11.1.120:464
+Open 10.11.1.220:464
+Open 10.11.1.209:515
+Open 10.11.1.229:587
+Open 10.11.1.20:593
+Open 10.11.1.120:593
+Open 10.11.1.220:593
+Open 10.11.1.8:631
+Open 10.11.1.20:636
+Open 10.11.1.120:636
+Open 10.11.1.220:636
+Open 10.11.1.217:836
+Open 10.11.1.217:993
+Open 10.11.1.217:995
+Open 10.11.1.5:1025
+Open 10.11.1.227:1025
+Open 10.11.1.227:1026
+Open 10.11.1.227:1028
+Open 10.11.1.13:1433
+Open 10.11.1.31:1433
+Open 10.11.1.111:1433
+Open 10.11.1.128:1433
+Open 10.11.1.222:1521
+Open 10.11.1.222:2030
+Open 10.11.1.72:2049
+Open 10.11.1.222:2233
+Open 10.11.1.20:3268
+Open 10.11.1.120:3268
+Open 10.11.1.220:3268
+Open 10.11.1.20:3269
+Open 10.11.1.220:3269
+Open 10.11.1.120:3269
+Open 10.11.1.8:3306
+Open 10.11.1.115:3306
+Open 10.11.1.39:3306
+Open 10.11.1.217:3306
+Open 10.11.1.123:3306
+Open 10.11.1.223:3306
+Open 10.11.1.227:3372
+Open 10.11.1.13:3389
+Open 10.11.1.20:3389
+Open 10.11.1.21:3389
+Open 10.11.1.22:3389
+Open 10.11.1.111:3389
+Open 10.11.1.24:3389
+Open 10.11.1.121:3389
+Open 10.11.1.128:3389
+Open 10.11.1.31:3389
+Open 10.11.1.123:3389
+Open 10.11.1.120:3389
+Open 10.11.1.122:3389
+Open 10.11.1.222:3389
+Open 10.11.1.220:3389
+Open 10.11.1.223:3389
+Open 10.11.1.229:3389
+Open 10.11.1.13:4167
+Open 10.11.1.128:4167
+Open 10.11.1.217:4190
+Open 10.11.1.217:4445
+Open 10.11.1.72:4555
+Open 10.11.1.217:4559
+Open 10.11.1.217:5038
+Open 10.11.1.220:5722
+Open 10.11.1.13:5800
+Open 10.11.1.128:5800
+Open 10.11.1.227:5800
+Open 10.11.1.13:5900
+Open 10.11.1.128:5900
+Open 10.11.1.227:5900
+Open 10.11.1.13:5985
+Open 10.11.1.20:5985
+Open 10.11.1.21:5985
+Open 10.11.1.31:5985
+Open 10.11.1.111:5985
+Open 10.11.1.121:5985
+Open 10.11.1.120:5985
+Open 10.11.1.128:5985
+Open 10.11.1.123:5985
+Open 10.11.1.122:5985
+Open 10.11.1.222:5985
+Open 10.11.1.223:5985
+Open 10.11.1.227:6532
+Open 10.11.1.209:6787
+Open 10.11.1.44:8000
+Open 10.11.1.209:8009
+Open 10.11.1.222:8009
+Open 10.11.1.209:8080
+Open 10.11.1.222:8080
+Open 10.11.1.111:8732
+Open 10.11.1.217:9090
+Open 10.11.1.20:9389
+Open 10.11.1.120:9389
+Open 10.11.1.220:9389
+Open 10.11.1.50:9505
+Open 10.11.1.141:10000
+Open 10.11.1.234:10443
+Open 10.11.1.227:27900
+Open 10.11.1.115:32768
+Open 10.11.1.72:37795
+Open 10.11.1.72:39301
+Open 10.11.1.72:43492
+Open 10.11.1.72:44012
+Open 10.11.1.237:44864
+Open 10.11.1.20:47001
+Open 10.11.1.21:47001
+Open 10.11.1.13:47001
+Open 10.11.1.111:47001
+Open 10.11.1.121:47001
+Open 10.11.1.120:47001
+Open 10.11.1.128:47001
+Open 10.11.1.122:47001
+Open 10.11.1.220:47001
+Open 10.11.1.123:47001
+Open 10.11.1.222:47001
+Open 10.11.1.223:47001
+Open 10.11.1.13:49152
+Open 10.11.1.128:49152
+Open 10.11.1.220:49152
+Open 10.11.1.13:49153
+Open 10.11.1.128:49153
+Open 10.11.1.220:49153
+Open 10.11.1.13:49154
+Open 10.11.1.128:49154
+Open 10.11.1.220:49154
+Open 10.11.1.13:49155
+Open 10.11.1.128:49155
+Open 10.11.1.220:49155
+Open 10.11.1.13:49156
+Open 10.11.1.128:49156
+Open 10.11.1.13:49157
+Open 10.11.1.128:49157
+Open 10.11.1.220:49157
+Open 10.11.1.13:49158
+Open 10.11.1.128:49158
+Open 10.11.1.220:49158
+Open 10.11.1.220:49163
+Open 10.11.1.220:49170
+Open 10.11.1.220:49262
+Open 10.11.1.21:49664
+Open 10.11.1.20:49664
+Open 10.11.1.22:49664
+Open 10.11.1.24:49664
+Open 10.11.1.111:49664
+Open 10.11.1.120:49664
+Open 10.11.1.121:49664
+Open 10.11.1.122:49664
+Open 10.11.1.123:49664
+Open 10.11.1.222:49664
+Open 10.11.1.223:49664
+Open 10.11.1.20:49665
+Open 10.11.1.21:49665
+Open 10.11.1.22:49665
+Open 10.11.1.24:49665
+Open 10.11.1.111:49665
+Open 10.11.1.121:49665
+Open 10.11.1.120:49665
+Open 10.11.1.122:49665
+Open 10.11.1.123:49665
+Open 10.11.1.223:49665
+Open 10.11.1.222:49665
+Open 10.11.1.20:49666
+Open 10.11.1.21:49666
+Open 10.11.1.22:49666
+Open 10.11.1.31:49666
+Open 10.11.1.24:49666
+Open 10.11.1.111:49666
+Open 10.11.1.121:49666
+Open 10.11.1.122:49666
+Open 10.11.1.123:49666
+Open 10.11.1.120:49666
+Open 10.11.1.223:49666
+Open 10.11.1.222:49666
+Open 10.11.1.20:49667
+Open 10.11.1.21:49667
+Open 10.11.1.22:49667
+Open 10.11.1.24:49667
+Open 10.11.1.31:49667
+Open 10.11.1.111:49667
+Open 10.11.1.120:49667
+Open 10.11.1.121:49667
+Open 10.11.1.122:49667
+Open 10.11.1.123:49667
+Open 10.11.1.222:49667
+Open 10.11.1.223:49667
+Open 10.11.1.21:49668
+Open 10.11.1.22:49668
+Open 10.11.1.24:49668
+Open 10.11.1.111:49668
+Open 10.11.1.121:49668
+Open 10.11.1.122:49668
+Open 10.11.1.123:49668
+Open 10.11.1.223:49668
+Open 10.11.1.222:49668
+Open 10.11.1.20:49669
+Open 10.11.1.21:49669
+Open 10.11.1.22:49669
+Open 10.11.1.24:49669
+Open 10.11.1.111:49669
+Open 10.11.1.121:49669
+Open 10.11.1.120:49669
+Open 10.11.1.123:49669
+Open 10.11.1.122:49669
+Open 10.11.1.222:49669
+Open 10.11.1.223:49669
+Open 10.11.1.21:49670
+Open 10.11.1.22:49670
+Open 10.11.1.24:49670
+Open 10.11.1.111:49670
+Open 10.11.1.121:49670
+Open 10.11.1.122:49670
+Open 10.11.1.123:49670
+Open 10.11.1.223:49670
+Open 10.11.1.222:49670
+Open 10.11.1.21:49671
+Open 10.11.1.22:49671
+Open 10.11.1.24:49671
+Open 10.11.1.111:49671
+Open 10.11.1.121:49671
+Open 10.11.1.122:49671
+Open 10.11.1.123:49671
+Open 10.11.1.223:49671
+Open 10.11.1.20:49672
+Open 10.11.1.121:49672
+Open 10.11.1.122:49672
+Open 10.11.1.120:49672
+Open 10.11.1.20:49677
+Open 10.11.1.120:49677
+Open 10.11.1.20:49678
+Open 10.11.1.120:49678
+Open 10.11.1.120:49679
+Open 10.11.1.20:49683
+Open 10.11.1.222:49684
+Open 10.11.1.20:49688
+Open 10.11.1.120:49692
+Open 10.11.1.120:49697
+Open 10.11.1.222:49703
+Open 10.11.1.20:49707
+Open 10.11.1.120:49714
+Open 10.11.1.72:59914
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 17:51 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:51
+Stats: 0:00:00 elapsed; 0 hosts completed (0 up), 0 undergoing Script Pre-Scan
+NSE: Active NSE Script Threads: 1 (0 waiting)
+NSE Timing: About 0.00% done
+Completed NSE at 17:51, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:51
+Completed NSE at 17:51, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:51
+Completed NSE at 17:51, 0.00s elapsed
+Initiating Ping Scan at 17:51
+Scanning 10.11.1.10 [2 ports]
+Completed Ping Scan at 17:51, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:51
+Completed Parallel DNS resolution of 1 host. at 17:51, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 17:51
+Scanning 10.11.1.10 [1 port]
+Discovered open port 80/tcp on 10.11.1.10
+Completed Connect Scan at 17:51, 0.02s elapsed (1 total ports)
+Initiating Service scan at 17:51
+Scanning 1 service on 10.11.1.10
+Completed Service scan at 17:51, 6.11s elapsed (1 service on 1 host)
+NSE: Script scanning 10.11.1.10.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:51
+Completed NSE at 17:51, 5.03s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:51
+Completed NSE at 17:51, 0.07s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:51
+Completed NSE at 17:51, 0.00s elapsed
+Nmap scan report for 10.11.1.10
+Host is up, received syn-ack (0.020s latency).
+Scanned at 2022-12-27 17:51:23 EST for 11s
+
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Microsoft IIS httpd 6.0
+|_http-title: Under Construction
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/6.0
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:51
+Completed NSE at 17:51, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:51
+Completed NSE at 17:51, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:51
+Completed NSE at 17:51, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.57 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 17:51 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:51
+Completed NSE at 17:51, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:51
+Completed NSE at 17:51, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:51
+Completed NSE at 17:51, 0.00s elapsed
+Initiating Ping Scan at 17:51
+Scanning 10.11.1.8 [2 ports]
+Completed Ping Scan at 17:51, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:51
+Completed Parallel DNS resolution of 1 host. at 17:51, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 17:51
+Scanning 10.11.1.8 [9 ports]
+Discovered open port 3306/tcp on 10.11.1.8
+Discovered open port 21/tcp on 10.11.1.8
+Discovered open port 111/tcp on 10.11.1.8
+Discovered open port 445/tcp on 10.11.1.8
+Discovered open port 139/tcp on 10.11.1.8
+Discovered open port 443/tcp on 10.11.1.8
+Discovered open port 22/tcp on 10.11.1.8
+Discovered open port 80/tcp on 10.11.1.8
+Discovered open port 631/tcp on 10.11.1.8
+Completed Connect Scan at 17:51, 0.02s elapsed (9 total ports)
+Initiating Service scan at 17:51
+Scanning 9 services on 10.11.1.8
+Completed Service scan at 17:54, 159.88s elapsed (9 services on 1 host)
+NSE: Script scanning 10.11.1.8.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:54
+NSE: [ftp-bounce 10.11.1.8:21] PORT response: 500 Illegal PORT command.
+NSE Timing: About 99.92% done; ETC: 17:54 (0:00:00 remaining)
+Completed NSE at 17:54, 30.66s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:54
+Completed NSE at 17:55, 21.20s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+Nmap scan report for 10.11.1.8
+Host is up, received syn-ack (0.018s latency).
+Scanned at 2022-12-27 17:51:35 EST for 211s
+
+PORT     STATE SERVICE     REASON  VERSION
+21/tcp   open  ftp         syn-ack vsftpd 2.0.1
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: ERROR
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.119.130
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 2.0.1 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh         syn-ack OpenSSH 3.9p1 (protocol 1.99)
+|_sshv1: Server supports SSHv1
+| ssh-hostkey: 
+|   1024 8994af2e5dc1da8425112c1245c670ac (RSA1)
+| 1024 35 156964931776691265368715094914662574254214065824385401443735183266380492074194744464486898093907614958482460938270245073084998545515592997167186913116503581749529958965492226515751899892020599345574118868190301842033965729122503772298683683232329927454079481833315863507419792266409187766409698590346083716381
+|   1024 c1c5d1830f4dd89e8f824cbe534b6e14 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAP4nrDYrkZYzkyUkQlh+7GFqXvjVFQBPidFXOSiNseXwN5aKSCD5wVxX80RojShdLDh7mVssyFLN0nGqyjeEVtQqaOH0DHHrgEebtp+C+3w9p2nDN64YV7xC8syKrfJ2gwmgVmO1TvZC2fwnhLGdPUwXjQRr17m86YrjMECZDvuXAAAAFQCpWxlKAiOCcwIMdK7UneijfnePxQAAAIA6RkMzawvFc+kuNMdhPHzD3oai2OX4kmg+vw275J2tj31IKmlSgEpc66PYjpXgJLWJI/pNh0Ui4rsO3aW9a6Die16q+gmEnwEx1/FdxFK5ipPg8ABQ4hlH749B6seszq0u7BJzFW0TuEOQGH/Jd7yOnO2unaK4G1GsI9+39nViIAAAAIEAxMpyyTO/ORRV/OWyPz0hboKY9rvXv91DSu1yLz22Mvnhk8UxrVVpjQAudFhURONRW5a5t0xZ2okFB+dac2+UN2s1kyyl7HiFBCNEpGOgHUlRtouy+fPu56mNdCKGtJzKMOGWXvBvuixnm2p9OJ6SDV9W3H8Ea0YdoDbvl8bcPv4=
+|   1024 bce1e6ddab5efdd1212e117cd5b20352 (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAwpmhWcwTwaCOPsrbpUUgAS5scHjFdQAUZlhIFHmG4GlZVBrZvVQURutlIl3NUe1TQZuvu4UAsI31Tq+zZP+s513rtAL5vhKT8ltts7nlMw7rbgw9zjv7PGIGAKk2ZwjbeOYZRIWyxwd1UTP6BL2IJMi56AST4GqWK+JIFmntR8M=
+80/tcp   open  http        syn-ack Apache httpd 2.0.52 ((CentOS))
+|_http-server-header: Apache/2.0.52 (CentOS)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+| http-robots.txt: 2 disallowed entries 
+|_/internal/  /tmp/ 
+111/tcp  open  rpcbind     syn-ack 2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100024  1            785/udp   status
+|_  100024  1            788/tcp   status
+139/tcp  open  netbios-ssn syn-ack Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+443/tcp  open  ssl/http    syn-ack Apache httpd 2.0.52 ((CentOS))
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/localityName=SomeCity/organizationalUnitName=SomeOrganizationalUnit/emailAddress=root@localhost.localdomain
+| Issuer: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/localityName=SomeCity/organizationalUnitName=SomeOrganizationalUnit/emailAddress=root@localhost.localdomain
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: md5WithRSAEncryption
+| Not valid before: 2009-09-16T14:03:22
+| Not valid after:  2010-09-16T14:03:22
+| MD5:   1a3c055ebd46ad3f70313690caf7be26
+| SHA-1: ef51f052448cf74caf1a9897b1b1229206e6d77e
+| -----BEGIN CERTIFICATE-----
+| MIIEDDCCA3WgAwIBAgIBADANBgkqhkiG9w0BAQQFADCBuzELMAkGA1UEBhMCLS0x
+| EjAQBgNVBAgTCVNvbWVTdGF0ZTERMA8GA1UEBxMIU29tZUNpdHkxGTAXBgNVBAoT
+| EFNvbWVPcmdhbml6YXRpb24xHzAdBgNVBAsTFlNvbWVPcmdhbml6YXRpb25hbFVu
+| aXQxHjAcBgNVBAMTFWxvY2FsaG9zdC5sb2NhbGRvbWFpbjEpMCcGCSqGSIb3DQEJ
+| ARYacm9vdEBsb2NhbGhvc3QubG9jYWxkb21haW4wHhcNMDkwOTE2MTQwMzIyWhcN
+| MTAwOTE2MTQwMzIyWjCBuzELMAkGA1UEBhMCLS0xEjAQBgNVBAgTCVNvbWVTdGF0
+| ZTERMA8GA1UEBxMIU29tZUNpdHkxGTAXBgNVBAoTEFNvbWVPcmdhbml6YXRpb24x
+| HzAdBgNVBAsTFlNvbWVPcmdhbml6YXRpb25hbFVuaXQxHjAcBgNVBAMTFWxvY2Fs
+| aG9zdC5sb2NhbGRvbWFpbjEpMCcGCSqGSIb3DQEJARYacm9vdEBsb2NhbGhvc3Qu
+| bG9jYWxkb21haW4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMN2FhFYfT0z
+| MIjklEBLEOGUuL7xY+O+KGCT2515yLEzI+LIi/c3vM9WTdwJLdcKVAAsczDo1Tpj
+| GrMuzPzPmkcDV3AGne07NBREjX8yBAIhgTrpdBn93u2KK+WyHy9kYRZnig4MY6jH
+| gVns7q6VWC/QDUV0Wx3JxzfZu3PysoaFAgMBAAGjggEcMIIBGDAdBgNVHQ4EFgQU
+| wJ02TwWBIuctg3mpJiMpj10ltm4wgegGA1UdIwSB4DCB3YAUwJ02TwWBIuctg3mp
+| JiMpj10ltm6hgcGkgb4wgbsxCzAJBgNVBAYTAi0tMRIwEAYDVQQIEwlTb21lU3Rh
+| dGUxETAPBgNVBAcTCFNvbWVDaXR5MRkwFwYDVQQKExBTb21lT3JnYW5pemF0aW9u
+| MR8wHQYDVQQLExZTb21lT3JnYW5pemF0aW9uYWxVbml0MR4wHAYDVQQDExVsb2Nh
+| bGhvc3QubG9jYWxkb21haW4xKTAnBgkqhkiG9w0BCQEWGnJvb3RAbG9jYWxob3N0
+| LmxvY2FsZG9tYWluggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADgYEA
+| nkTrpUvwYVzIK6dxN3Tqmcdax+vuRVxFJ4dDv+pzJenfHIc1e6u0MOQY9Au8YN1X
+| UZ9fV916/WSXHpKXGvO4YPkOMKQuGHP5qsX8QaA3W6G6jDG1z9PnHhqVZZmib/Q/
+| 4FLrjszxEN86lUREUpx6xxeB3Hng3ksLjSbAFQ7dtfg=
+|_-----END CERTIFICATE-----
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|_    SSL2_RC4_64_WITH_MD5
+|_http-server-header: Apache/2.0.52 (CentOS)
+|_ssl-date: 2022-12-28T03:54:47+00:00; +5h00m00s from scanner time.
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| http-robots.txt: 2 disallowed entries 
+|_/internal/  /tmp/ 
+445/tcp  open  netbios-ssn syn-ack Samba smbd 3.0.33-0.17.el4 (workgroup: MYGROUP)
+631/tcp  open  ipp         syn-ack CUPS 1.1
+|_http-title: 403 Forbidden
+|_http-server-header: CUPS/1.1
+| http-methods: 
+|   Supported Methods: GET HEAD OPTIONS POST PUT
+|_  Potentially risky methods: PUT
+3306/tcp open  mysql?      syn-ack
+Service Info: OS: Unix
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_clock-skew: mean: 6h40m01s, deviation: 2h53m14s, median: 4h59m59s
+|_smb2-time: Protocol negotiation failed (SMB2)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.33-0.17.el4)
+|   Computer name: phoenix
+|   NetBIOS computer name: 
+|   Domain name: 
+|   FQDN: phoenix
+|_  System time: 2022-12-27T22:54:19-05:00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 42008/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 32139/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 55489/udp): CLEAN (Timeout)
+|   Check 4 (port 52557/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 212.02 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 17:55 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+Initiating Ping Scan at 17:55
+Scanning 10.11.1.72 [2 ports]
+Completed Ping Scan at 17:55, 3.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.72 [host down, received no-response]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 3.19 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 17:55 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+Initiating Ping Scan at 17:55
+Scanning 10.11.1.71 [2 ports]
+Completed Ping Scan at 17:55, 2.23s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:55
+Completed Parallel DNS resolution of 1 host. at 17:55, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 17:55
+Scanning 10.11.1.71 [1 port]
+Discovered open port 22/tcp on 10.11.1.71
+Completed Connect Scan at 17:55, 0.02s elapsed (1 total ports)
+Initiating Service scan at 17:55
+Scanning 1 service on 10.11.1.71
+Completed Service scan at 17:55, 0.46s elapsed (1 service on 1 host)
+NSE: Script scanning 10.11.1.71.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 1.07s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+Nmap scan report for 10.11.1.71
+Host is up, received conn-refused (0.21s latency).
+Scanned at 2022-12-27 17:55:12 EST for 2s
+
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 6.6.1p1 Ubuntu 2ubuntu2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 72b555801b24d6f3bfa5c5981b010390 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAPDp94G5Kc4Ks0wezODHigKfvW97YanGJDf61rWZUPHVElBwnEKX9DzvaSFgYfDKYGLSSFaL8qOZ4BT2v0E8oY8+4kFUt9mNI6nerC1Zl0MIpVyzGCD/K7qbY4733Jh3qbL67JJlUDmhD8F+i8BxwUzmgUDqHe1SvfIivf4aWqMNAAAAFQDqhOTGYazHICsZI9u4au29awFhlQAAAIB61P12Bw67UEfFn/M9lWGuSpMlAMHvP0lkaEAJqibnO1iMP8sQxH0iAor+iy+b0g0k5v64AoWTwLCPoB/WXBG38EjqX4FPMvVv0PaTSKcjSx5Xoi7dpeQKgFple5wz69M5BnIN7bayk8hhVl6spf2FzFnOi861hfj4E4F/Qe5NQQAAAIAFiYxiG8wo3FbIpzedEYITInKeefsoqfanxF0FKflkG2RIVvpplKGWyBSUJ+8cdfYWwqQuO1ualbDYeH1EpY/k7OZ3FiV4xcVEs7CMj7F+9r2+QNG8dGsVjpFT3JN9zsaxdt581Aww855EE3Vfw0BskmOUNRakV09KE1QUD6e69w==
+|   2048 1af6a70dedc273a16fa3086828b53bbb (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDSZYpYor7ahn/cRF6dX6qxqoI+c+/N+TQSuSqto6S38bCWRIjv8eGQCOFScThYM6yLdxLBno0xRQ8GJY0DgHs9rIfU//3KpO4YqVvVF0iG+NVlhNrksDGFams55lbOdku55VUpU1rX4UJ7GVHHwF2wDBLZ+E1iZktuMVs7yZ4FKXpfnLOWIJ6lsqIqwLCLaeEhwcp1/jt/ZvOI4fj1PmOP5HMMf2A2F7pb+/ypsAlhQxst2jLNlXVLy8M2x6+jnke8KpSgQa0+0ptl3y7IYWPKkg93WBowSFfTsetIHH9LB/P6UnMfHphr3gA7PtNoAJdIe1TNXU76sW6U5PMeOdAT
+|   256 e6438959f985d8e2bbe3d7ed285cc565 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKPA2Hze5sMxed/a1Mlp4J5Cwlc+bcknkXE3iJLITxrSwAsuuJq/7eEXA+vA80qyLh8tlTDQrt0gUaW7v15PhD8=
+|   256 3b0bf3843c7d6e2b2c811194169b717d (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDvb5Nu4EkoIe1euGgqiXD2j0kxmqct0LB0R8G350t16
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 4.03 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 17:55 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:55
+Completed NSE at 17:55, 0.00s elapsed
+Initiating Ping Scan at 17:55
+Scanning 10.11.1.24 [2 ports]
+Completed Ping Scan at 17:55, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:55
+Completed Parallel DNS resolution of 1 host. at 17:55, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 17:55
+Scanning 10.11.1.24 [12 ports]
+Discovered open port 135/tcp on 10.11.1.24
+Discovered open port 445/tcp on 10.11.1.24
+Discovered open port 139/tcp on 10.11.1.24
+Discovered open port 3389/tcp on 10.11.1.24
+Discovered open port 49669/tcp on 10.11.1.24
+Discovered open port 49671/tcp on 10.11.1.24
+Discovered open port 49666/tcp on 10.11.1.24
+Discovered open port 49668/tcp on 10.11.1.24
+Discovered open port 49665/tcp on 10.11.1.24
+Discovered open port 49670/tcp on 10.11.1.24
+Discovered open port 49667/tcp on 10.11.1.24
+Discovered open port 49664/tcp on 10.11.1.24
+Completed Connect Scan at 17:55, 0.04s elapsed (12 total ports)
+Initiating Service scan at 17:55
+Scanning 12 services on 10.11.1.24
+Service scan Timing: About 41.67% done; ETC: 17:57 (0:01:16 remaining)
+Completed Service scan at 17:56, 53.84s elapsed (12 services on 1 host)
+NSE: Script scanning 10.11.1.24.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:56
+Completed NSE at 17:56, 9.09s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:56
+Completed NSE at 17:56, 0.09s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:56
+Completed NSE at 17:56, 0.00s elapsed
+Nmap scan report for 10.11.1.24
+Host is up, received conn-refused (0.018s latency).
+Scanned at 2022-12-27 17:55:14 EST for 63s
+
+PORT      STATE SERVICE       REASON  VERSION
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds  syn-ack Windows 10 Pro N 14393 microsoft-ds (workgroup: svcorp)
+3389/tcp  open  ms-wbt-server syn-ack Microsoft Terminal Services
+|_ssl-date: 2022-12-27T22:56:10+00:00; -7s from scanner time.
+| ssl-cert: Subject: commonName=svclient73.svcorp.com
+| Issuer: commonName=svclient73.svcorp.com
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-12-25T04:19:01
+| Not valid after:  2023-06-26T04:19:01
+| MD5:   cd7f52f3d01c8fb49167005670d9031d
+| SHA-1: 72d6d168fddcd79c39ba635a876d43f1ad413408
+| -----BEGIN CERTIFICATE-----
+| MIIC7jCCAdagAwIBAgIQULOiNGjxGYtHIrn4/gmChjANBgkqhkiG9w0BAQsFADAg
+| MR4wHAYDVQQDExVzdmNsaWVudDczLnN2Y29ycC5jb20wHhcNMjIxMjI1MDQxOTAx
+| WhcNMjMwNjI2MDQxOTAxWjAgMR4wHAYDVQQDExVzdmNsaWVudDczLnN2Y29ycC5j
+| b20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDjUF1DVuSfaoxhL8pc
+| X0yCaDvg0+aY5v1VoWihbxzm0HcOK0pM44RCHXR7At+FdEzJC6V7fyJ6PtMWsYFC
+| mM0WCir9ytwhNS4V5y5/NEX1vYqVHlaM2e8+jdzcGq1tI/3L2j/HOIy1vA1wAkwx
+| 2Y/y62/6oKo0cluvhHJXRK9e1pD5JTMoNjgSJVMp4Now0TMApmMajCJXbxrHZWpl
+| E7ZqozzB/N0gJrin/b30sGipsnQOkMQ6PxWZM8B3ZNBqplIucCnoXdo70v2VIi95
+| nuNgtiUJnRtTdWlBwyeVGg4wwYvSL5DlHs7TdcgdxvvRBaadMtEByHfOb1AMsUFd
+| KMRPAgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDAN
+| BgkqhkiG9w0BAQsFAAOCAQEAf+Rqw7ibbIlO9g9yOfSC+o2w7CjkmnkDvrBwrhCu
+| jhY/Huw/W/OoRDWxW1Cu4fLwmLQdQFjcjVF+Z+t9PET7atgnx+TdFzS6kr+d0bb3
+| dOZ9gdsX44PmSOlc3Q+LJ/aqUH80sn26dG4Dq4It4GXkuFBWnbnpsutPA7XCI59S
+| 8r2TfSg8DLz+tsTkXLtTwrPSTs1r5AakMXaYErLfsRoubEVhO6rdaz6CiGk9V7J9
+| 0pz3ree121vwyASGTZ72eQPmOpYW+QCmXm9q1BAs2S3w2N8e6qLo2r7zwD5rtSP3
+| 1oUsE6DG+InEfojX1F1j0g/qzQILvsspHt312CYRNuIXFQ==
+|_-----END CERTIFICATE-----
+| rdp-ntlm-info: 
+|   Target_Name: svcorp
+|   NetBIOS_Domain_Name: svcorp
+|   NetBIOS_Computer_Name: SVCLIENT73
+|   DNS_Domain_Name: svcorp.com
+|   DNS_Computer_Name: svclient73.svcorp.com
+|   DNS_Tree_Name: svcorp.com
+|   Product_Version: 10.0.14393
+|_  System_Time: 2022-12-27T22:56:01+00:00
+49664/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49666/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49668/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49669/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49670/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49671/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: Host: SVCLIENT73; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -6s, deviation: 2s, median: -7s
+| smb-os-discovery: 
+|   OS: Windows 10 Pro N 14393 (Windows 10 Pro N 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_10::-
+|   Computer name: svclient73
+|   NetBIOS computer name: SVCLIENT73\x00
+|   Domain name: svcorp.com
+|   Forest name: svcorp.com
+|   FQDN: svclient73.svcorp.com
+|_  System time: 2022-12-27T22:56:06+00:00
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2022-12-27T22:56:04
+|_  start_date: 2022-02-05T04:37:18
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 61102/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 50871/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 24669/udp): CLEAN (Timeout)
+|   Check 4 (port 20945/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:56
+Completed NSE at 17:56, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:56
+Completed NSE at 17:56, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:56
+Completed NSE at 17:56, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 63.32 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 17:56 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:56
+Completed NSE at 17:56, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:56
+Completed NSE at 17:56, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:56
+Completed NSE at 17:56, 0.00s elapsed
+Initiating Ping Scan at 17:56
+Scanning 10.11.1.13 [2 ports]
+Completed Ping Scan at 17:56, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:56
+Completed Parallel DNS resolution of 1 host. at 17:56, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 17:56
+Scanning 10.11.1.13 [18 ports]
+Discovered open port 445/tcp on 10.11.1.13
+Discovered open port 21/tcp on 10.11.1.13
+Discovered open port 135/tcp on 10.11.1.13
+Discovered open port 5900/tcp on 10.11.1.13
+Discovered open port 3389/tcp on 10.11.1.13
+Discovered open port 49158/tcp on 10.11.1.13
+Discovered open port 139/tcp on 10.11.1.13
+Discovered open port 49153/tcp on 10.11.1.13
+Discovered open port 49156/tcp on 10.11.1.13
+Discovered open port 49155/tcp on 10.11.1.13
+Discovered open port 47001/tcp on 10.11.1.13
+Discovered open port 4167/tcp on 10.11.1.13
+Discovered open port 1433/tcp on 10.11.1.13
+Discovered open port 49154/tcp on 10.11.1.13
+Discovered open port 5985/tcp on 10.11.1.13
+Discovered open port 5800/tcp on 10.11.1.13
+Discovered open port 49157/tcp on 10.11.1.13
+Discovered open port 49152/tcp on 10.11.1.13
+Completed Connect Scan at 17:56, 0.04s elapsed (18 total ports)
+Initiating Service scan at 17:56
+Scanning 18 services on 10.11.1.13
+Service scan Timing: About 61.11% done; ETC: 17:57 (0:00:34 remaining)
+Completed Service scan at 17:57, 67.49s elapsed (18 services on 1 host)
+NSE: Script scanning 10.11.1.13.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:57
+NSE: [ftp-bounce 10.11.1.13:21] PORT response: 501 Server cannot accept argument.
+Completed NSE at 17:57, 10.31s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:57
+Completed NSE at 17:57, 0.43s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:57
+Completed NSE at 17:57, 0.00s elapsed
+Nmap scan report for 10.11.1.13
+Host is up, received conn-refused (0.018s latency).
+Scanned at 2022-12-27 17:56:17 EST for 78s
+
+PORT      STATE SERVICE            REASON  VERSION
+21/tcp    open  ftp                syn-ack Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 04-07-19  10:25PM       <DIR>          aspnet_client
+| 04-07-19  07:14PM                99710 iis-85.png
+| 04-07-19  07:14PM                  701 iisstart.htm
+|_12-21-22  04:38AM                46705 insomniashell.aspx
+| ftp-syst: 
+|_  SYST: Windows_NT
+135/tcp   open  msrpc              syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn        syn-ack Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       syn-ack Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+1433/tcp  open  ms-sql-s           syn-ack Microsoft SQL Server 2012 11.00.2100.00; RTM
+|_ssl-date: 2022-12-27T22:57:33+00:00; -2s from scanner time.
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2022-03-16T23:28:47
+| Not valid after:  2052-03-16T23:28:47
+| MD5:   772d0f6f1be594627336f1dc91e154ff
+| SHA-1: 23133eec3709cd26f6fd669c6f4c42acadceb7b9
+| -----BEGIN CERTIFICATE-----
+| MIIB+zCCAWSgAwIBAgIQPOgY2jnheopNi3+Q+nGdAjANBgkqhkiG9w0BAQUFADA7
+| MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA
+| bABsAGIAYQBjAGswIBcNMjIwMzE2MjMyODQ3WhgPMjA1MjAzMTYyMzI4NDdaMDsx
+| OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs
+| AGwAYgBhAGMAazCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAtghYafnAEd9L
+| 3D8OjDU2wI8k2bRCAgvT67hKCmG48gxTBTT5e7cO+ZML0EtTBLUEYDksAVbYtawq
+| 8G4zpTWJLG06OceNBaDLVoOvPC+/maQSjJx88oQ3PPbvakTLjMiNMCrw8CIPPGXh
+| AwaVQurITFywO8z7Dd9KmGB3ZqlNp1sCAwEAATANBgkqhkiG9w0BAQUFAAOBgQAY
+| JlO8ssoZXxJ68/PJljXCpOZoO4E7B5CCA83zTUu8Sr+PabbZ856EOd0alyNPIuq3
+| AgTRxAGU86LP4GHouTmjn/xLkPEzbCxP7RnSSCOBLkbTfBIsOE115bWRFRyNku6q
+| iAKhiNX5WfUOidHp64eADjRD1hujC0oihDJBFbeakA==
+|_-----END CERTIFICATE-----
+3389/tcp  open  ssl/ms-wbt-server? syn-ack
+| ssl-cert: Subject: commonName=disco
+| Issuer: commonName=disco
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-12-20T04:37:53
+| Not valid after:  2023-06-21T04:37:53
+| MD5:   a0e262cd6fdfb6dc432d3e8d7f501fcc
+| SHA-1: 021d966ea1cac8d6a11f78add4ae9e64d5543a00
+| -----BEGIN CERTIFICATE-----
+| MIICzjCCAbagAwIBAgIQTyPNPhKKiLRG3boRK7sv5jANBgkqhkiG9w0BAQsFADAQ
+| MQ4wDAYDVQQDEwVkaXNjbzAeFw0yMjEyMjAwNDM3NTNaFw0yMzA2MjEwNDM3NTNa
+| MBAxDjAMBgNVBAMTBWRpc2NvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+| AQEA0OVFzV5i/clUCS0mCMmbjbFRMMHnaM9I7yWApvxpgbKHXI9qpFtRzLHqtnoG
+| J3TKYFBiHkiigZJdIVmSQh/5XdcASkEGGvpi8IxzgBVDqB8kP6vWcTdulKFyFKCy
+| t2SERiWvpdFe2zlridvGHYsmMvr647QYI9ZJkkSZNsl/C5VI2BxAavmtikHThgnS
+| gYPajbwU/MtIQbqcPf2ijl7EM6VWNLNUogI38IPFxYSsgXF3bF9Dd6fsyv9EYnPk
+| hLsjb4/4LFrLK4ctLuVmk/AaFT0jGzepqVpzySGZ6rBtac9Li8OIV2/tMj7P6Kbn
+| zZfhCtz4LIue3OzwuJtWcgN+QwIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD
+| ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAH5b+LdL63vESwQtIQ4h
+| KapJYooVTpmRpLYIxwSwY7a5kb6piKi16zuVba2N1fA/f+4wYlU9i04Jv787vazD
+| WjL2v49wWKS1BXTIiUYsmHN5mdVl2d6VntGWjHuN+stkl2RWKc0JHg9z3i0sOtoi
+| 61AkqGd32O9o9NqY48Widr1b7fS2huaErwbf4gH/s48R/Htp+nAErApeF0GRwpFl
+| sRpfKu50vSUPT37zEPsVLpywn8UIMQ6MdtHztHRxhkbm9njHfTeZQexoYo73QeIu
+| /oU4DMwzo/q833B7+tlqO7Tc9Q3qOZA6qfax1gzb8z6E+ajRXRwaK3O/vRjZNiRX
+| KUI=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2022-12-27T22:57:33+00:00; -2s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: DISCO
+|   NetBIOS_Domain_Name: DISCO
+|   NetBIOS_Computer_Name: DISCO
+|   DNS_Domain_Name: disco
+|   DNS_Computer_Name: disco
+|   Product_Version: 6.3.9600
+|_  System_Time: 2022-12-27T22:57:23+00:00
+4167/tcp  open  http               syn-ack Microsoft IIS httpd 8.5
+|_http-title: IIS Windows Server
+|_http-server-header: Microsoft-IIS/8.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+5800/tcp  open  http-proxy         syn-ack sslstrip
+|_http-title: TightVNC desktop [disco]
+| http-methods: 
+|_  Supported Methods: GET
+5900/tcp  open  vnc                syn-ack VNC (protocol 3.8)
+| vnc-info: 
+|   Protocol version: 3.8
+|   Security types: 
+|     None (1)
+|     Tight (16)
+|   Tight auth subtypes: 
+|     None
+|_  WARNING: Server does not require authentication
+5985/tcp  open  http               syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+47001/tcp open  http               syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49152/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49153/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49154/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49155/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49156/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49157/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49158/tcp open  msrpc              syn-ack Microsoft Windows RPC
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2022-12-27T22:57:27
+|_  start_date: 2022-03-16T23:28:44
+|_clock-skew: mean: -2s, deviation: 0s, median: -2s
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 46886/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 56189/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 58512/udp): CLEAN (Timeout)
+|   Check 4 (port 36194/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled but not required
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:57
+Completed NSE at 17:57, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:57
+Completed NSE at 17:57, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:57
+Completed NSE at 17:57, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 78.53 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 17:57 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:57
+Completed NSE at 17:57, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:57
+Completed NSE at 17:57, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:57
+Completed NSE at 17:57, 0.00s elapsed
+Initiating Ping Scan at 17:57
+Scanning 10.11.1.121 [2 ports]
+Completed Ping Scan at 17:57, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:57
+Completed Parallel DNS resolution of 1 host. at 17:57, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 17:57
+Scanning 10.11.1.121 [15 ports]
+Discovered open port 3389/tcp on 10.11.1.121
+Discovered open port 135/tcp on 10.11.1.121
+Discovered open port 139/tcp on 10.11.1.121
+Discovered open port 445/tcp on 10.11.1.121
+Discovered open port 49672/tcp on 10.11.1.121
+Discovered open port 49667/tcp on 10.11.1.121
+Discovered open port 49668/tcp on 10.11.1.121
+Discovered open port 47001/tcp on 10.11.1.121
+Discovered open port 49671/tcp on 10.11.1.121
+Discovered open port 5985/tcp on 10.11.1.121
+Discovered open port 49666/tcp on 10.11.1.121
+Discovered open port 49664/tcp on 10.11.1.121
+Discovered open port 49670/tcp on 10.11.1.121
+Discovered open port 49665/tcp on 10.11.1.121
+Discovered open port 49669/tcp on 10.11.1.121
+Completed Connect Scan at 17:57, 0.03s elapsed (15 total ports)
+Initiating Service scan at 17:57
+Scanning 15 services on 10.11.1.121
+Service scan Timing: About 46.67% done; ETC: 17:59 (0:01:02 remaining)
+Completed Service scan at 17:58, 54.09s elapsed (15 services on 1 host)
+NSE: Script scanning 10.11.1.121.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 8.19s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.13s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+Nmap scan report for 10.11.1.121
+Host is up, received conn-refused (0.018s latency).
+Scanned at 2022-12-27 17:57:36 EST for 62s
+
+PORT      STATE SERVICE       REASON  VERSION
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds? syn-ack
+3389/tcp  open  ms-wbt-server syn-ack Microsoft Terminal Services
+| ssl-cert: Subject: commonName=xor-app23.xor.com
+| Issuer: commonName=xor-app23.xor.com
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-12-22T19:41:04
+| Not valid after:  2023-06-23T19:41:04
+| MD5:   288772ac0b1b64f89fdaeecf05e19926
+| SHA-1: 4a976e3aecf748e6b310dc0e1d7191362f597e13
+| -----BEGIN CERTIFICATE-----
+| MIIC5jCCAc6gAwIBAgIQSlmsScUykpBN8fF1rydtyjANBgkqhkiG9w0BAQsFADAc
+| MRowGAYDVQQDExF4b3ItYXBwMjMueG9yLmNvbTAeFw0yMjEyMjIxOTQxMDRaFw0y
+| MzA2MjMxOTQxMDRaMBwxGjAYBgNVBAMTEXhvci1hcHAyMy54b3IuY29tMIIBIjAN
+| BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA34+MxU9GbAWyJyV6Ue6XC0WhwmKa
+| uFSPRvf9EfqCZDZt8idTEkQh1srRMpC7QtdAmfgMGVRtOTC1MYGcDK8TMwjOHNrb
+| bWm8jHojyMslkPU6w9n83crfKzjdcZ2vd/MKLSSVlygs8AiMDz9J3gXNGP/ORKAC
+| vWCaHKEE/91INmj4kyTrOKkJDhBozlTwlMi8WzKHYucKA56D5zpWoo8tpGNntqCN
+| UqfHVAvF2dXuA68h4ZW4pTpqapFewLmZQxC0Ouz3GA5hM4Vg1wGCHTx2R3Qt+a2j
+| PSQbxQCWaWKNHnSPUjEtWsBAKX6egjkzwJVFhDBdBlAnGhGdU34D3K37mQIDAQAB
+| oyQwIjATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcN
+| AQELBQADggEBAHEw9Vlh3bSHxtJ6igcSpBeCnrQ4jwCqgODEjV6976vZzCXZG2QD
+| sFTD883NjZUox6m8UtRBhhLP2YH2niGcHs0YvACXH8jg1sCIEXNwF6/C8qw94mmV
+| 0gXrjktK5VjRZ1uYPZhNsI4LpspeYzu6UulP6sxfIgWesvHXI6iPwaEliyrLwru4
+| zvTTC5O34+PFGqYsVRrs7ED6DbihGPBK5LDwPkU7+VH0CPVY3C0xaxOljHsXkIGN
+| u9A4UOKIRxwQ4vjWMWxWe0JBGbGcNHTy/deDwwFRAngmIWZlp5W2PBvXOg5SyRk4
+| NnbIPU6OWvDJZb6eNqb8wtxc1tHn7fy1iY4=
+|_-----END CERTIFICATE-----
+| rdp-ntlm-info: 
+|   Target_Name: xor
+|   NetBIOS_Domain_Name: xor
+|   NetBIOS_Computer_Name: XOR-APP23
+|   DNS_Domain_Name: xor.com
+|   DNS_Computer_Name: xor-app23.xor.com
+|   DNS_Tree_Name: xor.com
+|   Product_Version: 10.0.17763
+|_  System_Time: 2022-12-27T22:58:25+00:00
+|_ssl-date: 2022-12-27T22:58:33+00:00; -5s from scanner time.
+5985/tcp  open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+47001/tcp open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49666/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49668/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49669/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49670/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49671/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49672/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -5s, deviation: 0s, median: -5s
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2022-12-27T22:58:27
+|_  start_date: N/A
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 7534/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 54817/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 45840/udp): CLEAN (Timeout)
+|   Check 4 (port 5882/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 62.70 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 17:58 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+Initiating Ping Scan at 17:58
+Scanning 10.11.1.251 [2 ports]
+Completed Ping Scan at 17:58, 2.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:58
+Completed Parallel DNS resolution of 1 host. at 17:58, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 17:58
+Scanning 10.11.1.251 [3 ports]
+Discovered open port 21/tcp on 10.11.1.251
+Discovered open port 22/tcp on 10.11.1.251
+Discovered open port 80/tcp on 10.11.1.251
+Completed Connect Scan at 17:58, 0.02s elapsed (3 total ports)
+Initiating Service scan at 17:58
+Scanning 3 services on 10.11.1.251
+Completed Service scan at 17:58, 6.05s elapsed (3 services on 1 host)
+NSE: Script scanning 10.11.1.251.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:58
+NSE: [ftp-bounce 10.11.1.251:21] PORT response: 500 Illegal PORT command.
+Completed NSE at 17:58, 5.06s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.13s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+Nmap scan report for 10.11.1.251
+Host is up, received syn-ack (0.020s latency).
+Scanned at 2022-12-27 17:58:40 EST for 12s
+
+PORT   STATE SERVICE REASON  VERSION
+21/tcp open  ftp     syn-ack vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: PASV IP 10.1.1.246 is not the same as 10.11.1.251
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.119.130
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp open  ssh     syn-ack OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 7acaa24c998b6df44678fe4a696de494 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOtQIoHF+ozLT+P3agCVcLrFkej1b+lOWY2f2cHFqbyJKNA4sx0DOOcD48GDeUcPL1eTn3zNwNlJpySIin2YT4Q//sVgRDiwrmlPk4feKFl5UeYx1N9Ld1tgmoImdQCIRFV5eLwZcO7i4uq9XWJMt3ovo5pz1MKfy/hKjvleH86LYS+26hKE9WkIRbDKr0nfCFQPuxHqEdYZzUMDJNsobgoLVdrf3PYw09erJX3DWIGwnAsRSr79b+g+LIXNE68f5JHaR5wJi6iqwg2TPAEi2Syy837cOqprZ0DnJFnwetl9q4eBVt+Tj4yx+GeQphHwLiNoBwQ1b0iMRsOOQrZxdH
+|   256 042c708484034342a4c333d2950d5e91 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBO3DAvXdh1kU36SBCYPAeM+rj06cDuvVLLrl8RncbpLVPuSqiCVTqgVE2Gr15dcRzRd4uitCVk6fWblgccXUn4o=
+|   256 11ad7355cce9cb0ca423d646e87ddaf0 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMFpjhqvMXWVgNgAcxQYin97baZzNrjLcl+pvwS3Qy+M
+80/tcp open  http    syn-ack Apache httpd 2.4.29 ((Ubuntu))
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
+|_http-title: Site doesn't have a title (text/html).
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 13.54 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 17:58 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:58, 0.00s elapsed
+Initiating Ping Scan at 17:58
+Scanning 10.11.1.5 [2 ports]
+Completed Ping Scan at 17:58, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:58
+Completed Parallel DNS resolution of 1 host. at 17:58, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 17:58
+Scanning 10.11.1.5 [4 ports]
+Discovered open port 135/tcp on 10.11.1.5
+Discovered open port 139/tcp on 10.11.1.5
+Discovered open port 445/tcp on 10.11.1.5
+Discovered open port 1025/tcp on 10.11.1.5
+Completed Connect Scan at 17:58, 0.02s elapsed (4 total ports)
+Initiating Service scan at 17:58
+Scanning 4 services on 10.11.1.5
+Completed Service scan at 17:58, 6.08s elapsed (4 services on 1 host)
+NSE: Script scanning 10.11.1.5.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:58
+Completed NSE at 17:59, 15.59s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+Nmap scan report for 10.11.1.5
+Host is up, received conn-refused (0.018s latency).
+Scanned at 2022-12-27 17:58:52 EST for 22s
+
+PORT     STATE SERVICE      REASON  VERSION
+135/tcp  open  msrpc        syn-ack Microsoft Windows RPC
+139/tcp  open  netbios-ssn  syn-ack Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds syn-ack Microsoft Windows XP microsoft-ds
+1025/tcp open  msrpc        syn-ack Microsoft Windows RPC
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_clock-skew: 0s
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| nbstat: NetBIOS name: ALICE, NetBIOS user: <unknown>, NetBIOS MAC: 005056861142 (VMware)
+| Names:
+|   ALICE<00>            Flags: <unique><active>
+|   THINC<00>            Flags: <group><active>
+|   ALICE<03>            Flags: <unique><active>
+|   ALICE<20>            Flags: <unique><active>
+|   THINC<1e>            Flags: <group><active>
+|   THINC<1d>            Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   0050568611420000000000000000000000
+|   0000000000000000000000000000000000
+|_  0000000000000000000000000000
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 36286/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 16500/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 21282/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 55739/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_smb2-time: Protocol negotiation failed (SMB2)
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 21.95 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 17:59 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+Initiating Ping Scan at 17:59
+Scanning 10.11.1.39 [2 ports]
+Completed Ping Scan at 17:59, 1.13s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:59
+Completed Parallel DNS resolution of 1 host. at 17:59, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 17:59
+Scanning 10.11.1.39 [3 ports]
+Discovered open port 3306/tcp on 10.11.1.39
+Discovered open port 22/tcp on 10.11.1.39
+Discovered open port 80/tcp on 10.11.1.39
+Completed Connect Scan at 17:59, 0.02s elapsed (3 total ports)
+Initiating Service scan at 17:59
+Scanning 3 services on 10.11.1.39
+Completed Service scan at 17:59, 7.15s elapsed (3 services on 1 host)
+NSE: Script scanning 10.11.1.39.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.72s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.15s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+Nmap scan report for 10.11.1.39
+Host is up, received syn-ack (0.019s latency).
+Scanned at 2022-12-27 17:59:15 EST for 8s
+
+PORT     STATE SERVICE REASON  VERSION
+22/tcp   open  ssh     syn-ack OpenSSH 6.6.1 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 5ec17ed2f920f911ea4b0268073f54f2 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgrAeio5MX8ee/JR6rhcr8MTqM5SZga8iPjfwjFHc492aKCgXqFxE8Kprutz0NQDvXt0096pft0tiGPJBxZ6WiJvLxIzTSDe261Ly4ZUywtf3Akt/oCtOKwWV76B2gPoGG0jSpnhVgEcBW028QXk8+qDrQI5XLKyczKOdbnD/D76rOfPkJwMGTXPQmB4SSGqflnAF7Gem3Ay1dS7H+LVGgmfLHtNV9zlyx5dSRWihX6hnofYylHeSi7rLVWs5qDLeBqDID32joNqrhKzUUe8idgmU5lNCrGUcAGb+aUF7q5V0eWDD0mRXLay6OIHbXmvY/ylHyqs1jpQWhpXt9ZKTz
+|   256 36ef2731a2fd4ae3d24e12581f7a0358 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJaLYCLt5BQwdt158R4quRiBubM4IKNB2d3kHn6jSZwpB0o/j9kQmwg5L5ek6dDc0qd9lOjzWKKSec8n4ULzWU0=
+|   256 2c709cc94c5061d25143d567d1d039de (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK/4iJuHgKovQDwFWS6ZxgjJYnNu0qqorL0dmHw2ZMJ0
+80/tcp   open  http    syn-ack nginx 1.6.3
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: nginx/1.6.3
+3306/tcp open  mysql   syn-ack MariaDB (unauthorized)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 9.43 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 17:59 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 17:59
+Completed NSE at 17:59, 0.00s elapsed
+Initiating Ping Scan at 17:59
+Scanning 10.11.1.128 [2 ports]
+Completed Ping Scan at 17:59, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:59
+Completed Parallel DNS resolution of 1 host. at 17:59, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 17:59
+Scanning 10.11.1.128 [18 ports]
+Discovered open port 445/tcp on 10.11.1.128
+Discovered open port 21/tcp on 10.11.1.128
+Discovered open port 3389/tcp on 10.11.1.128
+Discovered open port 135/tcp on 10.11.1.128
+Discovered open port 5900/tcp on 10.11.1.128
+Discovered open port 139/tcp on 10.11.1.128
+Discovered open port 49154/tcp on 10.11.1.128
+Discovered open port 1433/tcp on 10.11.1.128
+Discovered open port 5800/tcp on 10.11.1.128
+Discovered open port 49153/tcp on 10.11.1.128
+Discovered open port 49152/tcp on 10.11.1.128
+Discovered open port 5985/tcp on 10.11.1.128
+Discovered open port 49157/tcp on 10.11.1.128
+Discovered open port 49158/tcp on 10.11.1.128
+Discovered open port 47001/tcp on 10.11.1.128
+Discovered open port 49156/tcp on 10.11.1.128
+Discovered open port 49155/tcp on 10.11.1.128
+Discovered open port 4167/tcp on 10.11.1.128
+Completed Connect Scan at 17:59, 0.04s elapsed (18 total ports)
+Initiating Service scan at 17:59
+Scanning 18 services on 10.11.1.128
+Service scan Timing: About 61.11% done; ETC: 18:00 (0:00:34 remaining)
+Completed Service scan at 18:00, 72.78s elapsed (18 services on 1 host)
+NSE: Script scanning 10.11.1.128.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:00
+NSE: [ftp-bounce 10.11.1.128:21] PORT response: 501 Server cannot accept argument.
+Completed NSE at 18:00, 10.43s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:00
+Completed NSE at 18:00, 0.40s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:00
+Completed NSE at 18:00, 0.01s elapsed
+Nmap scan report for 10.11.1.128
+Host is up, received conn-refused (0.018s latency).
+Scanned at 2022-12-27 17:59:23 EST for 84s
+
+PORT      STATE SERVICE            REASON  VERSION
+21/tcp    open  ftp                syn-ack Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_03-14-19  01:58AM             54030608 FoxitReader901_enu_Setup_Prom.exe
+| ftp-syst: 
+|_  SYST: Windows_NT
+135/tcp   open  msrpc              syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn        syn-ack Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       syn-ack Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+1433/tcp  open  ms-sql-s           syn-ack Microsoft SQL Server 2012 11.00.2100.00; RTM
+|_ssl-date: 2022-12-27T23:00:45+00:00; -2s from scanner time.
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2022-04-06T17:00:38
+| Not valid after:  2052-04-06T17:00:38
+| MD5:   e792281188ee43837d4704714514dced
+| SHA-1: 4d799eafc42c923d52fce42e09ffde5fc32dd0f3
+| -----BEGIN CERTIFICATE-----
+| MIIB+zCCAWSgAwIBAgIQb1ND4F2lDJlLWBOe7QvMqDANBgkqhkiG9w0BAQUFADA7
+| MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA
+| bABsAGIAYQBjAGswIBcNMjIwNDA2MTcwMDM4WhgPMjA1MjA0MDYxNzAwMzhaMDsx
+| OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs
+| AGwAYgBhAGMAazCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAt2BCFTpMFvVb
+| 30pr1H+x/ZWIZMlIzIYeBeFEel/fB3j71MKN2onqiSV2KVY8TuS5B2mmihgJt0Yr
+| JZgOg/Y2ReG6mzZZRrCAtyCACq36OoWxCu1862BgCwrOVQ3DPFsQvzb7x6SA6ye/
+| 8Ez34cAPAtN98vMmmH06jftwz7JGiSECAwEAATANBgkqhkiG9w0BAQUFAAOBgQCW
+| gUbEtRdYqEjqU1/zsUuE0OjU4zQ/VhZvcw4oA49YMfXLEBa3lo84eeOuyD4M36zq
+| qSFoJiNm+BpEpmX9lpBYTyc7HZBA/5Fi3zns/Ouvn5gqWqCICgedglgR3ZtQi/7g
+| of2cgv99hclVLTPG0/S/GKqCox6hhcP0Zgd9nUCsVQ==
+|_-----END CERTIFICATE-----
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+3389/tcp  open  ssl/ms-wbt-server? syn-ack
+| ssl-cert: Subject: commonName=dj
+| Issuer: commonName=dj
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-12-23T17:57:22
+| Not valid after:  2023-06-24T17:57:22
+| MD5:   f17a2327b8055e6cd1cf7b2388cb9f36
+| SHA-1: ba8d1d1da8000c52dca4d11294d6f65dd58455c7
+| -----BEGIN CERTIFICATE-----
+| MIICyDCCAbCgAwIBAgIQG2JulV0om4VJtmAw3u2LFjANBgkqhkiG9w0BAQsFADAN
+| MQswCQYDVQQDEwJkajAeFw0yMjEyMjMxNzU3MjJaFw0yMzA2MjQxNzU3MjJaMA0x
+| CzAJBgNVBAMTAmRqMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1hz0
+| dkcEJa34d4dJfT8k/y6my0r43zlqGi9NPFRPB1jV3UV9xy8eFxUWvV0NMXd3QXm7
+| o1OpnnHjYDNRRt3xqWvB5dxPk40NaJdvUU9wRvqV5fcs3+zu/K27d1aHBTWjkFf5
+| ubylIZCz3b64FfwnsPRjlZSVyITLeHsEVzan/jmDhPtwc6gxTvWEjChz+KqEyA74
+| gXiUZ17rxtHjxCChU/50EkkWY44udI805RxmZiExjsI2GGOMj9+wK1QEzF0lIpM5
+| v88Wl6/jVcE/AYhfme7ESwR3+sxg1aZwom//lnn6BlVRVa9FqzV785RhRPGWsu8A
+| BDd/a4CL8Nwi60p+WQIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcDATALBgNV
+| HQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAF+7bSMmaAZ/uxxzKveyOJN6NINE
+| OGHKD+A+BQlMau+RZEiSavsLUqVXQV8j7/0HicBuVFQrngfKcgKfT+A92S3j2ftp
+| 4w8nvnS7NgrF7n+rM9IQ2kiROIQnESoJI39dbGDzx9xggFHnFieE1d1y5RS5RbHW
+| Z93tYsbpgGhK+326mFf32IOZzdbtBR68J6BoC/3OqYJvk29Y6tQ5evIBPlj8udEP
+| sdnvbnjXAWmOeNB5RCXaPEDjR4XFg4Qacps/xQCnhCPcbMuqKkK1bVn9OOf6yFZ3
+| NDmJqMEuWJ7c1Bh6TfppCKUt7mj713LorsQwY33iUKo+hcEHDG+Fy4qstiE=
+|_-----END CERTIFICATE-----
+| rdp-ntlm-info: 
+|   Target_Name: DJ
+|   NetBIOS_Domain_Name: DJ
+|   NetBIOS_Computer_Name: DJ
+|   DNS_Domain_Name: dj
+|   DNS_Computer_Name: dj
+|   Product_Version: 6.3.9600
+|_  System_Time: 2022-12-27T23:00:35+00:00
+|_ssl-date: 2022-12-27T23:00:45+00:00; -2s from scanner time.
+4167/tcp  open  http               syn-ack Microsoft IIS httpd 8.5
+|_http-server-header: Microsoft-IIS/8.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: IIS Windows Server
+5800/tcp  open  vnc-http           syn-ack TightVNC (user: dj; VNC TCP port: 5900)
+| http-methods: 
+|_  Supported Methods: GET
+|_http-title: TightVNC desktop [dj]
+5900/tcp  open  vnc                syn-ack VNC (protocol 3.8)
+| vnc-info: 
+|   Protocol version: 3.8
+|   Security types: 
+|     VNC Authentication (2)
+|     Tight (16)
+|   Tight auth subtypes: 
+|_    STDV VNCAUTH_ (2)
+5985/tcp  open  http               syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+47001/tcp open  http               syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49152/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49153/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49154/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49155/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49156/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49157/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49158/tcp open  msrpc              syn-ack Microsoft Windows RPC
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled but not required
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2022-12-27T23:00:37
+|_  start_date: 2022-04-06T17:00:37
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 12276/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 16538/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 14194/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 12553/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: mean: -2s, deviation: 0s, median: -2s
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:00
+Completed NSE at 18:00, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:00
+Completed NSE at 18:00, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:00
+Completed NSE at 18:00, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 83.93 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:00 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:00
+Completed NSE at 18:00, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:00
+Completed NSE at 18:00, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:00
+Completed NSE at 18:00, 0.00s elapsed
+Initiating Ping Scan at 18:00
+Scanning 10.11.1.237 [2 ports]
+Completed Ping Scan at 18:00, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 18:00
+Completed Parallel DNS resolution of 1 host. at 18:00, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 18:00
+Scanning 10.11.1.237 [5 ports]
+Discovered open port 443/tcp on 10.11.1.237
+Discovered open port 111/tcp on 10.11.1.237
+Discovered open port 80/tcp on 10.11.1.237
+Discovered open port 44864/tcp on 10.11.1.237
+Discovered open port 22/tcp on 10.11.1.237
+Completed Connect Scan at 18:00, 0.02s elapsed (5 total ports)
+Initiating Service scan at 18:00
+Scanning 5 services on 10.11.1.237
+Completed Service scan at 18:01, 12.15s elapsed (5 services on 1 host)
+NSE: Script scanning 10.11.1.237.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:01
+Completed NSE at 18:01, 1.24s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:01
+Completed NSE at 18:01, 0.19s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:01
+Completed NSE at 18:01, 0.00s elapsed
+Nmap scan report for 10.11.1.237
+Host is up, received syn-ack (0.020s latency).
+Scanned at 2022-12-27 18:00:47 EST for 14s
+
+PORT      STATE SERVICE  REASON  VERSION
+22/tcp    open  ssh      syn-ack OpenSSH 6.0p1 Debian 4 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 fc89ba50c2ea2dabb919f1f90ab4c05a (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAL1caLXdHfBy4Fe2lmGzfvhGBtQ6GY1qaRwk5cYueFYbxp/Ml34zd9qh1TkJlS5npOGOYe5JOYtkEjasFVaH6606wQk4tv7IBB+C6F0/2TANe8FtecMhe7oMS8eLLPvxyLGzqGDmqU5fnVxvRF1DhmNqwKTxpAyicoMUES5EEnEpAAAAFQDphaJ68CKGLRzysPVUsdBQPbIroQAAAIB83eXGXESwUkiNlHCv7x2BZjzFSzu1VUMrz1Iu3AJXchFiDbI3hZu7OH7SUXjEW7Z74gCVjq7yc19lWOqC/68wwCnxJ/MnAd1oQl6oLHq7eKcT6CNuSdrTrgbff4RmKh9v2yfId7r9IFOaiyNnlZMMwZ8YVLlYiGbinyPQ9UHmeAAAAIEAjc8mRkKEeTjpJy1k2wbwQJNb1PMlbtjaRypW/UXbJTs6FSFHhWA89/YuV9Hz5mRGar290jIUvtsL6GL0f6Dtq34KoGpGmkm66MLZGrMTujfIRBBa8KE8t5cJXVYoRG4mFCxMfLmIWx84Gop2fHPt0eKBdEERFMZvk0mVKFTUxWM=
+|   2048 de2db8bd438ac3282bd32284d06ce09d (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUjqJVHzbY+P21ajq32xg0yozBp4wy5TU6lyigsgb8bMzcwdNV8GkSUatdHNb3Ay5MlK4HWIZfzlKA4Zra0iXUW+tu4byo6GHoV0hfaEMJki89mkZ1Eype89Gj+cIfp11HlKHJqCUaSDveuuUMaYCfQv+RkWm+2m4H27XrS1vuJe7q8L1r9anFJ7fF1Bwi2xD6AbMXXXFg0TIIMzfzmI2EZGB5XAIUqI3kNq7i/+Sd28UGqVWXtLIRiyOFYW2Htd//BYB9muNV4baVVgKM5IRpXnJoi6o4twMUAPdY34iFOVvTr8ndifoFaqNxYM9TUzFdmJOGuo01P78ca+IYjR0T
+|   256 a5584d9de861de5583e2716b5dad83e2 (ECDSA)
+|_ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIDrJaQuMQjLB2z8zoF3HaePoDAza/n0UERp9v5j+LYe77iPp+w21y47q7C6fFlXu7tBc7db9nMyfdealHnQxRg=
+80/tcp    open  http     syn-ack Apache httpd 2.2.22 ((Debian))
+|_http-server-header: Apache/2.2.22 (Debian)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (text/html).
+111/tcp   open  rpcbind  syn-ack 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100024  1          40298/tcp6  status
+|   100024  1          44864/tcp   status
+|   100024  1          56872/udp6  status
+|_  100024  1          59864/udp   status
+443/tcp   open  ssl/http syn-ack Apache httpd 2.2.22 ((Debian))
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Apache/2.2.22 (Debian)
+| ssl-cert: Subject: commonName=localhost
+| Issuer: commonName=localhost
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-12-26T16:25:05
+| Not valid after:  2023-12-24T16:25:05
+| MD5:   7ccbcc7f3cd8df1a0ee90fe0d5a61a8b
+| SHA-1: 3a52a856cb8c13914f2f91929554c3d506539a14
+| -----BEGIN CERTIFICATE-----
+| MIICuDCCAaCgAwIBAgIJALXALYNd5kLOMA0GCSqGSIb3DQEBBQUAMBQxEjAQBgNV
+| BAMTCWxvY2FsaG9zdDAeFw0xMzEyMjYxNjI1MDVaFw0yMzEyMjQxNjI1MDVaMBQx
+| EjAQBgNVBAMTCWxvY2FsaG9zdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+| ggEBAMnjdveRyQ/Vdnj+2m7QqpBX1pwhIuQoXeePEisu9Cgpby6X373Vad9T/h3/
+| iuUxbOMV9bNAgXZaP7XGSYzAr+4wLekhiKXP5p03K7bnywjAdTy/iZdczTiNmJ7v
+| 2sJPpp8XcLaKwn6bmoE60smbetYSIb5oqCH0iQUwoRs5uRe3tAGA6aDMD6BJjDXG
+| ig0ha5Soti4jsL8Ii2P8a/qEn4vJWDa0wb2R77ZhA6AzpmOdYoPekGtwtMNl026Y
+| q8nzmtdgisXSAxnwDBTZDfOusbrDRsRV1ml0UxwmrRrSCkcCXcQgK4jztHvPNzYF
+| YYd6lTLCk6/+VIV69ttmKv3xP5sCAwEAAaMNMAswCQYDVR0TBAIwADANBgkqhkiG
+| 9w0BAQUFAAOCAQEAfjYmRl5fK91FI/2CswNbsNSmXhlLDJ8gI5ACGEVRilH7Aqx9
+| ab6JIB6pCWBJmShm7La51FSz1WGalWas8FEUNl7EaSg+6QFsIihQq0Cpjxr7VXp5
+| rmRQjZW9r9L29eWicv0BF0+pbPMNSXcjx012k9ZnJFWqT93hEnLbepa2YwX5E4TF
+| ukOgljzkrlfzQ89rCLRo7CVqjfu4ibJh7egLQv735jwp21oahEP+PNHWha+i2JOL
+| P45zy82R+Udxg30YoW3AjvFsZKotCfOinHw+/NCh//YVIWQSPTRfOyGxOtgA3tDq
+| Q5PqvU36FvXlUpTR9RIIdI4u5zsRe9FsO0eYkQ==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2022-12-27T23:00:59+00:00; -2s from scanner time.
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+44864/tcp open  status   syn-ack 1 (RPC #100024)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: -2s
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:01
+Completed NSE at 18:01, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:01
+Completed NSE at 18:01, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:01
+Completed NSE at 18:01, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 13.87 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:01 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:01
+Completed NSE at 18:01, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:01
+Completed NSE at 18:01, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:01
+Completed NSE at 18:01, 0.00s elapsed
+Initiating Ping Scan at 18:01
+Scanning 10.11.1.120 [2 ports]
+Completed Ping Scan at 18:01, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 18:01
+Completed Parallel DNS resolution of 1 host. at 18:01, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 18:01
+Scanning 10.11.1.120 [27 ports]
+Discovered open port 3389/tcp on 10.11.1.120
+Discovered open port 53/tcp on 10.11.1.120
+Discovered open port 445/tcp on 10.11.1.120
+Discovered open port 135/tcp on 10.11.1.120
+Discovered open port 139/tcp on 10.11.1.120
+Discovered open port 3268/tcp on 10.11.1.120
+Discovered open port 3269/tcp on 10.11.1.120
+Discovered open port 49666/tcp on 10.11.1.120
+Discovered open port 49664/tcp on 10.11.1.120
+Discovered open port 49672/tcp on 10.11.1.120
+Discovered open port 49692/tcp on 10.11.1.120
+Discovered open port 49677/tcp on 10.11.1.120
+Discovered open port 464/tcp on 10.11.1.120
+Discovered open port 5985/tcp on 10.11.1.120
+Discovered open port 49678/tcp on 10.11.1.120
+Discovered open port 636/tcp on 10.11.1.120
+Discovered open port 49667/tcp on 10.11.1.120
+Discovered open port 49714/tcp on 10.11.1.120
+Discovered open port 49665/tcp on 10.11.1.120
+Discovered open port 49679/tcp on 10.11.1.120
+Discovered open port 9389/tcp on 10.11.1.120
+Discovered open port 47001/tcp on 10.11.1.120
+Discovered open port 593/tcp on 10.11.1.120
+Discovered open port 389/tcp on 10.11.1.120
+Discovered open port 49669/tcp on 10.11.1.120
+Discovered open port 88/tcp on 10.11.1.120
+Discovered open port 49697/tcp on 10.11.1.120
+Completed Connect Scan at 18:01, 0.04s elapsed (27 total ports)
+Initiating Service scan at 18:01
+Scanning 27 services on 10.11.1.120
+Service scan Timing: About 62.96% done; ETC: 18:02 (0:00:34 remaining)
+Completed Service scan at 18:02, 62.31s elapsed (27 services on 1 host)
+NSE: Script scanning 10.11.1.120.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:02
+Completed NSE at 18:02, 8.46s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:02
+Completed NSE at 18:02, 0.60s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:02
+Completed NSE at 18:02, 0.00s elapsed
+Nmap scan report for 10.11.1.120
+Host is up, received conn-refused (0.018s latency).
+Scanned at 2022-12-27 18:01:01 EST for 72s
+
+PORT      STATE SERVICE       REASON  VERSION
+53/tcp    open  domain        syn-ack Simple DNS Plus
+88/tcp    open  kerberos-sec  syn-ack Microsoft Windows Kerberos (server time: 2022-12-27 23:01:02Z)
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: xor.com0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack
+464/tcp   open  kpasswd5?     syn-ack
+593/tcp   open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped    syn-ack
+3268/tcp  open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: xor.com0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped    syn-ack
+3389/tcp  open  ms-wbt-server syn-ack Microsoft Terminal Services
+| ssl-cert: Subject: commonName=xor-dc01.xor.com
+| Issuer: commonName=xor-dc01.xor.com
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-12-22T19:40:53
+| Not valid after:  2023-06-23T19:40:53
+| MD5:   219fc505e02e37a4e507c55d2091903d
+| SHA-1: 1f5b43d3de36b9ae4ba2d06db29bba009d2153de
+| -----BEGIN CERTIFICATE-----
+| MIIC5DCCAcygAwIBAgIQGcBxDxR714dMppyhE01NpjANBgkqhkiG9w0BAQsFADAb
+| MRkwFwYDVQQDExB4b3ItZGMwMS54b3IuY29tMB4XDTIyMTIyMjE5NDA1M1oXDTIz
+| MDYyMzE5NDA1M1owGzEZMBcGA1UEAxMQeG9yLWRjMDEueG9yLmNvbTCCASIwDQYJ
+| KoZIhvcNAQEBBQADggEPADCCAQoCggEBAMjylL2CNwrd5b/sv8hDaMQh3FYHfeMy
+| ytuWKmHnSDk3uyyXB3C86CDhYAD105VL7j+Pejbs4+MQgYDG1y9HIH8CoAmQIfjn
+| f7Pt8jccYxx+muROom6efJhAtt1dAHoLLwQJYc51Ich1OmvEd0fvurpkMbyMMiOr
+| pYpA7NqiG9U3jFUyhTBU7wt/5UiIXpBzqGjbB1vGOpghqCoACnVDhR3tfpHqKrJ9
+| lBkiJ9uQ82isdrRSkMyDJopUvk8KHLgSZYcQ3c2W8BC+yhOzwIKtKNkAMFp/0zPI
+| jOgUo/BYf9dhHykZSEUfDhACXwI87ZOYoJAgqYbEaBSdb+C/iHI8ynkCAwEAAaMk
+| MCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEB
+| CwUAA4IBAQB3QMZVCFxoiJJuP1jUt/2b6XAu3ScsOFPQk0iycM5xEMEL3UXniuXa
+| zjNAZl+nYpTyvbaNrASuqa6qjgPfwtCd0dQJS31SQEL7XujhkBobHk3GPfrxrapj
+| k5N0bciPNcGCeKz8ciIZchrl97NrhoUSiDb+wI4iSdCrhyHZtV+SVvYeDgbGkNGu
+| ievsRFQPXYp7v40H5PlamGtYDjCGRbayClDdPiVrp9YA74nnESwkXZ7YeyEYXiIf
+| 3Eylk6mKZ3IKlD0igMqeqjoZncfb1Ni45uJtUG9dDYu4uqrkxZbMCWQCzLSgm5nc
+| D2JOa+YwmCReYW0Crq8GzIs8RqHg6YfD
+|_-----END CERTIFICATE-----
+| rdp-ntlm-info: 
+|   Target_Name: xor
+|   NetBIOS_Domain_Name: xor
+|   NetBIOS_Computer_Name: XOR-DC01
+|   DNS_Domain_Name: xor.com
+|   DNS_Computer_Name: xor-dc01.xor.com
+|   DNS_Tree_Name: xor.com
+|   Product_Version: 10.0.17763
+|_  System_Time: 2022-12-27T23:01:58+00:00
+|_ssl-date: 2022-12-27T23:02:07+00:00; -5s from scanner time.
+5985/tcp  open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        syn-ack .NET Message Framing
+47001/tcp open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49666/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49669/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49672/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49677/tcp open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+49678/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49679/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49692/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49697/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49714/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: Host: XOR-DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 19104/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 48209/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 26089/udp): CLEAN (Timeout)
+|   Check 4 (port 18965/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: mean: -5s, deviation: 0s, median: -6s
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2022-12-27T23:01:59
+|_  start_date: N/A
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:02
+Completed NSE at 18:02, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:02
+Completed NSE at 18:02, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:02
+Completed NSE at 18:02, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 71.68 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:02 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:02
+Completed NSE at 18:02, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:02
+Completed NSE at 18:02, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:02
+Completed NSE at 18:02, 0.00s elapsed
+Initiating Ping Scan at 18:02
+Scanning 10.11.1.115 [2 ports]
+Completed Ping Scan at 18:02, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 18:02
+Completed Parallel DNS resolution of 1 host. at 18:02, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 18:02
+Scanning 10.11.1.115 [11 ports]
+Discovered open port 80/tcp on 10.11.1.115
+Discovered open port 111/tcp on 10.11.1.115
+Discovered open port 443/tcp on 10.11.1.115
+Discovered open port 199/tcp on 10.11.1.115
+Discovered open port 139/tcp on 10.11.1.115
+Discovered open port 143/tcp on 10.11.1.115
+Discovered open port 21/tcp on 10.11.1.115
+Discovered open port 3306/tcp on 10.11.1.115
+Discovered open port 22/tcp on 10.11.1.115
+Discovered open port 25/tcp on 10.11.1.115
+Discovered open port 32768/tcp on 10.11.1.115
+Completed Connect Scan at 18:02, 0.03s elapsed (11 total ports)
+Initiating Service scan at 18:02
+Scanning 11 services on 10.11.1.115
+Completed Service scan at 18:05, 168.33s elapsed (11 services on 1 host)
+NSE: Script scanning 10.11.1.115.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:05
+NSE: [ftp-bounce 10.11.1.115:21] PORT response: 500 Illegal PORT command.
+Completed NSE at 18:05, 30.08s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:05
+NSE Timing: About 96.74% done; ETC: 18:06 (0:00:01 remaining)
+NSE Timing: About 96.74% done; ETC: 18:06 (0:00:02 remaining)
+Completed NSE at 18:06, 70.32s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:06
+Completed NSE at 18:06, 0.00s elapsed
+Nmap scan report for 10.11.1.115
+Host is up, received syn-ack (0.017s latency).
+Scanned at 2022-12-27 18:02:13 EST for 269s
+
+PORT      STATE SERVICE     REASON  VERSION
+21/tcp    open  ftp         syn-ack vsftpd 1.1.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x    2 0        0            4096 Feb 28  2003 pub
+22/tcp    open  ssh         syn-ack OpenSSH 3.5p1 (protocol 1.99)
+| ssh-hostkey: 
+|   1024 3670a49f3247ac573fefa1ec0bba441b (RSA1)
+| 1024 35 120344514349960813598898192027051396627887361763055222531835318733333615953493686001723539273400706470352667805953391089140752629026037361205964117661230023762517804970080908830946119043695303514789760902093478918957609252029683456537906417915831994981012299156668111566131900536256194903202189869782287739911
+|   1024 64797dc6a2633254f0d92bf35dc7d269 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAOcEG/6o3Sbn7OVFCeti3eKK4f4lhwAEykhVfB3yt0cRvOvJWHwlrbtNiqXzg8nEcIKEfCf9t1r7Nl50oxr82NOf5xYgZ6EFwsHoomEqmJn5P1Rzf4NdnoQwhEKjcGBNODZgo3ehL0YVvhcpEeTs/QNxHtOU9u+0mE1BE/hNXzjhAAAAFQCsI9EINYsU2RfINgpvY0fBOddU4wAAAIAWg+jjwpiZYVvJwj0+EhiKxF+xNbjKYiMPAGKdv+IMsW+CltGWww/l5qFMimEEIRG34jqR1VSl7BrJTnUouNRO8ZV0VLYYnMPSRaEyYluWEhHRLyf/TPdqDqPsa7yw1mBQKTKOKVLfwMa/1wIbFxo11CrFVluMT47jhL1BQaI6pQAAAIBDjo0gHWj84nO4SMVNT1cIFSB8aonZSV3QYIM1zxteI/MGRrMJyeFA4uggC6Cjrnu5m3LXeY5Q3kZJtGfMGbCvE+hmGc3+zvyUZVDAff4/7Aeq1BXDyv47TskyFM5qdq0rlxOPGw9S1xCuXx9VcLI0BejpjKARu30mSmCpsRjgoQ==
+|   1024 48fb393d308250de6669c5ca4562c0dc (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEA5taj5xQpdm92zd3E7FT1yu0euGgCdQwslVCN6pryfuMqGRZ1Y6VTSk8pNcMYzI3Q0ZA7vlyob4+zVAtM4ofFczNMW8OUwScCyQg28tp2EpncMb8tNr52tbn8ohsFfRXgFdSzJWJ22dYduPSLVDK2EvQREq5q7do8Z4EWgWUcYcM=
+|_sshv1: Server supports SSHv1
+25/tcp    open  smtp?       syn-ack
+|_smtp-commands: Couldn't establish connection on port 25
+80/tcp    open  http        syn-ack Apache httpd 2.0.40 ((Red Hat Linux))
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux
+|_http-server-header: Apache/2.0.40 (Red Hat Linux)
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+111/tcp   open  rpcbind     syn-ack 2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100024  1          32768/tcp   status
+|   100024  1          32768/udp   status
+|_  391002  2          32769/tcp   sgi_fam
+139/tcp   open  netbios-ssn syn-ack Samba smbd (workgroup: MYGROUP)
+143/tcp   open  imap        syn-ack UW imapd 2001.315rh
+|_ssl-date: 2022-12-28T00:05:33+00:00; +59m59s from scanner time.
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/emailAddress=root@localhost.localdomain/localityName=SomeCity/organizationalUnitName=SomeOrganizationalUnit
+| Issuer: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/emailAddress=root@localhost.localdomain/localityName=SomeCity/organizationalUnitName=SomeOrganizationalUnit
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: md5WithRSAEncryption
+| Not valid before: 2007-01-16T06:07:45
+| Not valid after:  2008-01-16T06:07:45
+| MD5:   1be170c2456174a1f44ee3bff085614d
+| SHA-1: 720d54efbe4818887d602aeff8696756fc10ee89
+| -----BEGIN CERTIFICATE-----
+| MIIEDDCCA3WgAwIBAgIBADANBgkqhkiG9w0BAQQFADCBuzELMAkGA1UEBhMCLS0x
+| EjAQBgNVBAgTCVNvbWVTdGF0ZTERMA8GA1UEBxMIU29tZUNpdHkxGTAXBgNVBAoT
+| EFNvbWVPcmdhbml6YXRpb24xHzAdBgNVBAsTFlNvbWVPcmdhbml6YXRpb25hbFVu
+| aXQxHjAcBgNVBAMTFWxvY2FsaG9zdC5sb2NhbGRvbWFpbjEpMCcGCSqGSIb3DQEJ
+| ARYacm9vdEBsb2NhbGhvc3QubG9jYWxkb21haW4wHhcNMDcwMTE2MDYwNzQ1WhcN
+| MDgwMTE2MDYwNzQ1WjCBuzELMAkGA1UEBhMCLS0xEjAQBgNVBAgTCVNvbWVTdGF0
+| ZTERMA8GA1UEBxMIU29tZUNpdHkxGTAXBgNVBAoTEFNvbWVPcmdhbml6YXRpb24x
+| HzAdBgNVBAsTFlNvbWVPcmdhbml6YXRpb25hbFVuaXQxHjAcBgNVBAMTFWxvY2Fs
+| aG9zdC5sb2NhbGRvbWFpbjEpMCcGCSqGSIb3DQEJARYacm9vdEBsb2NhbGhvc3Qu
+| bG9jYWxkb21haW4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANuYfH3T0AGz
+| WllgAMZ5H1aMr/G6BIUnOdhap7CYPgnqycYZbhLbahfwai9MXsupBqTG9pOiNEyZ
+| bI1ap8xrIcI5hcyaV6HDLn2NzyXkR/xey8x5sYBgS2H2EyX3MXrl4ABoxAw7fPeA
+| A5H3KZb9ufT73l8JZ9s9f2zCEZE8u215AgMBAAGjggEcMIIBGDAdBgNVHQ4EFgQU
+| nRsgHdgwQ1JC3fz86HxarnwPmLswgegGA1UdIwSB4DCB3YAUnRsgHdgwQ1JC3fz8
+| 6HxarnwPmLuhgcGkgb4wgbsxCzAJBgNVBAYTAi0tMRIwEAYDVQQIEwlTb21lU3Rh
+| dGUxETAPBgNVBAcTCFNvbWVDaXR5MRkwFwYDVQQKExBTb21lT3JnYW5pemF0aW9u
+| MR8wHQYDVQQLExZTb21lT3JnYW5pemF0aW9uYWxVbml0MR4wHAYDVQQDExVsb2Nh
+| bGhvc3QubG9jYWxkb21haW4xKTAnBgkqhkiG9w0BCQEWGnJvb3RAbG9jYWxob3N0
+| LmxvY2FsZG9tYWluggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADgYEA
+| J1mPl7WbXrzGplCBp37bSfJ3zWI1vg0IgU5DboyjU3uEi3SO1TOYUBS+cbr/u2H2
+| TKy1FkyVIZoE/YNF7pkwRXX/dTh2qyn0jePRgh6+3Ta4o/MdOyY4+6Yj5izSNpCf
+| Abtd84fBBGQB0C7sq7VVwKoHDDhvGIpl8Ly23TmMXag=
+|_-----END CERTIFICATE-----
+|_imap-capabilities: STARTTLS OK SORT AUTH=LOGINA0001 MAILBOX-REFERRALS CAPABILITY SCAN THREAD=ORDEREDSUBJECT completed MULTIAPPEND NAMESPACE LOGIN-REFERRALS IMAP4REV1 IDLE THREAD=REFERENCES
+199/tcp   open  smux        syn-ack Linux SNMP multiplexer
+443/tcp   open  ssl/http    syn-ack Apache httpd 2.0.40 ((Red Hat Linux))
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux
+| ssl-cert: Subject: commonName=redhat/organizationName=ACME LOCAL LTD/stateOrProvinceName=Berkshire/countryName=GB/emailAddress=bob@acme.com/localityName=Newbury/organizationalUnitName=MARKETING
+| Issuer: commonName=redhat/organizationName=ACME LOCAL LTD/stateOrProvinceName=Berkshire/countryName=GB/emailAddress=bob@acme.com/localityName=Newbury/organizationalUnitName=MARKETING
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: md5WithRSAEncryption
+| Not valid before: 2007-01-16T14:54:43
+| Not valid after:  2008-01-16T14:54:43
+| MD5:   e900ada0dfea040806cdddee15fd7d8b
+| SHA-1: 3b9a70e7870e11b8a2215af7bae9dd03ce903cbc
+| -----BEGIN CERTIFICATE-----
+| MIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQQFADCBjjELMAkGA1UEBhMCR0Ix
+| EjAQBgNVBAgTCUJlcmtzaGlyZTEQMA4GA1UEBxMHTmV3YnVyeTEXMBUGA1UEChMO
+| QUNNRSBMT0NBTCBMVEQxEjAQBgNVBAsTCU1BUktFVElORzEPMA0GA1UEAxMGcmVk
+| aGF0MRswGQYJKoZIhvcNAQkBFgxib2JAYWNtZS5jb20wHhcNMDcwMTE2MTQ1NDQz
+| WhcNMDgwMTE2MTQ1NDQzWjCBjjELMAkGA1UEBhMCR0IxEjAQBgNVBAgTCUJlcmtz
+| aGlyZTEQMA4GA1UEBxMHTmV3YnVyeTEXMBUGA1UEChMOQUNNRSBMT0NBTCBMVEQx
+| EjAQBgNVBAsTCU1BUktFVElORzEPMA0GA1UEAxMGcmVkaGF0MRswGQYJKoZIhvcN
+| AQkBFgxib2JAYWNtZS5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMRD
+| 0vy4uZz1lnlfh2bzTgArxS0sdOjdJh06Zd3dXmP9bTZwEimXZ1K6fg0wa+qmuTfn
+| eKdDsFVUbAl5Ecx5ovbxPfA6RwlTeLJ9E+I1ugizHasFZYM0/xmzUl4FEftVfgPa
+| 0uuKX8Z+RkzBajHLj0clotgmQPn719o/tgHU8DpxAgMBAAGjge4wgeswHQYDVR0O
+| BBYEFGijV7H5GV+Il9uGefjvjTDSxc4JMIG7BgNVHSMEgbMwgbCAFGijV7H5GV+I
+| l9uGefjvjTDSxc4JoYGUpIGRMIGOMQswCQYDVQQGEwJHQjESMBAGA1UECBMJQmVy
+| a3NoaXJlMRAwDgYDVQQHEwdOZXdidXJ5MRcwFQYDVQQKEw5BQ01FIExPQ0FMIExU
+| RDESMBAGA1UECxMJTUFSS0VUSU5HMQ8wDQYDVQQDEwZyZWRoYXQxGzAZBgkqhkiG
+| 9w0BCQEWDGJvYkBhY21lLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEB
+| BAUAA4GBAHN9rvmYb0fJjcs8eI6p0uheZAQ2OvQ7UunSCpWsFAwLQC6oi7IYhMcp
+| +DGB0RweEQnhZyyf9HA81WtpLK7vyGIZotFqxfQMEBZa5iGObZHoyY3pWTXElKMx
+| aRN/IulZMXFWw66x9+sh0RlNHBIKluH5cLzRWuH5jXnSQ9rJGSi2
+|_-----END CERTIFICATE-----
+|_ssl-date: 2022-12-28T00:05:33+00:00; +59m59s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|_    SSL2_RC4_128_WITH_MD5
+3306/tcp  open  mysql       syn-ack MySQL (unauthorized)
+32768/tcp open  status      syn-ack 1 (RPC #100024)
+Service Info: Host: tophat.acme.local; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_smb2-time: Protocol negotiation failed (SMB2)
+|_clock-skew: mean: 59m58s, deviation: 0s, median: 59m58s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 44170/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 38233/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 55695/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 34039/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+| nbstat: NetBIOS name: TOPHAT, NetBIOS user: <unknown>, NetBIOS MAC: 000000000000 (Xerox)
+| Names:
+|   TOPHAT<00>           Flags: <unique><active>
+|   TOPHAT<03>           Flags: <unique><active>
+|   TOPHAT<20>           Flags: <unique><active>
+|   MYGROUP<00>          Flags: <group><active>
+|   MYGROUP<1e>          Flags: <group><active>
+| Statistics:
+|   0000000000000000000000000000000000
+|   0000000000000000000000000000000000
+|_  0000000000000000000000000000
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:06
+Completed NSE at 18:06, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:06
+Completed NSE at 18:06, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:06
+Completed NSE at 18:06, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 269.03 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:06 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:06
+Completed NSE at 18:06, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:06
+Completed NSE at 18:06, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:06
+Completed NSE at 18:06, 0.00s elapsed
+Initiating Ping Scan at 18:06
+Scanning 10.11.1.31 [2 ports]
+Completed Ping Scan at 18:06, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 18:06
+Completed Parallel DNS resolution of 1 host. at 18:06, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 18:06
+Scanning 10.11.1.31 [9 ports]
+Discovered open port 445/tcp on 10.11.1.31
+Discovered open port 3389/tcp on 10.11.1.31
+Discovered open port 135/tcp on 10.11.1.31
+Discovered open port 139/tcp on 10.11.1.31
+Discovered open port 80/tcp on 10.11.1.31
+Discovered open port 49667/tcp on 10.11.1.31
+Discovered open port 5985/tcp on 10.11.1.31
+Discovered open port 1433/tcp on 10.11.1.31
+Discovered open port 49666/tcp on 10.11.1.31
+Completed Connect Scan at 18:06, 0.02s elapsed (9 total ports)
+Initiating Service scan at 18:06
+Scanning 9 services on 10.11.1.31
+Completed Service scan at 18:07, 56.87s elapsed (9 services on 1 host)
+NSE: Script scanning 10.11.1.31.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:07
+NSE Timing: About 99.92% done; ETC: 18:08 (0:00:00 remaining)
+Completed NSE at 18:08, 40.20s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.18s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+Nmap scan report for 10.11.1.31
+Host is up, received syn-ack (0.017s latency).
+Scanned at 2022-12-27 18:06:42 EST for 97s
+
+PORT      STATE SERVICE       REASON  VERSION
+80/tcp    open  http          syn-ack Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: Login
+| http-cookie-flags: 
+|   /: 
+|     ASPSESSIONIDAQTCTDSD: 
+|_      httponly flag not set
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds  syn-ack Windows Server 2016 Standard 14393 microsoft-ds
+1433/tcp  open  ms-sql-s      syn-ack Microsoft SQL Server 2017 14.00.1000.00; RTM
+|_ssl-date: 2022-12-27T23:08:19+00:00; 0s from scanner time.
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-12-24T00:39:02
+| Not valid after:  2051-12-24T00:39:02
+| MD5:   302989e9a5377a065a4bc58ab90f97b5
+| SHA-1: cff20f2c3e6bb2fb2bbf361ad094878ec8abcd9d
+| -----BEGIN CERTIFICATE-----
+| MIIDADCCAeigAwIBAgIQJdKwvKWGebdKWYh3zoih+zANBgkqhkiG9w0BAQsFADA7
+| MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA
+| bABsAGIAYQBjAGswIBcNMjExMjI0MDAzOTAyWhgPMjA1MTEyMjQwMDM5MDJaMDsx
+| OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs
+| AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJjJ/jxw
+| 4quqfJBD/F0LocfpYl6S7RCX1pZjVLfohULRjV5staGURLk0OZL2iyzUqH2N93fW
+| uUO1LpUStpNUypfyjEs7TdoghZWjBR8hlxOsPT8toxbAjaxqLtIuABsGpQIkD9jO
+| DK5TIbHcWaO2aKyMihzPuxEfTZoSLPkrLGzEOQzzZnh4LIH8JHtDghjmGHHZmbnU
+| NFY3SxRUMkfsx1vuNm5H5/D/A1MugyQoxdtjRRNlxq0+VfaviWrOfsK11cUim02k
+| EXVd7JoTtlcDhlKBiRPH5/ljroUI1Vyt8G2W3WuKG4jo+PmUNbTJGH6vNPKg24PA
+| xIPW+7X4QpOpuFcCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAeipu5EgWMnqYsRNI
+| MYBVbnJYEhbvBaCOPhR4LRYFC/CMuuJ+fW+aGSfDcZthqc12BcHlMk4yeBDR7tmo
+| GD1BFcoLTsdWyTjlh7P1CEjpqbWfKZRlHOXmm+bZetEVHk7GMU/ztEHP6BFH7hZU
+| 2UcJ5dDRTYicbjosj1OfjL0EkVJtuwfHCg3l7hg9F0+iOObbwJElQa+8Pt+I8NST
+| LKgtkqdbHXoohD6HQPZOJdyKMdhGHpiol3szj9PUoGZyzS3981gEn31bcTKrbJ65
+| jWgS1IJ49CYze2MTpM4GWV1Q6FTCzJOB8qKmLtDJ5K/9o8vVqqDZ3BoB01psCDXm
+| fsp5Nw==
+|_-----END CERTIFICATE-----
+3389/tcp  open  ms-wbt-server syn-ack Microsoft Terminal Services
+| ssl-cert: Subject: commonName=ralph
+| Issuer: commonName=ralph
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-12-26T22:04:07
+| Not valid after:  2023-06-27T22:04:07
+| MD5:   c1eee0f96e3758847233842388b6f553
+| SHA-1: 8daf1d310e0788954de6629864677cc31c86fbd4
+| -----BEGIN CERTIFICATE-----
+| MIICzjCCAbagAwIBAgIQE0MEip2TwptKzL/XLUQ00zANBgkqhkiG9w0BAQsFADAQ
+| MQ4wDAYDVQQDEwVyYWxwaDAeFw0yMjEyMjYyMjA0MDdaFw0yMzA2MjcyMjA0MDda
+| MBAxDjAMBgNVBAMTBXJhbHBoMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+| AQEAwlvaztRwWgeXZPokHQgINaJ0PbflWyK8Ru3mUI0GHcDixVVT5jigciOeF3l0
+| 1+d0c7ygYlzE293Dwp6owf5x9BxQ07xa2osvKjWXWjLO5x84Apb6COJrv4dy1xj6
+| EnHQ6wUXSaH0dgaRKFRu4PPaH20/fMNxkc8hPrKB8B4Rz4PO1AFSme/R2R0w11xd
+| yIIE15HHWK8NiN61G0NH6TE8y0ZrvYPAUY895TFk1whw7kdomsHtmF28H9I/8s0I
+| Xj/dxX3OTcC46kUcd9GL+PZRBlfqe0s5AN/0uPq1Zd7fr80XY3EAtH/9kmQSwXxF
+| ueoLyF/u4bCMCfCzQeTEtzqXoQIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD
+| ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBADGe4IIXinwqkHgbggIV
+| mcw2v1f60RC9F89dCVHvgosQGIwS0DcF3n9/ybFazoir6RDlFK0j1/ErQKrDu8AH
+| Xoq9zfotK+GSS9DQOMw+OQ1gwcZrFdC2AOjVn1N6ilWVkwzoClIe3wAuW4YoL6t2
+| sNWZFkqV33kkCt9iDuMyoalozx37IdrOBYtOHF+SLM/UaZ2as96LBZFRDUhI+lre
+| 9Oy1hgl3GqE27C9wrHahm3j0uv9cL+9J5uukoS2Q/qfPkXpCv/JC47u29Ul2w5wH
+| KYoNmTK6Ypry+3bW0yLRJhczS8E8F7pyM595t12eghWZ/P06PDI2SXIwygW7VHLe
+| DFs=
+|_-----END CERTIFICATE-----
+| rdp-ntlm-info: 
+|   Target_Name: RALPH
+|   NetBIOS_Domain_Name: RALPH
+|   NetBIOS_Computer_Name: RALPH
+|   DNS_Domain_Name: ralph
+|   DNS_Computer_Name: ralph
+|   Product_Version: 10.0.14393
+|_  System_Time: 2022-12-27T23:07:39+00:00
+|_ssl-date: 2022-12-27T23:08:19+00:00; 0s from scanner time.
+5985/tcp  open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49666/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 37603/tcp): CLEAN (Timeout)
+|   Check 2 (port 47397/tcp): CLEAN (Timeout)
+|   Check 3 (port 48318/udp): CLEAN (Timeout)
+|   Check 4 (port 26314/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: mean: 0s, deviation: 1s, median: 0s
+| smb2-time: 
+|   date: 2022-12-27T23:07:40
+|_  start_date: 2021-12-24T00:38:53
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb-os-discovery: 
+|   OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+|   Computer name: ralph
+|   NetBIOS computer name: RALPH\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2022-12-27T23:07:42+00:00
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 97.53 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:08 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+Initiating Ping Scan at 18:08
+Scanning 10.11.1.50 [2 ports]
+Completed Ping Scan at 18:08, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 18:08
+Completed Parallel DNS resolution of 1 host. at 18:08, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 18:08
+Scanning 10.11.1.50 [3 ports]
+Discovered open port 135/tcp on 10.11.1.50
+Discovered open port 80/tcp on 10.11.1.50
+Discovered open port 9505/tcp on 10.11.1.50
+Completed Connect Scan at 18:08, 0.02s elapsed (3 total ports)
+Initiating Service scan at 18:08
+Scanning 3 services on 10.11.1.50
+Completed Service scan at 18:08, 13.45s elapsed (3 services on 1 host)
+NSE: Script scanning 10.11.1.50.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 5.03s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.10s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+Nmap scan report for 10.11.1.50
+Host is up, received syn-ack (0.017s latency).
+Scanned at 2022-12-27 18:08:20 EST for 18s
+
+PORT     STATE SERVICE REASON  VERSION
+80/tcp   open  http    syn-ack Microsoft IIS httpd 8.5
+|_http-favicon: Unknown favicon MD5: B6341DFC213100C61DB4FB8775878CEC
+|_http-generator: Drupal 7 (http://drupal.org)
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+| http-robots.txt: 36 disallowed entries 
+| /includes/ /misc/ /modules/ /profiles/ /scripts/ 
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt 
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt 
+| /LICENSE.txt /MAINTAINERS.txt /update.php /UPGRADE.txt /xmlrpc.php 
+| /admin/ /comment/reply/ /filter/tips/ /node/add/ /search/ 
+| /user/register/ /user/password/ /user/login/ /user/logout/ /?q=admin/ 
+| /?q=comment/reply/ /?q=filter/tips/ /?q=node/add/ /?q=search/ 
+|_/?q=user/password/ /?q=user/register/ /?q=user/login/ /?q=user/logout/
+|_http-title: Welcome to Bethany&#039;s Page | Bethany&#039;s Page
+|_http-server-header: Microsoft-IIS/8.5
+135/tcp  open  msrpc   syn-ack Microsoft Windows RPC
+9505/tcp open  http    syn-ack HttpFileServer httpd
+|_http-favicon: Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: /
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 18.86 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:08 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:08
+Completed NSE at 18:08, 0.00s elapsed
+Initiating Ping Scan at 18:08
+Scanning 10.11.1.217 [2 ports]
+Completed Ping Scan at 18:08, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 18:08
+Completed Parallel DNS resolution of 1 host. at 18:08, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 18:08
+Scanning 10.11.1.217 [16 ports]
+Discovered open port 111/tcp on 10.11.1.217
+Discovered open port 995/tcp on 10.11.1.217
+Discovered open port 80/tcp on 10.11.1.217
+Discovered open port 110/tcp on 10.11.1.217
+Discovered open port 25/tcp on 10.11.1.217
+Discovered open port 993/tcp on 10.11.1.217
+Discovered open port 22/tcp on 10.11.1.217
+Discovered open port 3306/tcp on 10.11.1.217
+Discovered open port 143/tcp on 10.11.1.217
+Discovered open port 443/tcp on 10.11.1.217
+Discovered open port 9090/tcp on 10.11.1.217
+Discovered open port 4559/tcp on 10.11.1.217
+Discovered open port 5038/tcp on 10.11.1.217
+Discovered open port 4190/tcp on 10.11.1.217
+Discovered open port 836/tcp on 10.11.1.217
+Discovered open port 4445/tcp on 10.11.1.217
+Completed Connect Scan at 18:08, 0.03s elapsed (16 total ports)
+Initiating Service scan at 18:08
+Scanning 16 services on 10.11.1.217
+Service scan Timing: About 50.00% done; ETC: 18:14 (0:02:44 remaining)
+Completed Service scan at 18:11, 168.66s elapsed (16 services on 1 host)
+NSE: Script scanning 10.11.1.217.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:11
+NSE Timing: About 99.50% done; ETC: 18:11 (0:00:00 remaining)
+NSE Timing: About 99.68% done; ETC: 18:12 (0:00:00 remaining)
+NSE Timing: About 99.86% done; ETC: 18:12 (0:00:00 remaining)
+Completed NSE at 18:13, 107.46s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:13
+NSE Timing: About 86.36% done; ETC: 18:13 (0:00:05 remaining)
+NSE Timing: About 90.91% done; ETC: 18:14 (0:00:06 remaining)
+NSE Timing: About 93.94% done; ETC: 18:14 (0:00:06 remaining)
+NSE Timing: About 93.94% done; ETC: 18:15 (0:00:08 remaining)
+NSE Timing: About 94.70% done; ETC: 18:15 (0:00:08 remaining)
+NSE Timing: About 96.97% done; ETC: 18:16 (0:00:06 remaining)
+NSE Timing: About 97.73% done; ETC: 18:16 (0:00:05 remaining)
+NSE Timing: About 98.48% done; ETC: 18:17 (0:00:04 remaining)
+NSE Timing: About 98.48% done; ETC: 18:17 (0:00:04 remaining)
+NSE Timing: About 98.48% done; ETC: 18:18 (0:00:05 remaining)
+NSE Timing: About 99.24% done; ETC: 18:18 (0:00:03 remaining)
+Completed NSE at 18:18, 337.46s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Nmap scan report for 10.11.1.217
+Host is up, received syn-ack (0.017s latency).
+Scanned at 2022-12-27 18:08:38 EST for 614s
+
+PORT     STATE SERVICE    REASON  VERSION
+22/tcp   open  ssh        syn-ack OpenSSH 4.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 1af6e54cf5655ca379cee130f95a9caf (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAJPDStk/Ji1OiU57TGEuGEmDDTWZa2F2dPqSQILXUWGeomuSViEyAuXUIel3cRr/w3c9bRnBzMzaIaBR7ntV7xt6I66fjdxvj989TD05CRg79ZphnZ/0w8W355PQSNSfmQx19gE+FehSGI8FsXdNwgR4vJLywQ6zRADuKZICfxJnAAAAFQDuK0NM01ySwaR9nYYrflw+JI3QRQAAAIAJPz3CiABUjChoFy5RVGyKslPnSIETeIKxXMh4Kmx7dQKzKr8cD2u/fPbUrI8Yp16FomKqnduLwiJtKuOlHV3/vICUxR0ELd1MEyVvUaAPtUcPmucYwVPw01EE90dUqO+2xFJp26r2FZlfghWlTWr2RMj1GYVH+UrTUACd5JaYNQAAAIA9WPHqgPPz8LUyjlSuSBzpIoRHRnCj3OUaIKl/ru/KfmG+vQfxLv4Wf52lvl6HndscmJcbNRItsRBpRLyVU06L4bPxZbFidyB5oGKBG3ZLDr0uewRReiooTXu/nw0MNIUGKfViy7u7vC3J4xVxKADmKjWVogEUdSbqy8DloOizCw==
+|   2048 b19ec8eaeb4cfc55cb1e4d4c406e80f2 (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuB69lD2GJBSjKuNFsk02SaStfbvEgshBpAzFUCIqpXhofihCiQGMXYK5kDfrJ7Figych40Z0nmsT2nGr/vqgNxA1bpziy9dBVRs6NpSqyALFEB+L15AzpNtxBL4dPPZzleJhH7FnmjFQeF57u6vqKepBfANmCeRA+lCg4Wp+mbMSVULysWWDkzKnGCPWRE/cVwhe+brG53lQjVq40aI58tNLFfCEM5h6Z+93D+HDeGGzF5IJTBXFpebwhP1wwYTCGbbQJ8GCkuQkWg0D+SrxOZodjK0c/p9lPSCXR2qj3dzsNPVBum39k6ey+Ukj4iiW2YexUkxknZOvxUhXmJfRgw==
+25/tcp   open  smtp?      syn-ack
+|_smtp-commands: hotline.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, ENHANCEDSTATUSCODES, 8BITMIME, DSN
+80/tcp   open  http       syn-ack Apache httpd 2.2.3
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: Apache/2.2.3 (CentOS)
+|_http-title: Did not follow redirect to https://10.11.1.217/
+110/tcp  open  pop3?      syn-ack
+111/tcp  open  rpcbind    syn-ack 2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100024  1            833/udp   status
+|_  100024  1            836/tcp   status
+143/tcp  open  imap?      syn-ack
+443/tcp  open  ssl/http   syn-ack Apache httpd 2.2.3 ((CentOS))
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/emailAddress=root@localhost.localdomain/organizationalUnitName=SomeOrganizationalUnit/localityName=SomeCity
+| Issuer: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/emailAddress=root@localhost.localdomain/organizationalUnitName=SomeOrganizationalUnit/localityName=SomeCity
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-03-23T19:29:13
+| Not valid after:  2013-03-23T19:29:13
+| MD5:   f41ce874ef3cf28ddd809345c0053209
+| SHA-1: c443192435ead59803bfcc1540e986115e845491
+| -----BEGIN CERTIFICATE-----
+| MIIEDjCCA3egAwIBAgICLrcwDQYJKoZIhvcNAQEFBQAwgbsxCzAJBgNVBAYTAi0t
+| MRIwEAYDVQQIEwlTb21lU3RhdGUxETAPBgNVBAcTCFNvbWVDaXR5MRkwFwYDVQQK
+| ExBTb21lT3JnYW5pemF0aW9uMR8wHQYDVQQLExZTb21lT3JnYW5pemF0aW9uYWxV
+| bml0MR4wHAYDVQQDExVsb2NhbGhvc3QubG9jYWxkb21haW4xKTAnBgkqhkiG9w0B
+| CQEWGnJvb3RAbG9jYWxob3N0LmxvY2FsZG9tYWluMB4XDTEyMDMyMzE5MjkxM1oX
+| DTEzMDMyMzE5MjkxM1owgbsxCzAJBgNVBAYTAi0tMRIwEAYDVQQIEwlTb21lU3Rh
+| dGUxETAPBgNVBAcTCFNvbWVDaXR5MRkwFwYDVQQKExBTb21lT3JnYW5pemF0aW9u
+| MR8wHQYDVQQLExZTb21lT3JnYW5pemF0aW9uYWxVbml0MR4wHAYDVQQDExVsb2Nh
+| bGhvc3QubG9jYWxkb21haW4xKTAnBgkqhkiG9w0BCQEWGnJvb3RAbG9jYWxob3N0
+| LmxvY2FsZG9tYWluMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCqOEXHiaUp
+| ZG0Z3tegdr5/OpBaOLe8fiDJ11+Aqe1p4TvCcMDL3Zm9UQ/ATDq/Q0Df1714fnHb
+| znh1Oz9oPX1p5O3xaQyo07Gr+/Pte5M7ygomx2/cz8t4rjCGksGC9qySfo8gFSyq
+| xp/RrqRgk8h54AOTzXrYbcVUJcx9yqv/BwIDAQABo4IBHTCCARkwHQYDVR0OBBYE
+| FBslHZx1Bx4yHgUajp0GDd717hw4MIHpBgNVHSMEgeEwgd6AFBslHZx1Bx4yHgUa
+| jp0GDd717hw4oYHBpIG+MIG7MQswCQYDVQQGEwItLTESMBAGA1UECBMJU29tZVN0
+| YXRlMREwDwYDVQQHEwhTb21lQ2l0eTEZMBcGA1UEChMQU29tZU9yZ2FuaXphdGlv
+| bjEfMB0GA1UECxMWU29tZU9yZ2FuaXphdGlvbmFsVW5pdDEeMBwGA1UEAxMVbG9j
+| YWxob3N0LmxvY2FsZG9tYWluMSkwJwYJKoZIhvcNAQkBFhpyb290QGxvY2FsaG9z
+| dC5sb2NhbGRvbWFpboICLrcwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOB
+| gQAlkrkd9W0lpDOIWnYumHG5l1A8eYv7leOnXwldMdQHoHkJYTT8nC5nCf09gT3O
+| Roy/RtTQjbdd61Q9FQzdHH+hk6KIBZPzrXCZH7RED3mJu9scyTn8l4NmPQMUMMcW
+| aDdVkc4XkPLs3JKy1laBu6qeTPhawrOu+fiQH8w/S+wahw==
+|_-----END CERTIFICATE-----
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-title: Elastix - Login page
+|_ssl-date: 2022-12-28T04:12:30+00:00; +4h59m15s from scanner time.
+|_http-server-header: Apache/2.2.3 (CentOS)
+836/tcp  open  status     syn-ack 1 (RPC #100024)
+993/tcp  open  imaps?     syn-ack
+995/tcp  open  pop3s?     syn-ack
+3306/tcp open  mysql?     syn-ack
+4190/tcp open  sieve?     syn-ack
+4445/tcp open  upnotifyp? syn-ack
+4559/tcp open  hylafax?   syn-ack
+5038/tcp open  asterisk   syn-ack Asterisk Call Manager 1.1
+9090/tcp open  http       syn-ack Jetty (Openfire chat server http admin)
+|_http-favicon: Unknown favicon MD5: E4888EE8491B4EB75501996E41AF6460
+| http-methods: 
+|   Supported Methods: GET HEAD POST TRACE OPTIONS
+|_  Potentially risky methods: TRACE
+|_http-title: Site doesn't have a title (text/html).
+| http-cookie-flags: 
+|   /: 
+|     JSESSIONID: 
+|_      httponly flag not set
+Service Info: Host: 127.0.0.1
+
+Host script results:
+|_clock-skew: 4h59m14s
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 613.87 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.250 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.250 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.22 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.209 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.209 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.23 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.222 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.222 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.20 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.227 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.227 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.22 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.35 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.35 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.22 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.220 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.220 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.21 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.44 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.44 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.21 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.136 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.136 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.22 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.20 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.20 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.22 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.111 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.111 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.22 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.14 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.14 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.21 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.116 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.116 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.22 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.133 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.133 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.22 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.123 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.123 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.24 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.231 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.231 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.22 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.21 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.21 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.20 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.22 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.22 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.21 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.122 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.122 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.21 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.223 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.223 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.21 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.229 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.229 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.21 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.234 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.234 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.20 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.101 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.101 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.21 seconds
+
+[1;34m[~][0m Starting Script(s)
+[1;38;2;0;255;9m[>][0m Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[1;34m[~][0m Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-27 18:18 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Initiating Ping Scan at 18:18
+Scanning 10.11.1.141 [2 ports]
+Completed Ping Scan at 18:18, 0.00s elapsed (1 total hosts)
+Nmap scan report for 10.11.1.141 [host down, received net-unreach]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 18:18
+Completed NSE at 18:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.22 seconds
+

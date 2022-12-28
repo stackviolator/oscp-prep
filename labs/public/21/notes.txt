@@ -1,0 +1,7 @@
+------------------
+NOTES
+------------------
+
+Likely a macro docx attack
+
+username: "editor" and the password "MyEditWork"

@@ -1,0 +1,13 @@
+------------------
+NOTES
+------------------
+
+Post-exploitation agent for client-side exploitation and AD post exploitation
+Powershell on windows and python on macOS
+
+Installation
+	cd /opt
+	sudo git clone https://github.com/PowerShellEmpire/Empire.git
+	cd Empire/
+	sudo ./setup/install.sh
+	sudo ./empire

