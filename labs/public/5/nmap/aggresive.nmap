@@ -1,0 +1,23 @@
+# Nmap 7.93 scan initiated Fri Dec 30 21:00:58 2022 as: nmap -A -p 135,139,445,1025 -oA nmap/aggresive 10.11.1.5
+Nmap scan report for 10.11.1.5
+Host is up (0.020s latency).
+
+PORT     STATE SERVICE      VERSION
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds Microsoft Windows XP microsoft-ds
+1025/tcp open  NFS-or-IIS?
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_clock-skew: -2s
+|_smb2-time: Protocol negotiation failed (SMB2)
+|_nbstat: NetBIOS name: ALICE, NetBIOS user: <unknown>, NetBIOS MAC: 00505686d486 (VMware)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 30 21:01:26 2022 -- 1 IP address (1 host up) scanned in 28.16 seconds

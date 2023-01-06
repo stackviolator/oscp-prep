@@ -1,1 +1,1562 @@
-# Nmap 7.93 scan initiated Tue Dec 27 19:52:21 2022 as: nmap -iL hosts.txt -A -p- -oA nmap/full
+# Nmap 7.93 scan initiated Thu Jan  5 20:13:59 2023 as: nmap -A -iL hosts.txt -oA nmap/full
+Nmap scan report for 10.11.1.5
+Host is up (0.019s latency).
+Not shown: 991 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE      VERSION
+135/tcp   open     msrpc        Microsoft Windows RPC
+139/tcp   open     netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp   open     microsoft-ds Microsoft Windows XP microsoft-ds
+1025/tcp  open     msrpc        Microsoft Windows RPC
+1100/tcp  filtered mctp
+2049/tcp  filtered nfs
+8194/tcp  filtered sophos
+20000/tcp filtered dnp
+44501/tcp filtered unknown
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+|_nbstat: NetBIOS name: ALICE, NetBIOS user: <unknown>, NetBIOS MAC: 005056864ca7 (VMware)
+
+Nmap scan report for 10.11.1.8
+Host is up (0.020s latency).
+Not shown: 942 filtered tcp ports (no-response), 48 filtered tcp ports (host-unreach)
+PORT     STATE  SERVICE     VERSION
+21/tcp   open   ftp         vsftpd 2.0.1
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.119.221
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 2.0.1 - secure, fast, stable
+|_End of status
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: ERROR
+22/tcp   open   ssh         OpenSSH 3.9p1 (protocol 1.99)
+|_sshv1: Server supports SSHv1
+| ssh-hostkey: 
+|   1024 8994af2e5dc1da8425112c1245c670ac (RSA1)
+|   1024 c1c5d1830f4dd89e8f824cbe534b6e14 (DSA)
+|_  1024 bce1e6ddab5efdd1212e117cd5b20352 (RSA)
+25/tcp   closed smtp
+80/tcp   open   http        Apache httpd 2.0.52 ((CentOS))
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+|_http-server-header: Apache/2.0.52 (CentOS)
+111/tcp  open   rpcbind     2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100024  1            785/udp   status
+|_  100024  1            788/tcp   status
+139/tcp  open   netbios-ssn Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+443/tcp  open   ssl/http    Apache httpd 2.0.52 ((CentOS))
+|_ssl-date: 2023-01-06T06:22:31+00:00; +5h00m37s from scanner time.
+| http-methods: 
+|_  Potentially risky methods: TRACE
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--
+| Not valid before: 2009-09-16T14:03:22
+|_Not valid after:  2010-09-16T14:03:22
+| http-robots.txt: 2 disallowed entries 
+|_/internal/  /tmp/ 
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|_    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+|_http-server-header: Apache/2.0.52 (CentOS)
+445/tcp  open   netbios-ssn Samba smbd 3.0.33-0.17.el4 (workgroup: MYGROUP)
+631/tcp  open   ipp         CUPS 1.1
+| http-methods: 
+|_  Potentially risky methods: PUT
+|_http-title: 403 Forbidden
+|_http-server-header: CUPS/1.1
+3306/tcp open   mysql?
+Service Info: OS: Unix
+
+Host script results:
+|_smb2-time: Protocol negotiation failed (SMB2)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.33-0.17.el4)
+|   Computer name: phoenix
+|   NetBIOS computer name: 
+|   Domain name: 
+|   FQDN: phoenix
+|_  System time: 2023-01-06T01:20:15-05:00
+|_clock-skew: mean: 6h40m51s, deviation: 2h53m38s, median: 5h00m36s
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+Nmap scan report for 10.11.1.10
+Host is up (0.018s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Microsoft IIS httpd 6.0
+|_http-title: Under Construction
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/6.0
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.11.1.13
+Host is up (0.019s latency).
+Not shown: 975 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE              VERSION
+21/tcp    open     ftp                  Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 01-06-23  01:04AM              1468320 accesschk.exe
+| 04-07-19  10:25PM       <DIR>          aspnet_client
+| 01-06-23  01:05AM                 1526 cmdasp.asp
+| 01-06-23  01:04AM                 1400 cmdasp.aspx
+| 04-07-19  07:14PM                99710 iis-85.png
+| 04-07-19  07:14PM                  701 iisstart.htm
+| 01-06-23  01:06AM                59392 nc.exe
+|_01-06-23  01:04AM              1969664 winPEASx86.exe
+| ftp-syst: 
+|_  SYST: Windows_NT
+32/tcp    filtered unknown
+135/tcp   open     msrpc                Microsoft Windows RPC
+139/tcp   open     netbios-ssn          Microsoft Windows netbios-ssn
+445/tcp   open     microsoft-ds         Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+880/tcp   filtered unknown
+1050/tcp  filtered java-or-OTGfileshare
+1068/tcp  filtered instl_bootc
+1106/tcp  filtered isoipsigport-1
+1433/tcp  open     ms-sql-s             Microsoft SQL Server 2012 11.00.2100.00; RTM
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2022-03-16T23:28:47
+|_Not valid after:  2052-03-16T23:28:47
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: 2023-01-06T01:21:48+00:00; -1s from scanner time.
+2200/tcp  filtered ici
+3389/tcp  open     ssl/ms-wbt-server?
+| ssl-cert: Subject: commonName=disco
+| Not valid before: 2023-01-04T19:14:44
+|_Not valid after:  2023-07-06T19:14:44
+|_ssl-date: 2023-01-06T01:21:52+00:00; 0s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: DISCO
+|   NetBIOS_Domain_Name: DISCO
+|   NetBIOS_Computer_Name: DISCO
+|   DNS_Domain_Name: disco
+|   DNS_Computer_Name: disco
+|   Product_Version: 6.3.9600
+|_  System_Time: 2023-01-06T01:19:02+00:00
+5800/tcp  open     vnc-http             TightVNC (user: disco; VNC TCP port: 5900)
+|_http-title: TightVNC desktop [disco]
+5900/tcp  open     vnc                  VNC (protocol 3.8)
+| vnc-info: 
+|   Protocol version: 3.8
+|   Security types: 
+|     None (1)
+|     Tight (16)
+|   Tight auth subtypes: 
+|     None
+|_  WARNING: Server does not require authentication
+5987/tcp  filtered wbem-rmi
+9878/tcp  filtered kca-service
+16113/tcp filtered unknown
+49152/tcp open     msrpc                Microsoft Windows RPC
+49153/tcp open     msrpc                Microsoft Windows RPC
+49154/tcp open     msrpc                Microsoft Windows RPC
+49155/tcp open     msrpc                Microsoft Windows RPC
+49156/tcp open     msrpc                Microsoft Windows RPC
+49157/tcp open     unknown
+49158/tcp open     msrpc                Microsoft Windows RPC
+49176/tcp filtered unknown
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2023-01-06T01:19:39
+|_  start_date: 2022-03-16T23:28:44
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.11.1.14
+Host is up (0.019s latency).
+Not shown: 994 filtered tcp ports (no-response)
+PORT    STATE  SERVICE VERSION
+21/tcp  open   ftp     Microsoft ftpd
+| ftp-syst: 
+|_  SYST: Windows_NT
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 01-06-23  12:55AM       <DIR>          AdminScripts
+| 01-17-07  06:43PM       <DIR>          ftproot
+| 01-17-07  06:43PM       <DIR>          iissamples
+| 01-06-23  12:59AM       <DIR>          Scripts
+|_01-06-23  12:59AM       <DIR>          wwwroot
+23/tcp  closed telnet
+25/tcp  closed smtp
+80/tcp  open   http    Microsoft IIS httpd 5.1
+| http-webdav-scan: 
+|   Allowed Methods: OPTIONS, TRACE, GET, HEAD, DELETE, COPY, MOVE, PROPFIND, PROPPATCH, SEARCH, MKCOL, LOCK, UNLOCK
+|   WebDAV type: Unknown
+|   Public Options: OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH
+|   Server Type: Microsoft-IIS/5.1
+|_  Server Date: Fri, 06 Jan 2023 01:19:29 GMT
+| http-methods: 
+|_  Potentially risky methods: TRACE DELETE COPY MOVE PROPFIND PROPPATCH SEARCH MKCOL LOCK UNLOCK PUT
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Microsoft-IIS/5.1
+110/tcp closed pop3
+443/tcp open   https?
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.11.1.20
+Host is up (0.018s latency).
+Not shown: 988 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2023-01-06 01:15:02Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: svcorp.com0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: svcorp.com0., Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+|_ssl-date: 2023-01-06T01:21:50+00:00; -1s from scanner time.
+| ssl-cert: Subject: commonName=sv-dc01.svcorp.com
+| Not valid before: 2023-01-05T00:20:42
+|_Not valid after:  2023-07-07T00:20:42
+Service Info: Host: SV-DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2023-01-06T01:19:52
+|_  start_date: N/A
+
+Nmap scan report for 10.11.1.21
+Host is up (0.019s latency).
+Not shown: 994 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           FileZilla ftpd
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+80/tcp   open  http          Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: SV Corporation Editorial Process
+|_http-server-header: Microsoft-IIS/10.0
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: svcorp
+|   NetBIOS_Domain_Name: svcorp
+|   NetBIOS_Computer_Name: SV-FILE01
+|   DNS_Domain_Name: svcorp.com
+|   DNS_Computer_Name: sv-file01.svcorp.com
+|   DNS_Tree_Name: svcorp.com
+|   Product_Version: 10.0.14393
+|_  System_Time: 2023-01-06T01:19:13+00:00
+| ssl-cert: Subject: commonName=sv-file01.svcorp.com
+| Not valid before: 2023-01-05T00:21:13
+|_Not valid after:  2023-07-07T00:21:13
+|_ssl-date: 2023-01-06T01:21:51+00:00; 0s from scanner time.
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2023-01-06T01:20:00
+|_  start_date: 2022-03-24T22:59:18
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.11.1.22
+Host is up (0.020s latency).
+Not shown: 990 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE       VERSION
+135/tcp  open     msrpc         Microsoft Windows RPC
+139/tcp  open     netbios-ssn   Microsoft Windows netbios-ssn
+417/tcp  filtered onmux
+445/tcp  open     microsoft-ds  Windows 10 Pro N 14393 microsoft-ds (workgroup: svcorp)
+1030/tcp filtered iad1
+1084/tcp filtered ansoft-lm-2
+2196/tcp filtered unknown
+3389/tcp open     ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=svclient08.svcorp.com
+| Not valid before: 2023-01-05T00:21:06
+|_Not valid after:  2023-07-07T00:21:06
+| rdp-ntlm-info: 
+|   Target_Name: svcorp
+|   NetBIOS_Domain_Name: svcorp
+|   NetBIOS_Computer_Name: SVCLIENT08
+|   DNS_Domain_Name: svcorp.com
+|   DNS_Computer_Name: svclient08.svcorp.com
+|   DNS_Tree_Name: svcorp.com
+|   Product_Version: 10.0.14393
+|_  System_Time: 2023-01-06T01:19:50+00:00
+|_ssl-date: 2023-01-06T01:21:52+00:00; 0s from scanner time.
+7019/tcp filtered doceri-ctl
+7921/tcp filtered unknown
+Service Info: Host: SVCLIENT08; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 14s, deviation: 33s, median: 0s
+| smb2-time: 
+|   date: 2023-01-06T01:20:05
+|_  start_date: 2021-11-28T18:40:16
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb-os-discovery: 
+|   OS: Windows 10 Pro N 14393 (Windows 10 Pro N 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_10::-
+|   Computer name: svclient08
+|   NetBIOS computer name: SVCLIENT08\x00
+|   Domain name: svcorp.com
+|   Forest name: svcorp.com
+|   FQDN: svclient08.svcorp.com
+|_  System time: 2023-01-06T01:20:07+00:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+Nmap scan report for 10.11.1.24
+Host is up (0.020s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Windows 10 Pro N 14393 microsoft-ds (workgroup: svcorp)
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=svclient73.svcorp.com
+| Not valid before: 2023-01-05T00:21:24
+|_Not valid after:  2023-07-07T00:21:24
+|_ssl-date: 2023-01-06T01:21:51+00:00; 0s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: svcorp
+|   NetBIOS_Domain_Name: svcorp
+|   NetBIOS_Computer_Name: SVCLIENT73
+|   DNS_Domain_Name: svcorp.com
+|   DNS_Computer_Name: svclient73.svcorp.com
+|   DNS_Tree_Name: svcorp.com
+|   Product_Version: 10.0.14393
+|_  System_Time: 2023-01-06T01:19:17+00:00
+Service Info: Host: SVCLIENT73; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 15s, deviation: 34s, median: 0s
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-01-06T01:20:10
+|_  start_date: 2022-02-05T04:37:18
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb-os-discovery: 
+|   OS: Windows 10 Pro N 14393 (Windows 10 Pro N 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_10::-
+|   Computer name: svclient73
+|   NetBIOS computer name: SVCLIENT73\x00
+|   Domain name: svcorp.com
+|   Forest name: svcorp.com
+|   FQDN: svclient73.svcorp.com
+|_  System time: 2023-01-06T01:20:11+00:00
+
+Nmap scan report for 10.11.1.31
+Host is up (0.018s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+22/tcp   open  ssh           OpenSSH for_Windows_9.1 (protocol 2.0)
+| ssh-hostkey: 
+|   256 aa066cf5dfb3768a0ba1d31561a1703a (ECDSA)
+|_  256 1d7b9f0b8a00e337976356aebacd8dd6 (ED25519)
+80/tcp   open  http          Microsoft IIS httpd 10.0
+|_http-title: Login
+| http-methods: 
+|_  Potentially risky methods: TRACE
+| http-cookie-flags: 
+|   /: 
+|     ASPSESSIONIDQQRARSAA: 
+|_      httponly flag not set
+|_http-server-header: Microsoft-IIS/10.0
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Windows Server 2016 Standard 14393 microsoft-ds
+1433/tcp open  ms-sql-s      Microsoft SQL Server 2017 14.00.1000.00; RTM
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2021-12-24T00:39:02
+|_Not valid after:  2051-12-24T00:39:02
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: 2023-01-06T01:21:38+00:00; -14s from scanner time.
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=ralph
+| Not valid before: 2023-01-01T17:55:25
+|_Not valid after:  2023-07-03T17:55:25
+| rdp-ntlm-info: 
+|   Target_Name: RALPH
+|   NetBIOS_Domain_Name: RALPH
+|   NetBIOS_Computer_Name: RALPH
+|   DNS_Domain_Name: ralph
+|   DNS_Computer_Name: ralph
+|   Product_Version: 10.0.14393
+|_  System_Time: 2023-01-06T01:18:51+00:00
+|_ssl-date: 2023-01-06T01:21:37+00:00; -13s from scanner time.
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb-os-discovery: 
+|   OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+|   Computer name: ralph
+|   NetBIOS computer name: RALPH\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2023-01-06T01:20:01+00:00
+| smb2-time: 
+|   date: 2023-01-06T01:20:03
+|_  start_date: 2021-12-24T00:38:53
+|_clock-skew: mean: 0s, deviation: 33s, median: -13s
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+Nmap scan report for 10.11.1.35
+Host is up (0.018s latency).
+Not shown: 992 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE VERSION
+22/tcp    open     ssh     OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 454a21258c04dcc848760c5277146c73 (RSA)
+|   256 a0b82d0f07793647ac9fbf539b0f87eb (ECDSA)
+|_  256 ee06c514bc2fae9e1e0b88cd3f12e06d (ED25519)
+80/tcp    open     http    Apache httpd 2.4.6 ((CentOS) PHP/5.4.16)
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/5.4.16
+1047/tcp  filtered neod1
+2049/tcp  filtered nfs
+6007/tcp  filtered X11:7
+6112/tcp  filtered dtspc
+32784/tcp filtered unknown
+56737/tcp filtered unknown
+
+Nmap scan report for 10.11.1.39
+Host is up (0.019s latency).
+Not shown: 950 filtered tcp ports (no-response), 47 filtered tcp ports (host-unreach)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 6.6.1 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 5ec17ed2f920f911ea4b0268073f54f2 (RSA)
+|   256 36ef2731a2fd4ae3d24e12581f7a0358 (ECDSA)
+|_  256 2c709cc94c5061d25143d567d1d039de (ED25519)
+80/tcp   open  http    nginx 1.6.3
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: nginx/1.6.3
+3306/tcp open  mysql   MariaDB (unauthorized)
+
+Nmap scan report for 10.11.1.44
+Host is up (0.017s latency).
+Not shown: 994 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE   VERSION
+9/tcp    filtered discard
+22/tcp   open     ssh       OpenSSH 5.3p1 Debian 3ubuntu7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 656369c98b96b1fbbed55cf81e7bde8f (DSA)
+|_  2048 2899c051209b31e1a4fb9a174652cffc (RSA)
+106/tcp  filtered pop3pw
+3301/tcp filtered tarantool
+6007/tcp filtered X11:7
+8000/tcp open     ssl/http  Rocket httpd 1.2.6 (Python 2.6.5)
+| http-cookie-flags: 
+|   /: 
+|     session_id_issue_tracker: 
+|_      httponly flag not set
+| http-robots.txt: 1 disallowed entry 
+|_/welcome/default/user
+|_http-generator: Web2py Web Framework
+|_http-title: CSC438 - Issue Tracker Project
+| ssl-cert: Subject: commonName=Tricia Admin/organizationName=Thinc/stateOrProvinceName=NY/countryName=US
+| Not valid before: 2013-08-17T11:55:25
+|_Not valid after:  2014-08-17T11:55:25
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|_    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|_ssl-date: 2023-01-06T01:21:54+00:00; +2s from scanner time.
+|_http-server-header: Rocket 1.2.6 Python/2.6.5
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: 1s
+
+Nmap scan report for 10.11.1.50
+Host is up (0.019s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE VERSION
+80/tcp  open  http    Microsoft IIS httpd 8.5
+|_http-title: Welcome to Bethany&#039;s Page | Bethany&#039;s Page
+| http-robots.txt: 36 disallowed entries (15 shown)
+| /includes/ /misc/ /modules/ /profiles/ /scripts/ 
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt 
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt 
+|_/LICENSE.txt /MAINTAINERS.txt
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-generator: Drupal 7 (http://drupal.org)
+|_http-server-header: Microsoft-IIS/8.5
+135/tcp open  msrpc   Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.11.1.71
+Host is up (0.018s latency).
+Not shown: 993 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE      VERSION
+22/tcp   open     ssh          OpenSSH 6.6.1p1 Ubuntu 2ubuntu2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 72b555801b24d6f3bfa5c5981b010390 (DSA)
+|   2048 1af6a70dedc273a16fa3086828b53bbb (RSA)
+|   256 e6438959f985d8e2bbe3d7ed285cc565 (ECDSA)
+|_  256 3b0bf3843c7d6e2b2c811194169b717d (ED25519)
+80/tcp   open     http         Apache/2.4.7 (Ubuntu)
+| http-title: Trees of Large Sizes
+|_Requested resource was site/index.php/
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+783/tcp  filtered spamassassin
+1039/tcp filtered sbl
+1093/tcp filtered proofd
+5414/tcp filtered statusd
+9998/tcp filtered distinct32
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.11.1.72
+Host is up (0.019s latency).
+Not shown: 993 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 5.8p1 Debian 7ubuntu1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 d32e100d4890ce9a33fb663fa0a69448 (DSA)
+|   2048 ef0a3b8e3f92a45ef0abe77d75f0de0e (RSA)
+|_  256 153a653b97ede0fc85bc4b53482261b1 (ECDSA)
+25/tcp   open  smtp    JAMES smtpd 2.3.2
+|_smtp-commands: beta Hello nmap.scanme.org (192.168.119.221 [192.168.119.221])
+80/tcp   open  http    Apache httpd 2.2.20 ((Ubuntu))
+|_http-server-header: Apache/2.2.20 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+110/tcp  open  pop3    JAMES pop3d 2.3.2
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  2,3,4       2049/tcp   nfs
+|   100003  2,3,4       2049/tcp6  nfs
+|   100003  2,3,4       2049/udp   nfs
+|   100003  2,3,4       2049/udp6  nfs
+|   100005  1,2,3      34776/udp   mountd
+|   100005  1,2,3      49089/tcp6  mountd
+|   100005  1,2,3      53037/udp6  mountd
+|   100005  1,2,3      59384/tcp   mountd
+|   100021  1,3,4      34103/tcp6  nlockmgr
+|   100021  1,3,4      42047/udp6  nlockmgr
+|   100021  1,3,4      53711/tcp   nlockmgr
+|   100021  1,3,4      59919/udp   nlockmgr
+|   100024  1          39535/tcp6  status
+|   100024  1          43143/udp6  status
+|   100024  1          46455/udp   status
+|   100024  1          49648/tcp   status
+|   100227  2,3         2049/tcp   nfs_acl
+|   100227  2,3         2049/tcp6  nfs_acl
+|   100227  2,3         2049/udp   nfs_acl
+|_  100227  2,3         2049/udp6  nfs_acl
+119/tcp  open  nntp    JAMES nntpd (posting ok)
+2049/tcp open  nfs_acl 2-3 (RPC #100227)
+Service Info: Host: beta; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.11.1.101
+Host is up (0.019s latency).
+Not shown: 994 closed tcp ports (conn-refused)
+PORT    STATE    SERVICE     VERSION
+21/tcp  open     ftp         vsftpd 3.0.3
+22/tcp  open     ssh         OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 625416aa0b7377611ba445c0f82e5bed (RSA)
+|   256 f44223276e90febcf4d9326f8f6b7434 (ECDSA)
+|_  256 c66afa446e3137dae39edc29f4486bb8 (ED25519)
+25/tcp  filtered smtp
+80/tcp  open     http        Apache httpd 2.4.18 ((Ubuntu))
+|_http-title: TryHarder oscp.thinc.local
+| http-robots.txt: 1 disallowed entry 
+|_/passwords/
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+139/tcp open     netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp open     netbios-ssn Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)
+Service Info: Host: BREAK; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-time: 
+|   date: 2023-01-06T01:20:17
+|_  start_date: N/A
+|_clock-skew: mean: 1h40m26s, deviation: 2h54m00s, median: -1s
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+|   Computer name: break
+|   NetBIOS computer name: BREAK\x00
+|   Domain name: \x00
+|   FQDN: break
+|_  System time: 2023-01-05T20:20:17-05:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_nbstat: NetBIOS name: BREAK, NetBIOS user: <unknown>, NetBIOS MAC: 000000000000 (Xerox)
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.11.1.111
+Host is up (0.017s latency).
+Not shown: 995 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+1433/tcp open  ms-sql-s      Microsoft SQL Server 2017 14.00.1000.00; RTM
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2022-04-28T09:23:20
+|_Not valid after:  2052-04-28T09:23:20
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: 2023-01-06T01:21:42+00:00; -7s from scanner time.
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+|_ssl-date: 2023-01-06T01:21:44+00:00; -7s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: 1NSIDER
+|   NetBIOS_Domain_Name: 1NSIDER
+|   NetBIOS_Computer_Name: 1NSIDER
+|   DNS_Domain_Name: 1nsider
+|   DNS_Computer_Name: 1nsider
+|   Product_Version: 10.0.17763
+|_  System_Time: 2023-01-06T01:19:07+00:00
+| ssl-cert: Subject: commonName=1nsider
+| Not valid before: 2023-01-03T04:54:26
+|_Not valid after:  2023-07-05T04:54:26
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2023-01-06T01:20:12
+|_  start_date: N/A
+|_clock-skew: mean: -7s, deviation: 0s, median: -7s
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.11.1.115
+Host is up (0.018s latency).
+Not shown: 989 closed tcp ports (conn-refused)
+PORT      STATE SERVICE     VERSION
+21/tcp    open  ftp         vsftpd 1.1.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x    2 0        0            4096 Feb 28  2003 pub
+22/tcp    open  ssh         OpenSSH 3.5p1 (protocol 1.99)
+|_sshv1: Server supports SSHv1
+| ssh-hostkey: 
+|   1024 3670a49f3247ac573fefa1ec0bba441b (RSA1)
+|   1024 64797dc6a2633254f0d92bf35dc7d269 (DSA)
+|_  1024 48fb393d308250de6669c5ca4562c0dc (RSA)
+25/tcp    open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+80/tcp    open  http        Apache httpd 2.0.40 ((Red Hat Linux))
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux
+|_http-server-header: Apache/2.0.40 (Red Hat Linux)
+| http-methods: 
+|_  Potentially risky methods: TRACE
+111/tcp   open  rpcbind     2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100024  1          32768/tcp   status
+|   100024  1          32768/udp   status
+|_  391002  2          32769/tcp   sgi_fam
+139/tcp   open  netbios-ssn Samba smbd (workgroup: MYGROUP)
+143/tcp   open  imap        UW imapd 2001.315rh
+|_imap-capabilities: IMAP4REV1 IDLE AUTH=LOGINA0001 THREAD=REFERENCES SORT CAPABILITY OK MULTIAPPEND STARTTLS MAILBOX-REFERRALS THREAD=ORDEREDSUBJECT LOGIN-REFERRALS NAMESPACE completed SCAN
+|_ssl-date: 2023-01-06T02:22:19+00:00; +1h00m08s from scanner time.
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--
+| Not valid before: 2007-01-16T06:07:45
+|_Not valid after:  2008-01-16T06:07:45
+199/tcp   open  smux        Linux SNMP multiplexer
+443/tcp   open  ssl/http    Apache httpd 2.0.40 ((Red Hat Linux))
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux
+| ssl-cert: Subject: commonName=redhat/organizationName=ACME LOCAL LTD/stateOrProvinceName=Berkshire/countryName=GB
+| Not valid before: 2007-01-16T14:54:43
+|_Not valid after:  2008-01-16T14:54:43
+|_http-server-header: Apache/2.0.40 (Red Hat Linux)
+|_ssl-date: 2023-01-06T02:21:58+00:00; +1h00m08s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|_    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+3306/tcp  open  mysql       MySQL (unauthorized)
+32768/tcp open  status      1 (RPC #100024)
+Service Info: Host: tophat.acme.local; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 1h00m07s, deviation: 0s, median: 1h00m07s
+|_nbstat: NetBIOS name: TOPHAT, NetBIOS user: <unknown>, NetBIOS MAC: 000000000000 (Xerox)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Nmap scan report for 10.11.1.116
+Host is up (0.018s latency).
+Not shown: 995 closed tcp ports (conn-refused)
+PORT    STATE SERVICE    VERSION
+21/tcp  open  ftp        vsftpd 3.0.3
+22/tcp  open  ssh        OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 86887a3f919526ff1ad1644439ea8c1a (RSA)
+|   256 076218a5a3892f3e91d906c2ea37cc23 (ECDSA)
+|_  256 c2bea44f01a171fbb20c3a3ea4c85651 (ED25519)
+80/tcp  open  http       Apache httpd 2.4.18 ((Ubuntu))
+|_http-title: Dotty
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+110/tcp open  tcpwrapped
+143/tcp open  tcpwrapped
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.11.1.120
+Host is up (0.019s latency).
+Not shown: 988 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2023-01-06 01:15:31Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: xor.com0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: xor.com0., Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+|_ssl-date: 2023-01-06T01:21:48+00:00; -1s from scanner time.
+| ssl-cert: Subject: commonName=xor-dc01.xor.com
+| Not valid before: 2023-01-05T01:16:47
+|_Not valid after:  2023-07-07T01:16:47
+Service Info: Host: XOR-DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2023-01-06T01:20:25
+|_  start_date: N/A
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled and required
+
+Nmap scan report for 10.11.1.121
+Host is up (0.019s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: xor
+|   NetBIOS_Domain_Name: xor
+|   NetBIOS_Computer_Name: XOR-APP23
+|   DNS_Domain_Name: xor.com
+|   DNS_Computer_Name: xor-app23.xor.com
+|   DNS_Tree_Name: xor.com
+|   Product_Version: 10.0.17763
+|_  System_Time: 2023-01-06T01:18:55+00:00
+|_ssl-date: 2023-01-06T01:21:50+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=xor-app23.xor.com
+| Not valid before: 2023-01-05T01:17:09
+|_Not valid after:  2023-07-07T01:17:09
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-01-06T01:20:32
+|_  start_date: N/A
+
+Nmap scan report for 10.11.1.122
+Host is up (0.018s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=xor-app07.xor.com
+| Not valid before: 2023-01-05T01:17:05
+|_Not valid after:  2023-07-07T01:17:05
+|_ssl-date: 2023-01-06T01:21:50+00:00; 0s from scanner time.
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-01-06T01:20:39
+|_  start_date: N/A
+
+Nmap scan report for 10.11.1.123
+Host is up (0.019s latency).
+Not shown: 993 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+80/tcp   open  http          Apache httpd 2.4.39 ((Win64) OpenSSL/1.1.1b PHP/7.3.5)
+|_http-server-header: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.5
+| http-title: Welcome to XAMPP
+|_Requested resource was http://10.11.1.123/dashboard/
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp  open  ssl/http      Apache httpd 2.4.39 ((Win64) OpenSSL/1.1.1b PHP/7.3.5)
+| ssl-cert: Subject: commonName=localhost
+| Not valid before: 2009-11-10T23:48:47
+|_Not valid after:  2019-11-08T23:48:47
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.5
+| tls-alpn: 
+|_  http/1.1
+| http-title: Welcome to XAMPP
+|_Requested resource was https://10.11.1.123/dashboard/
+445/tcp  open  microsoft-ds  Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+3306/tcp open  mysql         MariaDB (unauthorized)
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=xor-app59.xor.com
+| Not valid before: 2023-01-05T01:17:13
+|_Not valid after:  2023-07-07T01:17:13
+|_ssl-date: 2023-01-06T01:21:51+00:00; 0s from scanner time.
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2023-01-06T01:20:44
+|_  start_date: 2022-07-20T02:58:25
+
+Nmap scan report for 10.11.1.128
+Host is up (0.019s latency).
+Not shown: 985 closed tcp ports (conn-refused)
+PORT      STATE SERVICE            VERSION
+21/tcp    open  ftp                Microsoft ftpd
+| ftp-syst: 
+|_  SYST: Windows_NT
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_03-14-19  01:58AM             54030608 FoxitReader901_enu_Setup_Prom.exe
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+1433/tcp  open  ms-sql-s           Microsoft SQL Server 2012 11.00.2100.00; RTM
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2022-04-06T17:00:38
+|_Not valid after:  2052-04-06T17:00:38
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: 2023-01-06T01:21:53+00:00; 0s from scanner time.
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+3389/tcp  open  ssl/ms-wbt-server?
+| ssl-cert: Subject: commonName=dj
+| Not valid before: 2023-01-04T23:32:48
+|_Not valid after:  2023-07-06T23:32:48
+| rdp-ntlm-info: 
+|   Target_Name: DJ
+|   NetBIOS_Domain_Name: DJ
+|   NetBIOS_Computer_Name: DJ
+|   DNS_Domain_Name: dj
+|   DNS_Computer_Name: dj
+|   Product_Version: 6.3.9600
+|_  System_Time: 2023-01-06T01:19:00+00:00
+|_ssl-date: 2023-01-06T01:21:51+00:00; 0s from scanner time.
+5800/tcp  open  http-proxy         sslstrip
+|_http-title: TightVNC desktop [dj]
+5900/tcp  open  vnc                VNC (protocol 3.8)
+| vnc-info: 
+|   Protocol version: 3.8
+|   Security types: 
+|     VNC Authentication (2)
+|     Tight (16)
+|   Tight auth subtypes: 
+|_    STDV VNCAUTH_ (2)
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+49156/tcp open  msrpc              Microsoft Windows RPC
+49157/tcp open  msrpc              Microsoft Windows RPC
+49158/tcp open  msrpc              Microsoft Windows RPC
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-01-06T01:20:50
+|_  start_date: 2022-04-06T17:00:37
+
+Nmap scan report for 10.11.1.133
+Host is up (0.018s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Microsoft IIS 5.6
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Fri, 06 Jan 2023 01:15:58 GMT
+|     Server: Microsoft IIS 5.6
+|     Vary: Accept-Encoding
+|     Content-Length: 619
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     <html>
+|     <head>
+|     <title>Let's play with the offsec team</title>
+|     </head>
+|     <body style="color: #FFFFFF; background-color: #000000;font-family: verdana;">
+|     <center>
+|     <div style="width:600px;height:399px;background-image:url(offsec-team.jpg);">
+|     <form method="post" action="login.asp">
+|     <table style="padding-top:170px;">
+|     <tr>
+|     <td>Username: </td><td><input type="text" name="username" value=""></td>
+|     </tr>
+|     <tr>
+|     <td>Password: </td><td><input type="password" name="password"></td>
+|     </tr>
+|     <tr>
+|     colspan="2" align="right"><input type="submit" name="submit" value="Enter"></td>
+|     </tr>
+|     </table>
+|     </form>
+|     </div>
+|     </center>
+|     </body>
+|_    </html>
+|_http-server-header: Microsoft IIS 5.6
+|_http-title: Let's play with the offsec team
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.93%I=7%D=1/5%Time=63B7764F%P=x86_64-pc-linux-gnu%r(GetRe
+SF:quest,325,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fri,\x2006\x20Jan\x202023
+SF:\x2001:15:58\x20GMT\r\nServer:\x20Microsoft\x20IIS\x205\.6\r\nVary:\x20
+SF:Accept-Encoding\r\nContent-Length:\x20619\r\nConnection:\x20close\r\nCo
+SF:ntent-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n<html>\n<head>\n<titl
+SF:e>Let's\x20play\x20with\x20the\x20offsec\x20team</title>\n</head>\n<bod
+SF:y\x20style=\"color:\x20#FFFFFF;\x20background-color:\x20#000000;font-fa
+SF:mily:\x20verdana;\">\n<center>\n<div\x20style=\"width:600px;height:399p
+SF:x;background-image:url\(offsec-team\.jpg\);\">\n<form\x20method=\"post\
+SF:"\x20action=\"login\.asp\">\n<table\x20style=\"padding-top:170px;\">\n<
+SF:tr>\n<td>Username:\x20</td><td><input\x20type=\"text\"\x20name=\"userna
+SF:me\"\x20value=\"\"></td>\n</tr>\n<tr>\n<td>Password:\x20</td><td><input
+SF:\x20type=\"password\"\x20name=\"password\"></td>\n</tr>\n<tr>\n<td\x20c
+SF:olspan=\"2\"\x20align=\"right\"><input\x20type=\"submit\"\x20name=\"sub
+SF:mit\"\x20value=\"Enter\"></td>\n</tr>\n</table>\n</form>\n</div>\n</cen
+SF:ter>\n</body>\n</html>\n")%r(HTTPOptions,325,"HTTP/1\.1\x20200\x20OK\r\
+SF:nDate:\x20Fri,\x2006\x20Jan\x202023\x2001:15:58\x20GMT\r\nServer:\x20Mi
+SF:crosoft\x20IIS\x205\.6\r\nVary:\x20Accept-Encoding\r\nContent-Length:\x
+SF:20619\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset
+SF:=UTF-8\r\n\r\n<html>\n<head>\n<title>Let's\x20play\x20with\x20the\x20of
+SF:fsec\x20team</title>\n</head>\n<body\x20style=\"color:\x20#FFFFFF;\x20b
+SF:ackground-color:\x20#000000;font-family:\x20verdana;\">\n<center>\n<div
+SF:\x20style=\"width:600px;height:399px;background-image:url\(offsec-team\
+SF:.jpg\);\">\n<form\x20method=\"post\"\x20action=\"login\.asp\">\n<table\
+SF:x20style=\"padding-top:170px;\">\n<tr>\n<td>Username:\x20</td><td><inpu
+SF:t\x20type=\"text\"\x20name=\"username\"\x20value=\"\"></td>\n</tr>\n<tr
+SF:>\n<td>Password:\x20</td><td><input\x20type=\"password\"\x20name=\"pass
+SF:word\"></td>\n</tr>\n<tr>\n<td\x20colspan=\"2\"\x20align=\"right\"><inp
+SF:ut\x20type=\"submit\"\x20name=\"submit\"\x20value=\"Enter\"></td>\n</tr
+SF:>\n</table>\n</form>\n</div>\n</center>\n</body>\n</html>\n");
+
+Nmap scan report for 10.11.1.136
+Host is up (0.020s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT    STATE SERVICE     VERSION
+22/tcp  open  ssh         OpenSSH 4.3p2 Debian 9 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 8823980d9d8a205935b8141214d5d044 (DSA)
+|_  2048 6b5d0471767856965692a8023073eefa (RSA)
+|_auth-owners: root
+113/tcp open  ident
+|_auth-owners: identd
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: LOCAL)
+|_auth-owners: root
+445/tcp open  netbios-ssn Samba smbd 3.0.24 (workgroup: LOCAL)
+|_auth-owners: root
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 2h31m01s, deviation: 3h33m28s, median: 4s
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.24)
+|   NetBIOS computer name: 
+|   Workgroup: THINC.LOCAL\x00
+|_  System time: 2023-01-05T20:20:55-05:00
+|_smb2-time: Protocol negotiation failed (SMB2)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: share (dangerous)
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_nbstat: NetBIOS name: SUFFERANCE, NetBIOS user: <unknown>, NetBIOS MAC: 000000000000 (Xerox)
+
+Nmap scan report for 10.11.1.141
+Host is up (0.018s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 4.0 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 fecdbbf636d4596292b410e475044354 (DSA)
+|_  1024 9a992575ac04e5f9f721c6f5884f126a (RSA)
+111/tcp   open  rpcbind 2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|_  100000  2            111/udp   rpcbind
+10000/tcp open  http    MiniServ 0.01 (Webmin httpd)
+|_http-title: Site doesn't have a title (text/html; Charset=iso-8859-1).
+
+Nmap scan report for 10.11.1.209
+Host is up (0.019s latency).
+Not shown: 995 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.5 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 a133be711a0a48ef8290e19cf43eae0c (RSA)
+|_  256 91d43c25ce97724b553cfed43b23c48e (ED25519)
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+515/tcp  open  printer
+8009/tcp open  ajp13   Apache Jserv (Protocol v1.3)
+| ajp-methods: 
+|_  Supported methods: GET HEAD POST OPTIONS
+8080/tcp open  http    Apache Tomcat 9.0.27
+|_http-title: Apache Tomcat/9.0.27
+|_http-favicon: Apache Tomcat
+|_http-open-proxy: Proxy might be redirecting requests
+
+Nmap scan report for 10.11.1.217
+Host is up (0.018s latency).
+Not shown: 989 closed tcp ports (conn-refused)
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        OpenSSH 4.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 1af6e54cf5655ca379cee130f95a9caf (DSA)
+|_  2048 b19ec8eaeb4cfc55cb1e4d4c406e80f2 (RSA)
+25/tcp   open  smtp?
+|_smtp-commands: hotline.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, ENHANCEDSTATUSCODES, 8BITMIME, DSN
+80/tcp   open  http       Apache httpd 2.2.3
+|_http-server-header: Apache/2.2.3 (CentOS)
+|_http-title: Did not follow redirect to https://10.11.1.217/
+110/tcp  open  pop3?
+111/tcp  open  rpcbind    2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100024  1            833/udp   status
+|_  100024  1            836/tcp   status
+143/tcp  open  imap?
+443/tcp  open  ssl/http   Apache httpd 2.2.3 ((CentOS))
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--
+| Not valid before: 2012-03-23T19:29:13
+|_Not valid after:  2013-03-23T19:29:13
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-title: Elastix - Login page
+|_http-server-header: Apache/2.2.3 (CentOS)
+|_ssl-date: 2023-01-06T06:21:49+00:00; +4h59m59s from scanner time.
+993/tcp  open  imaps?
+995/tcp  open  pop3s?
+3306/tcp open  mysql?
+4445/tcp open  upnotifyp?
+Service Info: Host: 127.0.0.1
+
+Host script results:
+|_clock-skew: 4h59m58s
+
+Nmap scan report for 10.11.1.220
+Host is up (0.018s latency).
+Not shown: 980 closed tcp ports (conn-refused)
+PORT      STATE SERVICE            VERSION
+21/tcp    open  ftp                FileZilla ftpd 0.9.34 beta
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+53/tcp    open  domain             Microsoft DNS 6.1.7601 (1DB15D39) (Windows Server 2008 R2 SP1)
+| dns-nsid: 
+|_  bind.version: Microsoft DNS 6.1.7601 (1DB15D39)
+88/tcp    open  kerberos-sec       Microsoft Windows Kerberos (server time: 2013-12-28 07:37:29Z)
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+389/tcp   open  ldap               Microsoft Windows Active Directory LDAP (Domain: thinc.local, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds       Windows Server 2008 R2 Standard 7601 Service Pack 1 microsoft-ds (workgroup: THINC)
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http         Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap               Microsoft Windows Active Directory LDAP (Domain: thinc.local, Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped
+3389/tcp  open  ssl/ms-wbt-server?
+|_ssl-date: 2013-12-28T07:37:07+00:00; -9y8d17h44m46s from scanner time.
+| ssl-cert: Subject: commonName=master.thinc.local
+| Not valid before: 2013-12-27T07:37:01
+|_Not valid after:  2014-06-28T07:37:01
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+49157/tcp open  ncacn_http         Microsoft Windows RPC over HTTP 1.0
+49158/tcp open  msrpc              Microsoft Windows RPC
+49163/tcp open  msrpc              Microsoft Windows RPC
+Service Info: Host: MASTER; OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2008:r2:sp1
+
+Host script results:
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: required
+| smb-os-discovery: 
+|   OS: Windows Server 2008 R2 Standard 7601 Service Pack 1 (Windows Server 2008 R2 Standard 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_server_2008::sp1
+|   Computer name: master
+|   NetBIOS computer name: MASTER\x00
+|   Domain name: thinc.local
+|   Forest name: thinc.local
+|   FQDN: master.thinc.local
+|_  System time: 2013-12-27T23:37:07-08:00
+| smb2-time: 
+|   date: 2013-12-28T07:37:09
+|_  start_date: 2013-12-28T08:29:08
+|_clock-skew: mean: -3295d15h43m33s, deviation: 4h01m05s, median: -3295d17h43m46s
+| smb2-security-mode: 
+|   210: 
+|_    Message signing enabled and required
+
+Nmap scan report for 10.11.1.222
+Host is up (0.019s latency).
+Not shown: 991 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+1521/tcp open  oracle-tns    Oracle TNS listener 18.0.0.0.0 (unauthorized)
+2030/tcp open  oracle-mts    Oracle MTS Recovery Service
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: CHRIS
+|   NetBIOS_Domain_Name: CHRIS
+|   NetBIOS_Computer_Name: CHRIS
+|   DNS_Domain_Name: chris
+|   DNS_Computer_Name: chris
+|   Product_Version: 10.0.17763
+|_  System_Time: 2023-01-06T01:19:25+00:00
+| ssl-cert: Subject: commonName=chris
+| Not valid before: 2022-11-08T21:13:53
+|_Not valid after:  2023-05-10T21:13:53
+|_ssl-date: 2023-01-06T01:21:46+00:00; -3s from scanner time.
+5357/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Service Unavailable
+|_http-server-header: Microsoft-HTTPAPI/2.0
+8009/tcp open  ajp13         Apache Jserv (Protocol v1.3)
+| ajp-methods: 
+|_  Supported methods: GET HEAD POST OPTIONS
+8080/tcp open  http          Apache Tomcat 9.0.19
+|_http-title: Apache Tomcat/9.0.19
+|_http-open-proxy: Proxy might be redirecting requests
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -3s, deviation: 0s, median: -3s
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-01-06T01:20:57
+|_  start_date: N/A
+
+Nmap scan report for 10.11.1.223
+Host is up (0.019s latency).
+Not shown: 992 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           FileZilla ftpd
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+80/tcp   open  http          Apache httpd 2.4.38 ((Win64) OpenSSL/1.0.2q PHP/5.6.40)
+|_http-title: ApPHP MicroBlog
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: Apache/2.4.38 (Win64) OpenSSL/1.0.2q PHP/5.6.40
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp  open  ssl/http      Apache httpd 2.4.38 ((Win64) OpenSSL/1.0.2q PHP/5.6.40)
+| tls-alpn: 
+|_  http/1.1
+| ssl-cert: Subject: commonName=localhost
+| Not valid before: 2009-11-10T23:48:47
+|_Not valid after:  2019-11-08T23:48:47
+|_http-server-header: Apache/2.4.38 (Win64) OpenSSL/1.0.2q PHP/5.6.40
+|_ssl-date: TLS randomness does not represent time
+|_http-title: ApPHP MicroBlog
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+445/tcp  open  microsoft-ds?
+3306/tcp open  mysql         MariaDB (unauthorized)
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=jeff
+| Not valid before: 2023-01-01T03:18:46
+|_Not valid after:  2023-07-03T03:18:46
+|_ssl-date: 2023-01-06T01:21:49+00:00; -3s from scanner time.
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -3s, deviation: 0s, median: -3s
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-01-06T01:21:02
+|_  start_date: N/A
+
+Nmap scan report for 10.11.1.227
+Host is up (0.019s latency).
+Not shown: 987 closed tcp ports (conn-refused)
+PORT     STATE SERVICE      VERSION
+21/tcp   open  ftp          Microsoft ftpd 5.0
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 01-02-23  05:03AM       <DIR>          test
+| 01-05-23  01:51AM                    3 test.txt
+| 01-02-23  05:02AM       <DIR>          testing
+|_01-02-23  05:03AM                    6 tmp.txt
+| ftp-syst: 
+|   SYST: Windows_NT version 5.0
+|   STAT: 
+| jd Microsoft Windows NT FTP Server status:
+|      Version 5.0
+|      Connected to 192.168.119.221
+|      Logged in as IEUser@
+|      TYPE: ASCII, FORM: Nonprint; STRUcture: File; transfer MODE: STREAM
+|      No data connection
+|_End of status.
+25/tcp   open  smtp         Microsoft ESMTP 5.0.2195.5329
+| smtp-ntlm-info: 
+|   Target_Name: JD
+|   NetBIOS_Domain_Name: JD
+|   NetBIOS_Computer_Name: JD
+|   DNS_Domain_Name: jd.acme.local
+|   DNS_Computer_Name: jd.acme.local
+|_  Product_Version: 5.0.2195
+| smtp-commands: jd.acme.local Hello [192.168.119.221], AUTH GSSAPI NTLM LOGIN, AUTH=LOGIN, TURN, ATRN, SIZE 2097152, ETRN, PIPELINING, DSN, ENHANCEDSTATUSCODES, 8bitmime, BINARYMIME, CHUNKING, VRFY, OK
+|_ This server supports the following commands: HELO EHLO STARTTLS RCPT DATA RSET MAIL QUIT HELP AUTH TURN ATRN ETRN BDAT VRFY
+80/tcp   open  http         Microsoft IIS httpd 5.0
+| http-webdav-scan: 
+|   Allowed Methods: OPTIONS, TRACE, GET, HEAD, COPY, PROPFIND, SEARCH, LOCK, UNLOCK
+|   WebDAV type: Unknown
+|   Public Options: OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH
+|   Server Type: Microsoft-IIS/5.0
+|_  Server Date: Fri, 06 Jan 2023 01:19:13 GMT
+|_http-server-header: Microsoft-IIS/5.0
+|_http-title: Directory Listing Denied
+| http-methods: 
+|_  Potentially risky methods: TRACE COPY PROPFIND SEARCH LOCK UNLOCK DELETE PUT MOVE MKCOL PROPPATCH
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+443/tcp  open  https?
+445/tcp  open  microsoft-ds Windows 2000 microsoft-ds
+1025/tcp open  msrpc        Microsoft Windows RPC
+1026/tcp open  msrpc        Microsoft Windows RPC
+1028/tcp open  msrpc        Microsoft Windows RPC
+3372/tcp open  msdtc        Microsoft Distributed Transaction Coordinator
+5800/tcp open  vnc-http     RealVNC 4.0 (resolution: 400x250; VNC TCP port: 5900)
+|_http-server-header: RealVNC/4.0
+|_http-title: VNC viewer for Java
+5900/tcp open  vnc          VNC (protocol 3.8)
+| vnc-info: 
+|   Protocol version: 3.8
+|   Security types: 
+|_    VNC Authentication (2)
+Service Info: Host: jd.acme.local; OSs: Windows, Windows 2000; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_2000
+
+Host script results:
+|_clock-skew: mean: -59m05s, deviation: 1h23m30s, median: -1h58m08s
+| smb-os-discovery: 
+|   OS: Windows 2000 (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_2000::-
+|   Computer name: jd
+|   NetBIOS computer name: JD\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2023-01-06T03:21:07+02:00
+|_smb2-time: Protocol negotiation failed (SMB2)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_nbstat: NetBIOS name: JD, NetBIOS user: ADMINISTRATOR, NetBIOS MAC: 00505686f08d (VMware)
+
+Nmap scan report for 10.11.1.229
+Host is up (0.020s latency).
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+25/tcp   open  smtp          hMailServer smtpd
+| smtp-commands: MAIL, SIZE 20480000, AUTH LOGIN, HELP
+|_ 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY
+80/tcp   open  http          Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Home Page - Long Live the Squirrel
+|_http-server-header: Microsoft-IIS/10.0
+110/tcp  open  pop3          hMailServer pop3d
+|_pop3-capabilities: USER TOP UIDL
+143/tcp  open  imap          hMailServer imapd
+|_imap-capabilities: IMAP4 NAMESPACE SORT OK completed IDLE CHILDREN QUOTA IMAP4rev1 RIGHTS=texkA0001 ACL CAPABILITY
+587/tcp  open  smtp          hMailServer smtpd
+| smtp-commands: MAIL, SIZE 20480000, AUTH LOGIN, HELP
+|_ 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+|_ssl-date: 2023-01-06T01:21:50+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=mail
+| Not valid before: 2023-01-04T19:01:57
+|_Not valid after:  2023-07-06T19:01:57
+Service Info: Host: MAIL; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.11.1.231
+Host is up (0.018s latency).
+Not shown: 995 closed tcp ports (conn-refused)
+PORT    STATE SERVICE     VERSION
+22/tcp  open  ssh         OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 b68d1ef380643f8a9652927a9fb1be67 (DSA)
+|   2048 72c406a72f711b6a6b57fecfad3f9c16 (RSA)
+|_  256 6bc66efbba06dc23f93e01a62a87481a (ECDSA)
+25/tcp  open  smtp        Postfix smtpd
+|_smtp-commands: mail.local, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN
+| ssl-cert: Subject: commonName=localhost.localdomain
+| Not valid before: 2013-05-05T06:42:26
+|_Not valid after:  2023-05-03T06:42:26
+|_ssl-date: TLS randomness does not represent time
+111/tcp open  rpcbind     2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|_  100000  3,4          111/udp6  rpcbind
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: SECURITY)
+445/tcp open  netbios-ssn Samba smbd 4.2.10-Debian (workgroup: SECURITY)
+Service Info: Hosts:  mail.local, MAILMAN; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-time: 
+|   date: 2023-01-06T01:21:09
+|_  start_date: N/A
+|_nbstat: NetBIOS name: MAILMAN, NetBIOS user: <unknown>, NetBIOS MAC: 000000000000 (Xerox)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_clock-skew: mean: 1h40m35s, deviation: 2h54m15s, median: -1s
+| smb2-security-mode: 
+|   300: 
+|_    Message signing enabled but not required
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.2.10-Debian)
+|   Computer name: mailman
+|   NetBIOS computer name: MAILMAN\x00
+|   Domain name: local
+|   FQDN: mailman.local
+|_  System time: 2023-01-05T20:21:09-05:00
+
+Nmap scan report for 10.11.1.234
+Host is up (0.018s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.3p1 Debian 3ubuntu3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 2c83670229208799875595926c8da4a3 (DSA)
+|_  2048 6b9108a8c090ac68bdc9cd9cbe692bac (RSA)
+80/tcp open  http    Apache httpd 2.2.14 ((Ubuntu))
+|_http-server-header: Apache/2.2.14 (Ubuntu)
+|_http-title: Business Statistics | New Server for Thinc&#039;s Business Sta...
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.11.1.237
+Host is up (0.019s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 6.0p1 Debian 4 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 fc89ba50c2ea2dabb919f1f90ab4c05a (DSA)
+|   2048 de2db8bd438ac3282bd32284d06ce09d (RSA)
+|_  256 a5584d9de861de5583e2716b5dad83e2 (ECDSA)
+80/tcp  open  http     Apache httpd 2.2.22 ((Debian))
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Apache/2.2.22 (Debian)
+111/tcp open  rpcbind  2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100024  1          39617/udp6  status
+|   100024  1          49849/tcp   status
+|   100024  1          53430/tcp6  status
+|_  100024  1          58564/udp   status
+443/tcp open  ssl/http Apache httpd 2.2.22 ((Debian))
+|_http-title: Site doesn't have a title (text/html).
+| ssl-cert: Subject: commonName=localhost
+| Not valid before: 2013-12-26T16:25:05
+|_Not valid after:  2023-12-24T16:25:05
+|_ssl-date: 2023-01-06T01:21:41+00:00; -10s from scanner time.
+|_http-server-header: Apache/2.2.22 (Debian)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: -10s
+
+Nmap scan report for sandbox.local (10.11.1.250)
+Host is up (0.019s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 868f8936792f44b26118a4fbd5a1f343 (RSA)
+|   256 def384f1cdf3c89a306d60e8b11d9927 (ECDSA)
+|_  256 146aba77e057e50cc0cc7631918ddd9f (ED25519)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-generator: WordPress 5.3
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: SandBox &#8211; See the future, Feel the shine
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.11.1.251
+Host is up (0.020s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT      STATE  SERVICE  VERSION
+20/tcp    closed ftp-data
+21/tcp    open   ftp      vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: PASV IP 10.1.1.246 is not the same as 10.11.1.251
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.119.221
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp    open   ssh      OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 7acaa24c998b6df44678fe4a696de494 (RSA)
+|   256 042c708484034342a4c333d2950d5e91 (ECDSA)
+|_  256 11ad7355cce9cb0ca423d646e87ddaf0 (ED25519)
+80/tcp    open   http     Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+10180/tcp closed unknown
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Post-scan script results:
+| clock-skew: 
+|   -3s: 
+|     10.11.1.223
+|     10.11.1.222
+|   0s: 
+|     10.11.1.120
+|     10.11.1.20
+|     10.11.1.231
+|_    10.11.1.101
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan  5 20:28:25 2023 -- 40 IP addresses (40 hosts up) scanned in 866.62 seconds

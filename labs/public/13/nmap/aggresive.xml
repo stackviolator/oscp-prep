@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Sat Dec 31 11:35:50 2022 as: nmap -p 21,135,139,445,1433,3389,4167,5800,5900,5985,47001 -A -oA nmap/aggresive 10.11.1.13 -->
+<nmaprun scanner="nmap" args="nmap -p 21,135,139,445,1433,3389,4167,5800,5900,5985,47001 -A -oA nmap/aggresive 10.11.1.13" start="1672504550" startstr="Sat Dec 31 11:35:50 2022" version="7.93" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="11" services="21,135,139,445,1433,3389,4167,5800,5900,5985,47001"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.11.1.13" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskprogress task="Service scan" time="1672504591" percent="90.91" remaining="5" etc="1672504595"/>
+<host starttime="1672504550" endtime="1672504628"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.11.1.13" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;04-07-19  10:25PM       &lt;DIR&gt;          aspnet_client&#xa;12-31-22  04:32PM                   16 file.txt&#xa;04-07-19  07:14PM                99710 iis-85.png&#xa;04-07-19  07:14PM                  701 iisstart.htm"/><script id="ftp-syst" output="&#xa;  SYST: Windows_NT"><elem key="SYST">Windows_NT</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="1433"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-sql-s" product="Microsoft SQL Server 2012" version="11.00.2100.00; RTM" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:sql_server:2012:gold</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-cert" output="Subject: commonName=SSL_Self_Signed_Fallback&#xa;Not valid before: 2022-03-16T23:28:47&#xa;Not valid after:  2052-03-16T23:28:47"><table key="subject">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">B6085869F9C011DF4BDC3F0E8C3536C08F24D9B442020BD3EBB84A0A61B8F20C530534F97BB70EF9930BD04B5304B50460392C0156D8B5AC2AF06E33A535892C6D3A39C78D05A0CB5683AF3C2FBF99A4128C9C7CF284373CF6EF6A44CB8CC88D302AF0F0220F3C65E103069542EAC84C5CB03BCCFB0DDF4A98607766A94DA75B</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-03-16T23:28:47</elem>
+<elem key="notAfter">2052-03-16T23:28:47</elem>
+</table>
+<elem key="md5">772d0f6f1be594627336f1dc91e154ff</elem>
+<elem key="sha1">23133eec3709cd26f6fd669c6f4c42acadceb7b9</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIB+zCCAWSgAwIBAgIQPOgY2jnheopNi3+Q+nGdAjANBgkqhkiG9w0BAQUFADA7&#xa;MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA&#xa;bABsAGIAYQBjAGswIBcNMjIwMzE2MjMyODQ3WhgPMjA1MjAzMTYyMzI4NDdaMDsx&#xa;OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs&#xa;AGwAYgBhAGMAazCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAtghYafnAEd9L&#xa;3D8OjDU2wI8k2bRCAgvT67hKCmG48gxTBTT5e7cO+ZML0EtTBLUEYDksAVbYtawq&#xa;8G4zpTWJLG06OceNBaDLVoOvPC+/maQSjJx88oQ3PPbvakTLjMiNMCrw8CIPPGXh&#xa;AwaVQurITFywO8z7Dd9KmGB3ZqlNp1sCAwEAATANBgkqhkiG9w0BAQUFAAOBgQAY&#xa;JlO8ssoZXxJ68/PJljXCpOZoO4E7B5CCA83zTUu8Sr+PabbZ856EOd0alyNPIuq3&#xa;AgTRxAGU86LP4GHouTmjn/xLkPEzbCxP7RnSSCOBLkbTfBIsOE115bWRFRyNku6q&#xa;iAKhiNX5WfUOidHp64eADjRD1hujC0oihDJBFbeakA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-12-31T16:37:06+00:00; -2s from scanner time."><elem key="date">2022-12-31T16:37:06+00:00</elem>
+<elem key="delta">-2.0</elem>
+</script><script id="ms-sql-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="ms-sql-ntlm-info" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" tunnel="ssl" method="table" conf="3"/><script id="rdp-ntlm-info" output="&#xa;  Target_Name: DISCO&#xa;  NetBIOS_Domain_Name: DISCO&#xa;  NetBIOS_Computer_Name: DISCO&#xa;  DNS_Domain_Name: disco&#xa;  DNS_Computer_Name: disco&#xa;  Product_Version: 6.3.9600&#xa;  System_Time: 2022-12-31T16:36:57+00:00"><elem key="Target_Name">DISCO</elem>
+<elem key="NetBIOS_Domain_Name">DISCO</elem>
+<elem key="NetBIOS_Computer_Name">DISCO</elem>
+<elem key="DNS_Domain_Name">disco</elem>
+<elem key="DNS_Computer_Name">disco</elem>
+<elem key="Product_Version">6.3.9600</elem>
+<elem key="System_Time">2022-12-31T16:36:57+00:00</elem>
+</script><script id="ssl-date" output="2022-12-31T16:37:06+00:00; -2s from scanner time."><elem key="date">2022-12-31T16:37:06+00:00</elem>
+<elem key="delta">-2.0</elem>
+</script><script id="ssl-cert" output="Subject: commonName=disco&#xa;Not valid before: 2022-12-29T00:04:39&#xa;Not valid after:  2023-06-30T00:04:39"><table key="subject">
+<elem key="commonName">disco</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">disco</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">E280230B3B11A7D6865F763DA708EA258EBEA57C45DD1ED1643025EEFBC0376233ECB936EFA939FED6AC2B354902155B5C197274015442AB508C7A9DE153031E9F26954CFDD43AB11CC5593CEE795BAF4819A42D7E4A7914865CD66BDC2BD6520F47CEBD6EDD075938A32ECA40D96637C90EA23244002207727A7DE68FD6F1EBD75A84858A53DCF88F414792F5F3C3434B6CA20E8479FA3850FF4D7796783E00543062707DB79D80B9C42FA650A659E9075C9D66378561EAF8864E4010B6771BF0F86A1635DE103F09FAD42D03F7FBCDA15FE5E70B890E0C9C16EBF8BAE1226452CE95C89B4F84777953A03F8D557DA409FD6153402155E17C293457E9573EB3</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-29T00:04:39</elem>
+<elem key="notAfter">2023-06-30T00:04:39</elem>
+</table>
+<elem key="md5">fb3842b926e7b3f2bf5511534212d1c8</elem>
+<elem key="sha1">e201b9f1128ad315392b0cd88ed53cb713ad87b6</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzjCCAbagAwIBAgIQVDMfCERH8I5Czgh+lBhdZzANBgkqhkiG9w0BAQsFADAQ&#xa;MQ4wDAYDVQQDEwVkaXNjbzAeFw0yMjEyMjkwMDA0MzlaFw0yMzA2MzAwMDA0Mzla&#xa;MBAxDjAMBgNVBAMTBWRpc2NvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC&#xa;AQEA4oAjCzsRp9aGX3Y9pwjqJY6+pXxF3R7RZDAl7vvAN2Iz7Lk276k5/tasKzVJ&#xa;AhVbXBlydAFUQqtQjHqd4VMDHp8mlUz91DqxHMVZPO55W69IGaQtfkp5FIZc1mvc&#xa;K9ZSD0fOvW7dB1k4oy7KQNlmN8kOojJEACIHcnp95o/W8evXWoSFilPc+I9BR5L1&#xa;88NDS2yiDoR5+jhQ/013lng+AFQwYnB9t52AucQvplCmWekHXJ1mN4Vh6viGTkAQ&#xa;tncb8PhqFjXeED8J+tQtA/f7zaFf5ecLiQ4MnBbr+LrhImRSzpXIm0+Ed3lToD+N&#xa;VX2kCf1hU0AhVeF8KTRX6Vc+swIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD&#xa;ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAJm68ZcHKlxLvGlxvu3U&#xa;e679u6UbB4r2LotTyZbKVxwn8peLieU0FgxiitadZ9PdjjTabRb07aFHrpfaSgoT&#xa;ZOfcmwJFkyMLMoT5B5bqk4OBcbpWmFw2KrSJjschDZY/hp1nhqmyL2bRtOgCKh+O&#xa;o/C71EyNGthvrycx/qefHmQNnvsMjC/cfStPySJT1llxT/jBMJ+Ot51/YLtC0UQB&#xa;BiBYuiJnqT7uM4rUBvolqklCzxaUUtb7AvO1nZjQDtT+p1cq0PjBcMtaSO0QyCXY&#xa;ORFedvkYk29IetcS3knGdy2RmbBuJvbx8XorVp5PDLArKDCFmx26Hsi3ASZJ5FBC&#xa;VPE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="4167"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="8.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_services:8.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-IIS/8.5"><elem>Microsoft-IIS/8.5</elem>
+</script><script id="http-title" output="IIS Windows Server"><elem key="title">IIS Windows Server</elem>
+</script><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="5800"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="vnc-http" product="TightVNC" extrainfo="user: disco; VNC TCP port: 5900" method="probed" conf="10"><cpe>cpe:/a:tightvnc:tightvnc</cpe></service><script id="http-title" output="TightVNC desktop [disco]"><elem key="title">TightVNC desktop [disco]</elem>
+</script></port>
+<port protocol="tcp" portid="5900"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="vnc" product="VNC" extrainfo="protocol 3.8" method="probed" conf="10"/><script id="vnc-info" output="&#xa;  Protocol version: 3.8&#xa;  Security types: &#xa;    None (1)&#xa;    Tight (16)&#xa;  Tight auth subtypes: &#xa;    None&#xa;  WARNING: Server does not require authentication"><elem key="Protocol version">3.8</elem>
+<table key="Security types">
+<table>
+<elem key="type">1</elem>
+<elem key="name">None</elem>
+</table>
+<table>
+<elem key="type">16</elem>
+<elem key="name">Tight</elem>
+</table>
+</table>
+<table key="Tight auth subtypes">
+<elem>None</elem>
+</table>
+<elem key="WARNING">Server does not require authentication</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: -2s, deviation: 0s, median: -2s"><elem key="mean">-2</elem>
+<elem key="median">-2</elem>
+<elem key="stddev">0</elem>
+<elem key="count">5</elem>
+</script><script id="smb2-time" output="&#xa;  date: 2022-12-31T16:36:56&#xa;  start_date: 2022-03-16T23:28:44"><elem key="date">2022-12-31T16:36:56</elem>
+<elem key="start_date">2022-03-16T23:28:44</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  302: &#xa;    Message signing enabled but not required"><table key="302">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script></hostscript><times srtt="21888" rttvar="2472" to="100000"/>
+</host>
+<runstats><finished time="1672504628" timestr="Sat Dec 31 11:37:08 2022" summary="Nmap done at Sat Dec 31 11:37:08 2022; 1 IP address (1 host up) scanned in 78.13 seconds" elapsed="78.13" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

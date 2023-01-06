@@ -1,0 +1,18 @@
+------------------
+NOTES
+------------------
+
+eternal blue
+
+https://github.com/k4u5h41/MS17-010_CVE-2017-0143
+
+ Transferring files is annoying.. alot of missing binaries
+ use the vbs file transfer method from course notes
+ used tftp as described in notes
+
+got the sam and system hives and cracked locally using samdump2 on kali
+downloaded bank-account.zip
+	cracked password w john
+		zip2john bank-account.zip > hash
+		john --wordlist=/usr/share/wordlists/rockyou.txt
+		pw = alice

@@ -4,3 +4,8 @@ NOTES
 
 Elastix server
 admin:admin
+
+Elastix RCE in exploit db -> tons of sudo -l binaries, i used chmod and opened up perms for /etc/passwd to place a new root password hash
+or
+sudo nmap --interactive
+!sh

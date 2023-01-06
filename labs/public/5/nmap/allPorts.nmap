@@ -1,0 +1,11 @@
+# Nmap 7.93 scan initiated Fri Dec 30 20:59:54 2022 as: nmap -p- -oA nmap/allPorts 10.11.1.5
+Nmap scan report for 10.11.1.5
+Host is up (0.021s latency).
+Not shown: 65531 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1025/tcp open  NFS-or-IIS
+
+# Nmap done at Fri Dec 30 21:00:17 2022 -- 1 IP address (1 host up) scanned in 22.34 seconds

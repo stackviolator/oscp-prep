@@ -1,0 +1,25 @@
+# Nmap 7.93 scan initiated Sat Dec 31 11:34:01 2022 as: nmap -p- -oA nmap/allPorts 10.11.1.13
+Nmap scan report for 10.11.1.13
+Host is up (0.021s latency).
+Not shown: 65517 closed tcp ports (conn-refused)
+PORT      STATE SERVICE
+21/tcp    open  ftp
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+1433/tcp  open  ms-sql-s
+3389/tcp  open  ms-wbt-server
+4167/tcp  open  ddgn
+5800/tcp  open  vnc-http
+5900/tcp  open  vnc
+5985/tcp  open  wsman
+47001/tcp open  winrm
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49156/tcp open  unknown
+49157/tcp open  unknown
+49158/tcp open  unknown
+
+# Nmap done at Sat Dec 31 11:34:37 2022 -- 1 IP address (1 host up) scanned in 36.80 seconds

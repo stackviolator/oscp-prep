@@ -1,0 +1,4 @@
+# Nmap 7.93 scan initiated Fri Dec 30 20:59:54 2022 as: nmap -p- -oA nmap/allPorts 10.11.1.5
+Host: 10.11.1.5 ()	Status: Up
+Host: 10.11.1.5 ()	Ports: 135/open/tcp//msrpc///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 1025/open/tcp//NFS-or-IIS///	Ignored State: closed (65531)
+# Nmap done at Fri Dec 30 21:00:17 2022 -- 1 IP address (1 host up) scanned in 22.34 seconds

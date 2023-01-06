@@ -1,0 +1,10 @@
+------------------
+NOTES
+------------------
+
+view source /test/index -> /test.asp -> /hidd3n-script
+
+http://10.11.1.133/1f2e73705207bdd6467e109c1606ed29-21213/111111111
+https://www.exploit-db.com/exploits/7444 -> rfi to rev shell and dump users + passwords
+
+user with the dumped passwords has all sudo perms

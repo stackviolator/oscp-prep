@@ -1,0 +1,4 @@
+# Nmap 7.93 scan initiated Sat Dec 31 11:35:50 2022 as: nmap -p 21,135,139,445,1433,3389,4167,5800,5900,5985,47001 -A -oA nmap/aggresive 10.11.1.13
+Host: 10.11.1.13 ()	Status: Up
+Host: 10.11.1.13 ()	Ports: 21/open/tcp//ftp//Microsoft ftpd/, 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds//Microsoft Windows Server 2008 R2 - 2012 microsoft-ds/, 1433/open/tcp//ms-sql-s//Microsoft SQL Server 2012 11.00.2100.00; RTM/, 3389/open/tcp//ssl|ms-wbt-server?///, 4167/open/tcp//http//Microsoft IIS httpd 8.5/, 5800/open/tcp//vnc-http//TightVNC (user: disco; VNC TCP port: 5900)/, 5900/open/tcp//vnc//VNC (protocol 3.8)/, 5985/open/tcp//http//Microsoft HTTPAPI httpd 2.0 (SSDP|UPnP)/, 47001/open/tcp//http//Microsoft HTTPAPI httpd 2.0 (SSDP|UPnP)/
+# Nmap done at Sat Dec 31 11:37:08 2022 -- 1 IP address (1 host up) scanned in 78.13 seconds

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Fri Dec 30 21:00:58 2022 as: nmap -A -p 135,139,445,1025 -oA nmap/aggresive 10.11.1.5 -->
+<nmaprun scanner="nmap" args="nmap -A -p 135,139,445,1025 -oA nmap/aggresive 10.11.1.5" start="1672452058" startstr="Fri Dec 30 21:00:58 2022" version="7.93" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="4" services="135,139,445,1025"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.11.1.5" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1672452058" endtime="1672452086"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.11.1.5" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" product="Microsoft Windows XP microsoft-ds" ostype="Windows XP" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows_xp</cpe></service></port>
+<port protocol="tcp" portid="1025"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="NFS-or-IIS" method="table" conf="3"/></port>
+</ports>
+<hostscript><script id="clock-skew" output="-2s"><elem key="count">1</elem>
+<elem key="mean">-2</elem>
+<elem key="stddev">0</elem>
+<elem key="median">-2</elem>
+</script><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/><script id="nbstat" output="NetBIOS name: ALICE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00505686d486 (VMware)"/><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script></hostscript><times srtt="19790" rttvar="7826" to="100000"/>
+</host>
+<runstats><finished time="1672452086" timestr="Fri Dec 30 21:01:26 2022" summary="Nmap done at Fri Dec 30 21:01:26 2022; 1 IP address (1 host up) scanned in 28.16 seconds" elapsed="28.16" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

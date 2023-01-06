@@ -1,0 +1,1 @@
+# Nmap 7.93 scan initiated Fri Dec 30 21:02:32 2022 as: nmap -p- -oA nmap/allPorts 10.11.1.8

