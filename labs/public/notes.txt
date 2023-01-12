@@ -1,0 +1,5 @@
+------------------
+NOTES
+------------------
+
+Anonymous FTP allowed, dir of aspnet_client indicatest there is a web server serving the ftp share

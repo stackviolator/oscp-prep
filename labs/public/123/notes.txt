@@ -1,0 +1,14 @@
+------------------
+NOTES
+------------------
+
+Feroxbuster scan -> /books
+login page is found, need creds
+
+need and email, use the domain given
+admin@xor.local:admin
+
+image manager can upload files, no checks
+uploaded a webshell
+from the webshell i uploaded powercat and ran powercat to get the reverse shell as system
+can cut out the middle man and just upload a rev shell but i didnt want to find the right architecture in class
