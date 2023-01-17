@@ -1,0 +1,10 @@
+------------------
+NOTES
+------------------
+
+Feroxbuster -> /db
+password admin
+
+looking at creds under the users table
+
+server is a linux apache server, likley using md5 hashes
