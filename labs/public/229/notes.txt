@@ -40,3 +40,6 @@ adding a user to the db
 
 
 			fuck this bullshit man
+
+			http://kaoticcreations.blogspot.com/2011/10/microsoft-sql-server-mssql-and-sql.html
+			https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/MSSQL%20Injection.md#mssql-error-based
