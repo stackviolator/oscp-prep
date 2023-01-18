@@ -1,0 +1,15 @@
+POST / HTTP/1.1
+Host: 10.11.1.229
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 574
+Origin: http://10.11.1.229
+Connection: close
+Referer: http://10.11.1.229/
+Upgrade-Insecure-Requests: 1
+Sec-GPC: 1
+
+__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=ust4jjKczirnO41gPRoZoZLXTYPhG9z%2BaQeuqxmothfb78kba%2BF%2FipN7y0dToXbQIWcQHuWG%2B19H6xsXCXH0QEaasD6jxooGLD9Io41rJ%2BcHKbZnZVM3xKU%2Fud3uYo4JZsj9bWcYBiYsjdOX%2FLmY4xeCqO8oWJGsFzt3Fg0y9C0%3D&__VIEWSTATEGENERATOR=A9B807B2&__EVENTVALIDATION=4AWvTJalftB7%2FPB4FNRb%2B77XEiBV6i8pGqCdNvIcDY1guM%2FlTLd1MckhT%2BcLQ9tFkV7QcIrC3ZfvZOtEP2lZqZEJUcVuJXkdRPYjrgTLv%2B8Aq2B%2BD4r2PVaeHRM8UGzAMrn5vV%2BHcu1gFdtzCyboSqNg3iQIO5cCHREaYzZ6D1I%3D&ctl00%24MainContent%24UsernameBox=a&ctl00%24MainContent%24emailBox=a&ctl00%24MainContent%24submit=Submit

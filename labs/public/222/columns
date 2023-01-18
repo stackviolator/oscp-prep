@@ -7,8 +7,7 @@ Table name: ALL$AW_CUBE_ENABLED_VIEWS Column name: AW_NAME from 0
 Table name: ALL$AW_CUBE_ENABLED_VIEWS Column name: AW_OWNER from 0
 Table name: ALL$AW_CUBE_ENABLED_VIEWS Column name: CUBE_NAME from 0
 Table name: ALL$AW_CUBE_ENABLED_VIEWS Column name: HIERCOMBO_NUM from 0
-Table name: ALL$AW_CUBE_ENABLED_VIEWS Column name: HIERCOMBO_STR from 0
-Table name: ALL$AW_CUBE_ENABLED_VIEWS Column name: SYSTEM_VIEWNAME from 0
+Table name: ALL$AW_CUBE_ENABLED_VIEWS Column name: HIERCOMBO_STR from 0 Table name: ALL$AW_CUBE_ENABLED_VIEWS Column name: SYSTEM_VIEWNAME from 0
 Table name: ALL$AW_CUBE_ENABLED_VIEWS Column name: USER_VIEWNAME from 0
 Table name: ALL$AW_DIM_ENABLED_VIEWS Column name: AW_NAME from 0
 Table name: ALL$AW_DIM_ENABLED_VIEWS Column name: AW_OWNER from 0

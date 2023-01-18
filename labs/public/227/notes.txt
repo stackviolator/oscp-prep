@@ -1,0 +1,5 @@
+------------------
+NOTES
+------------------
+
+windows server 2000 -> eternal blue, see .5/notes.txt

